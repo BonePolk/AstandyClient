@@ -1,6 +1,10 @@
 # AstandyClient
 
-An unofficial python client for the Standoff 2 game
+An *unofficial python client* for the Standoff 2 game
+
+📢 **News: [Project Telegram Channel](https://t.me/astandy_api)**
+
+📚 **Documentation: [readthedocs](https://astandyclient.readthedocs.io/en/latest/)**
 
 ## Installation
 
@@ -10,15 +14,16 @@ pip install astandy
 
 ## Usage example
 
-You need to obtain handshake for your game account and push it as \_\_handshake\_\_
+You need to obtain handshake for your game account and pass it to client
 
 ```
 import asyncio
 
 from Astandy import StandClient
+from Astandy.generated.services import GetPlayerRequest
 from Astandy.generated.listeners import MarketplaceRemoteEventListenerOnTradeRequestOpenedUpdate
 
-client = StandClient(__handshake__)
+client = StandClient("__your_handshake_here__")
 
 async def main():
     await client.start()
@@ -41,21 +46,23 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-There also some docs on [readthedocs](https://astandyclient.readthedocs.io/en/latest/)
-
 ## About handshake
 
 There some limitation with handshake:
 
 - AxleBolt always try to fix ways to obtain handshake of account and also can add some new restrictions
 - Only one active handshake per account (If you log into the official Standoff 2 game client, your current session will be invalidated, and you will need to perform a new handshake.)
-- Handshake have limited lifetime 
+- Handshake have limited lifetime must be refreshed periodically
 
 ## What do all this rpc methods actually?
 
-Try it out and guess what difference
+- Try it out
+- And observe differences on account maybe or simply guess idk
 
-[!TIP]
-Always use a test/alt account when exploring unknown methods to avoid any risks to your main profile.
+**Always use a test account when exploring unknown methods to avoid any risks to your main profile.**
 
-Also i am planning to release application for analyzing the official Standoff 2 game client rpc behavior. News about are on [project telegram channel](https://t.me/astandy_api)
+Also i am planning to release application for analyzing the official Standoff 2 game client rpc behavior. 
+
+## Supported RPC methods
+
+There not all supported rpc methods implemented. I am already fix tools to autogen all rpc methods from game dump and i am planning to add them later.
