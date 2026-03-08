@@ -47,6 +47,15 @@ There also some docs on [readthedocs](https://astandyclient.readthedocs.io/en/la
 
 There some limitation with handshake:
 
-- AxleBolt always try to fix ways to obtain handshake of account and also can add some new limitations
+- AxleBolt always try to fix ways to obtain handshake of account and also can add some new restrictions
 - Only one active handshake per account (If you log into the official Standoff 2 game client, your current session will be invalidated, and you will need to perform a new handshake.)
 - Handshake have limited lifetime 
+
+## What do all this rpc methods actually?
+
+Try it out and guess what difference
+
+[!TIP]
+Always use a test/alt account when exploring unknown methods to avoid any risks to your main profile.
+
+Also i am planning to release application for analyzing the official Standoff 2 game client rpc behavior. News about are on [project telegram channel](https://t.me/astandy_api)
