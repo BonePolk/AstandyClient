@@ -1,0 +1,16 @@
+/assets/dump.cs
+/examples
+/.idea
+/venv
+/.venv
+*/__pycache__
+*/*/__pycache__
+*/*/*/__pycache__
+*.pyc
+*.log
+*.log.old
+*~
+tests_config.py
+Astandy/astandy.egg-info/*
+astandy.egg-info/*
+dist/*
