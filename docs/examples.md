@@ -34,6 +34,7 @@ For an exmaple of raw request will be PlayerRemoteService.getPlayer2.
 import asyncio
 
 from Astandy import StandClient
+from Astandy.generated.services import GetPlayerRequest
 from Astandy.generated.listeners import MarketplaceRemoteEventListenerOnTradeRequestOpenedUpdate
 
 client = StandClient("e593bcefbd4ca98a53af13f3642ab9fe")
