@@ -1,0 +1,613 @@
+//This file was automatically generated!
+syntax = "proto3";
+
+package Astandy.generated;
+
+enum ProcessingState { ProcessingState_Creating = 0; ProcessingState_Cancelling = 1; ProcessingState_Expiring = 2;}
+enum OperationValuePair_ValueOneofCase { OperationValuePair_ValueOneofCase_None = 0; OperationValuePair_ValueOneofCase_IntValue = 3; OperationValuePair_ValueOneofCase_BoolValue = 4;}
+enum LobbyType { LobbyType_Default = 0; LobbyType_SqlLobby = 2; LobbyType_AsyncRandomLobby = 3;}
+enum RequestType { RequestType_NoneTypeRequest = 0; RequestType_OpenRequest = 1; RequestType_ClosedRequest = 2;}
+enum PropertyType { PropertyType_None = 0; PropertyType_Game = 1; PropertyType_Actor = 2; PropertyType_GameAndActor = 3;}
+enum OperationValuePair_Types_Operation { OperationValuePair_Types_Operation_Default = 0; OperationValuePair_Types_Operation_Exist = 1; OperationValuePair_Types_Operation_Equals = 2;}
+enum OnlineStatus { OnlineStatus_StateOffline = 0; OnlineStatus_StateOnline = 1; OnlineStatus_StateBusy = 2; OnlineStatus_StateAway = 3; OnlineStatus_StateSnooze = 4; OnlineStatus_StateLookingToTrade = 5; OnlineStatus_StateLookingToPlay = 6;}
+enum MarketRequestType { MarketRequestType_MpNoneType = 0; MarketRequestType_SaleRequest = 1; MarketRequestType_PurchaseRequest = 2;}
+enum ClanMemberRolePermission { ClanMemberRolePermission_ChangeClanSettings = 0; ClanMemberRolePermission_AcceptMember = 1; ClanMemberRolePermission_InviteMember = 2; ClanMemberRolePermission_KickMemberLess = 3; ClanMemberRolePermission_KickMemberEqual = 4; ClanMemberRolePermission_AssignRoleLess = 5; ClanMemberRolePermission_AssignRoleEqual = 6; ClanMemberRolePermission_CreateClanBattle = 7; ClanMemberRolePermission_JoinClanBattle = 8; ClanMemberRolePermission_UpgradeClanMembersCount = 9;}
+enum ClanType { ClanType_Closed = 0; ClanType_ByRequest = 1; ClanType_Opened = 2;}
+enum RetrievableType { RetrievableType_Unremovable = 0; RetrievableType_Removable = 1; RetrievableType_Retrievable = 2;}
+enum GoogleAuthResponse_TicketsOneofCase { GoogleAuthResponse_TicketsOneofCase_None = 0; GoogleAuthResponse_TicketsOneofCase_Ticket = 1; GoogleAuthResponse_TicketsOneofCase_TicketBinary = 2;}
+enum JoinClanType { JoinClanType_ByAcceptInviteRequest = 0; JoinClanType_ByAcceptJoinRequest = 1; JoinClanType_JoinToOpenClan = 2; JoinClanType_NoneJoinType = 3;}
+enum BanScope { BanScope_Global = 0; BanScope_Marketplace = 1; BanScope_MarketplaceSpecial = 2; BanScope_Chat = 3;}
+enum BoltIdAuthResponse_TicketsOneofCase { BoltIdAuthResponse_TicketsOneofCase_None = 0; BoltIdAuthResponse_TicketsOneofCase_Ticket = 1; BoltIdAuthResponse_TicketsOneofCase_TicketBinary = 2;}
+enum OfferType { OfferType_InappPurchase = 0; OfferType_Store = 1;}
+enum LobbyPlayerType { LobbyPlayerType_Any = 0; LobbyPlayerType_Member = 1; LobbyPlayerType_Spectator = 2;}
+enum StatDefType { StatDefType_Int = 0; StatDefType_Float = 1; StatDefType_Long = 3;}
+enum VkAuthResponse_TicketsOneofCase { VkAuthResponse_TicketsOneofCase_None = 0; VkAuthResponse_TicketsOneofCase_Ticket = 1; VkAuthResponse_TicketsOneofCase_TicketBinary = 2;}
+enum SettingType { SettingType_String = 0; SettingType_Integer = 1; SettingType_Float = 2; SettingType_Bool = 3; SettingType_Long = 4;}
+enum ClosingReason { ClosingReason_NoneReason = 0; ClosingReason_SuccessTransaction = 1; ClosingReason_NotEnoughFunds = 2; ClosingReason_Cancelled = 3; ClosingReason_SaleRequestNotFound = 4; ClosingReason_Expired = 5; ClosingReason_InventorySizeExceeded = 6;}
+enum ExternalPlatform { ExternalPlatform_Default = 0; ExternalPlatform_Vk = 1; ExternalPlatform_Facebook = 2; ExternalPlatform_Youtube = 3; ExternalPlatform_TikTok = 4; ExternalPlatform_Instagram = 5; ExternalPlatform_Twitter = 6; ExternalPlatform_Discord = 7;}
+enum SystemMessageType { SystemMessageType_MatchesCanceled = 0; SystemMessageType_ReportedPlayersBanned = 1; SystemMessageType_FriendshipRequestAccepted = 2; SystemMessageType_ClanMembershipAccepted = 3; SystemMessageType_ClanMembershipEnded = 4; SystemMessageType_AchievementUnlocked = 5; SystemMessageType_GiftReceived = 6; SystemMessageType_SeasonFinished = 7; SystemMessageType_AvatarRejected = 8; SystemMessageType_GlobalBanReceived = 9; SystemMessageType_MarketplaceTransactionReverted = 10; SystemMessageType_DeveloperMessage = 11; SystemMessageType_MarketplaceBanReceived = 12; SystemMessageType_ChatBanReceived = 13; SystemMessageType_InappSucceed = 14; SystemMessageType_NewDeviceLogined = 15; SystemMessageType_MatchesRestored = 16;}
+enum Platform { Platform_Win32S = 0; Platform_Win32Windows = 1; Platform_Win32NT = 2; Platform_WinCE = 3; Platform_Unix = 4; Platform_Xbox = 5; Platform_MacOSX = 6;}
+enum MessageType { MessageType_ClansNoneType = 0; MessageType_ChatMessage = 1; MessageType_LogMessage = 2;}
+enum Store { Store_GooglePlay = 0; Store_AppStore = 1; Store_AppGallery = 2; Store_Amazon = 3; Store_Dev = 4; Store_Yoo = 5;}
+enum ProgressGameEventType { ProgressGameEventType_Unspecified = 0; ProgressGameEventType_GamePassBought = 1; ProgressGameEventType_EventPointsBought = 2; ProgressGameEventType_GamePassAndEventPointsBought = 3;}
+enum BHBHHDGDFCHFACH { BHBHHDGDFCHFACH_Unknown = 0; BHBHHDGDFCHFACH_GroupWaitTimeout = 1; BHBHHDGDFCHFACH_GroupMemberDisconnected = 2; BHBHHDGDFCHFACH_GroupMemberNotConfirmed = 3; BHBHHDGDFCHFACH_GroupMemberIsNotOneClan = 4;}
+enum MatchState { MatchState_Finished = 0; MatchState_Canceled = 1; MatchState_Annulled = 2;}
+enum RelationshipStatus { RelationshipStatus_None = 0; RelationshipStatus_Blocked = 1; RelationshipStatus_Initiator = 2; RelationshipStatus_Friend = 3; RelationshipStatus_Recipient = 4; RelationshipStatus_Ignored = 5;}
+enum HuaweiAuthResponse_TicketsOneofCase { HuaweiAuthResponse_TicketsOneofCase_None = 0; HuaweiAuthResponse_TicketsOneofCase_Ticket = 1; HuaweiAuthResponse_TicketsOneofCase_TicketBinary = 2;}
+enum AppleIdAuthResponse_TicketsOneofCase { AppleIdAuthResponse_TicketsOneofCase_None = 0; AppleIdAuthResponse_TicketsOneofCase_Ticket = 1; AppleIdAuthResponse_TicketsOneofCase_TicketBinary = 2;}
+enum MatchType { MatchType_Simple = 0; MatchType_Win32 = 1;}
+enum AuthType { AuthType_Test = 0; AuthType_Guest = 1; AuthType_GooglePlay = 2; AuthType_Facebook = 3; AuthType_GameCenter = 4; AuthType_AppleId = 5; AuthType_Huawei = 6; AuthType_Vk = 7; AuthType_BoltId = 8;}
+enum GameCenterAuthResponse_TicketsOneofCase { GameCenterAuthResponse_TicketsOneofCase_None = 0; GameCenterAuthResponse_TicketsOneofCase_Ticket = 1; GameCenterAuthResponse_TicketsOneofCase_TicketBinary = 2;}
+enum PropertySetByType { PropertySetByType_GameServer = 0; PropertySetByType_Client = 2;}
+enum FacebookAuthResponse_TicketsOneofCase { FacebookAuthResponse_TicketsOneofCase_None = 0; FacebookAuthResponse_TicketsOneofCase_Ticket = 1; FacebookAuthResponse_TicketsOneofCase_TicketBinary = 2;}
+enum Property_ValueOneofCase { Property_ValueOneofCase_None = 0; Property_ValueOneofCase_IntValue = 3; Property_ValueOneofCase_FloatValue = 4; Property_ValueOneofCase_LongValue = 5; Property_ValueOneofCase_StringValue = 6; Property_ValueOneofCase_BooleanValue = 7;}
+enum TestAuthResponse_TicketsOneofCase { TestAuthResponse_TicketsOneofCase_None = 0; TestAuthResponse_TicketsOneofCase_Ticket = 1; TestAuthResponse_TicketsOneofCase_TicketBinary = 2;}
+enum Filter_ValueOneofCase { Filter_ValueOneofCase_None = 0; Filter_ValueOneofCase_IntValue = 2; Filter_ValueOneofCase_FloatValue = 3; Filter_ValueOneofCase_StringValue = 4; Filter_ValueOneofCase_Strings = 6;}
+enum Comparison { Comparison_Equals = 0; Comparison_NotEquals = 1; Comparison_GreaterThan = 2; Comparison_GreaterThanOrEqual = 3; Comparison_LessThan = 4; Comparison_LessThanOrEqual = 5; Comparison_In = 6; Comparison_NotIn = 7;}
+message RequestToJoinClanResponse {}
+message BoltIdUnLinkAuthRequest {}
+message GetClanJoinRequestsCountResponse {  int32 count = 1;}
+message StorePlayerStatsRequest {  StorePlayerStats storePlayerStats = 1;}
+message GetLastRateGameResponse {  int32 rate = 1;  string message = 2;  string internalData = 3;  string context = 4;  int64 timestampAskLater = 5;  bool dontAskLater = 6;  int64 timestamp = 7;  repeated RateContext rateContexts = 8;  RewardInfo reward = 9;}
+message CreatePurchaseRequestResponse {  string purchaseRequestId = 1;}
+message CreateSaleResponse {  string requestId = 1;}
+message OnPlayerStatusChangedEvent {  string friendGpid = 1;  PlayerStatus newStatus = 2;}
+message GetCurrentClanStatsForSeasonResponse {  ClanStats clanStats = 1;  repeated ClanMemberStats clanMemberStats = 2;}
+message GetCurrentStatsResponse {  Stats stats = 1;}
+message SetInventoryItemFlagsRequest {  ItemFlags itemFlags = 1;}
+message SetLobbyJoinableResponse {}
+message HuaweiUnLinkAuthResponse {}
+message SetInventoryItemFlagsResponse {}
+message GetPlayerInviteRequestsRequest {  int32 offset = 1;  int32 length = 2;}
+message GetPlayerSettingsRequest {}
+message GetPlayerRequest {}
+message AppleIdLinkAuthResponse {  bool guestLinking = 1;}
+message CancelJoinRequestResponse {}
+message SetLobbyTypeResponse {}
+message DeleteClosedInviteRequestRequest {  string requestId = 1;}
+message SetOnlineStatusRequest {}
+message GetUnreadLogMessagesCountRequest {}
+message DeleteAccountRequest {  string email = 1;}
+message OnAdRewardEvent {  repeated CurrencyAmount rewardCurrencies = 1;  repeated PlayerInventoryItem rewardItems = 2;  bool ignore = 3;}
+message GetLobbyResponse {  Lobby lobby = 1;}
+message OnJoinRequestCancelledEvent {}
+message ValidateClanNameResponse {}
+message BoltIdAuthResponse {  BoltIdAuthResponse_TicketsOneofCase ticketsCase = 3;}
+message FindClanRequest {  string filter = 1;  int32 page = 2;  int32 size = 3;}
+message GetInvitesToLobbyResponse {  repeated LobbyInvite lobbyInvites = 1;}
+message GetPlayerFriendsRequest {  repeated RelationshipStatus relationshipStatuses = 1;  int32 page = 2;  int32 size = 3;}
+message GetUnreadChatMessagesCountRequest {}
+message VkUnLinkAuthRequest {}
+message SetLobbyMaxSpectatorsRequest {  int32 maxSpectators = 1;}
+message AssignLeaderRoleRequest {  string newLeaderMemberId = 1;  int32 roleId = 2;}
+message GetFriendMsgsByOffsetRequest {  string friendGpid = 1;  Offset offset = 2;}
+message GetPlayerInventoryRequest {}
+message SendClanChatMessageRequest {  string message = 1;}
+message EEBEGEFGBEBEGEH {  int32 CHFFAAGAGAFBEHE = 1;  AAGDEBAFFCFGFCH AHEABGBEHEGHDED = 2;}
+message OnLobbyDataChangedEvent {  Dictionary data = 1;}
+message HuaweiLinkAuthResponse {  bool guestLinking = 1;}
+message AppGalleryBuyInappResponse {  GivenReward reward = 1;}
+message OnIncomingClanChatMessageEvent {  ClanUserMessage message = 1;}
+message HandshakeResponse {  string country = 1;}
+message SetPlayerAvatarResponse {  string avatarId = 1;}
+message CancelJoinRequestRequest {  string requestId = 1;}
+message SendFriendMsgRequest {  string friendGpid = 1;  string msg = 2;}
+message GetClanMembersByIdRequest {  string clanId = 1;}
+message OnSystemMessageReceivedEvent {  SystemMessageDetails message = 1;}
+message OnAssignedRoleEvent {  int32 newRoleId = 1;  string assignatorMemberId = 2;  string assigneeMemberId = 3;}
+message GetPlayerOpenRequestsResponse {  repeated OpenRequest openRequests = 1;}
+message CreateSaleRequest {  int32 itemId = 1;  float price = 2;}
+message CreatePurchaseRequestBySaleResponse {  string purchaseRequestId = 1;}
+message GetPlayerInviteRequestsCountResponse {  int32 count = 1;}
+message CancelInviteRequestResponse {}
+message OnProgressGameEvent {  string eventId = 1;  int32 points = 2;  map<string, int32> levels = 3;  GivenReward reward = 4;  ProgressGameEventContext context = 5;  map<string, ListOfLevelsToClaimReward> levelsToClaimReward = 6;}
+message RefuseInvitationToLobbyRequest {  string lobbyId = 1;}
+message GetItemsResponse {  repeated Item items = 1;}
+message SetPlayerSettingsRequest {  PlayerSettings settings = 1;}
+message OnClanTagAndNameChanged {  string newClanTag = 1;  string newClanName = 2;}
+message DeleteClosedJoinRequestRequest {  string requestId = 1;}
+message GetClanByIdRequest {  string clanId = 1;}
+message GetPlayerFriendByIdResponse {  PlayerFriend playerFriend = 1;}
+message BoltIdUnLinkAuthResponse {}
+message GetOtherPlayerItemsRequest {  string gpid = 1;  repeated int32 itemDefinitionIds = 2;}
+message SetClanAvatarResponse {  string avatarId = 1;}
+message SendLobbyChatMsgResponse {}
+message LeaveClanRequest {}
+message GameCenterLinkAuthResponse {  bool guestLinking = 1;}
+message FacebookAuthRequest {  AuthFacebook authFacebook = 1;  AppVerification appVerification = 2;  DeviceInfo deviceInfo = 3;}
+message GetSpecialOffersRequest {}
+message OnPlayerRequestOpenedEvent {  OpenRequest request = 1;}
+message OnInviteRequestCancelledEvent {}
+message GetInventoryItemPropertyDefinitionsRequest {  string lastUpdated = 1;}
+message ReadFriendMsgsResponse {}
+message CreateClanResponse {  Clan clan = 1;}
+message GetFriendMsgsByOffsetResponse {  repeated UserMessage messages = 1;}
+message ChangeClanTypeRequest {  ClanType clanType = 1;}
+message OnStatsUpdatedEvent {  repeated PlayerStat updatedStats = 1;  int64 updatedDate = 2;}
+message GetPlayerStatsRequest {  string gpid = 1;  repeated string apiNames = 2;  bool addLeaderboardStats = 3;}
+message OnPlayerNameChangedEvent {  string gpid = 1;  string name = 2;}
+message GetPlayerClosedJoinRequestsCountResponse {  int32 count = 1;}
+message UnblockFriendResponse {  RelationshipStatus relationshipStatus = 1;}
+message GetTradeResponse {  Trade trade = 1;}
+message SendClanChatMessageResponse {}
+message GameCenterUnLinkAuthRequest {}
+message GetLobbyRequest {  string lobbyId = 1;}
+message InvitePlayerToLobbyAsResponse {}
+message SetPlayerSettingsResponse {}
+message OnJoinRequestTakenEvent {  string requestId = 1;  Player player = 2;}
+message OnNewPlayerInvitedToLobbyEvent {  string inviteSenderGpid = 1;  PlayerFriend newPlayer = 2;}
+message SetClanAvatarRequest {  bytes avatar = 1;}
+message GetSystemMessagesResponse {  repeated SystemMessagePreview messages = 1;  string continuationToken = 2;}
+message AskLaterRequest {  int64 timestampAskLater = 1;  string internalData = 2;  string context = 3;}
+message DeleteClosedInviteRequestResponse {}
+message GetSpecialOffersResponse {  repeated SpecialOffer specialOffers = 1;}
+message GetClanSettingsRequest {}
+message OnRefuseInviteToLobbyEvent {  string inviteSenderGpid = 1;  string invitedGpid = 2;}
+message KickPlayerFromLobbyRequest {  string kickedGpid = 1;}
+message GetClanJoinRequestsCountRequest {}
+message SetLobbyPhotonGameRequest {  PhotonGame photonGame = 1;}
+message GetCurrentPlayerAchievementsRequest {  bool showLocked = 1;}
+message DeleteSystemMessagesResponse {}
+message OnKickedEvent {  string kickingReason = 1;}
+message SetPlayerAvatarRequest {  bytes avatar = 1;}
+message OnLobbyTypeChangedEvent {  LobbyType lobbyType = 1;}
+message GetPlayerAchievementsResponse {  repeated PlayerAchievement playerAchievement = 1;}
+message TestAuthRequest {  AuthTest authTest = 1;  AppVerification verification = 2;  DeviceInfo deviceInfo = 3;}
+message CreatePurchaseRequestBySaleRequest {  string saleId = 1;}
+message GetPlayerFriendsIdsResponse {  repeated string friendGpids = 1;}
+message AcceptFriendRequestResponse {  RelationshipStatus relationshipStatus = 1;}
+message ProgressChallengeResponse {  bool completed = 1;  int32 challengePoints = 2;  GivenReward challengeReward = 3;  int32 eventPoints = 4;  map<string, int32> eventGamePassLevels = 5;  GivenReward eventReward = 6;  bool rewardsObtained = 7;}
+message CountUnreadSystemMessagesRequest {}
+message IgnoreFriendRequestRequest {  string friendGpid = 1;}
+message OnLobbyPlayerTypeChangedEvent {  string gpid = 1;  LobbyPlayerType playerType = 2;}
+message FacebookLinkAuthResponse {  bool guestLinking = 1;}
+message ChangeLobbyOtherPlayerTypeRequest {  string gpid = 1;  LobbyPlayerType playerType = 2;}
+message GetCurrentPlayerAchievementsResponse {  repeated PlayerAchievement achievements = 1;}
+message SetLobbyMaxMembersRequest {  int32 maxMembers = 1;}
+message SearchPlayersRequest {  string value = 1;  int32 page = 2;  int32 size = 3;}
+message GoogleUnLinkAuthResponse {}
+message AcceptFriendRequestRequest {  string friendGpid = 1;}
+message GetClanRequest {}
+message WriteFileResponse {}
+message GoogleUnLinkAuthRequest {}
+message SetPlayerFirebaseTokenResponse {}
+message GetChatUsersLiteResponse {  repeated ChatUserLite chatUsers = 1;}
+message SearchPlayersResponse {  repeated PlayerFriend playerFriends = 1;}
+message GetCachedPlayerGameEventsRequest {  string lastUpdated = 1;}
+message SearchLobbyRequest {  int32 amount = 1;  repeated Filter filters = 2;  int32 version = 3;}
+message DeleteFriendMsgsResponse {}
+message GetPlayerStatsResponse {  PlayerStats playerStats = 1;}
+message GetAchievementDefinitionsResponse {  repeated AchievementDefinition achievements = 1;}
+message WriteFileRequest {  string filename = 1;  bytes file = 2;  string type = 3;}
+message GetPlayerOpenRequestsRequest {}
+message AppStoreBuyInappResponse {  PlayerInventory reward = 1;}
+message OnReceivedInviteToLobbyEvent {  LobbyInvite invite = 1;}
+message GetPlayerGameEventsProgressesRequest {}
+message DeclineInviteRequestRequest {  string requestId = 1;}
+message GetInvitesToLobbyRequest {}
+message GetCachedPlayerGameEventsResponse {  repeated GameEventDefinition gameEvents = 1;  string lastUpdated = 2;  int64 msUntilRefresh = 3;}
+message GetClanMembersRequest {}
+message GetInventoryItemDefinitionsResponse {  repeated InventoryItemDefinition inventoryItemDefinitions = 1;  string lastUpdated = 2;}
+message GetPlayerStatsForSeasonRequest {  string seasonId = 1;  string gpid = 2;}
+message GetClanMembersByIdResponse {  repeated ClanMember clanMembers = 1;}
+message AppGalleryBuyInappRequest {  string productId = 1;  string purchaseToken = 2;}
+message GetClanLogMessagesRequest {  int32 from = 1;  int32 count = 2;}
+message GetClanJoinRequestsRequest {  int32 offset = 1;  int32 length = 2;}
+message UnmountInventoryItemRequest {  int32 modifiedItemId = 1;  string modificationName = 2;}
+message GetTradesResponse {  repeated Trade trades = 1;}
+message CancelInviteRequestRequest {  string requestId = 1;}
+message SubscribeCreatorRequest {  string code = 1;}
+message VkLinkAuthResponse {  bool guestLinking = 1;}
+message CreateRequestEncryptedRequest {  string email = 1;}
+message ExecuteRecipeEncrypted2Response {  ExchangeRecipeResult exchangeResult = 1;}
+message GetClanJoinRequestsResponse {  repeated ClanJoinRequest clanJoinRequests = 1;}
+message GetTradeOpenSaleRequestsResponse {  repeated OpenRequest openRequests = 1;}
+message ReadClanLogMessagesResponse {}
+message GetClanChatMessagesResponse {  repeated ClanUserMessage clanUserMessage = 1;}
+message SetLobbyTypeRequest {  LobbyType lobbyType = 1;}
+message GetPlayerClosedJoinRequestsCountRequest {}
+message UnsubscribeRequest {  string topic = 1;}
+message GetCurrentClanStatsRequest {  bool addLeaderboardStats = 1;}
+message GetPlayerFriendByUidRequest {  string uid = 1;}
+message GetItemsRequest {  int32 from = 1;  int32 count = 2;}
+message GetClanInviteRequestsRequest {  int32 offset = 1;  int32 length = 2;}
+message OnLobbyChatMessageEvent {  string gpid = 1;  string message = 2;}
+message RequestToJoinClanRequest {  string clanId = 1;}
+message CreateLobbyWithSpectatorsResponse {  Lobby lobby = 1;}
+message GetSystemMessageDetailsResponse {  SystemMessageDetails message = 1;}
+message GetSubscribedCreatorRequest {}
+message SubscribeResponse {}
+message VkAuthRequest {  AuthVk authVk = 1;  AppVerification appVerification = 2;  DeviceInfo deviceInfo = 3;}
+message AppleIdUnLinkAuthRequest {}
+message OnClanStatsUpdatedEvent {  ClanStats clanStats = 1;  repeated ClanMemberStats clanMemberStats = 2;}
+message OnJoinRequestDeclinedEvent {}
+message DeleteSystemMessagesRequest {  repeated string messageIds = 1;  bool deleteAll = 2;}
+message SetLobbyMaxMembersResponse {}
+message GetPlayerJoinRequestsRequest {  int32 offset = 1;  int32 length = 2;}
+message GoogleAuthResponse {  GoogleAuthResponse_TicketsOneofCase ticketsCase = 3;}
+message GameCenterUnLinkAuthResponse {}
+message OnKickedMemberEvent {  string kickerMemberId = 1;  string kickedMemberId = 2;}
+message SetLobbyPhotonGameResponse {}
+message GetMarketplaceSettingsResponse {  MarketplaceSettings marketplaceSettings = 1;}
+message AssignRoleToMemberRequest {  string memberId = 1;  int32 roleId = 2;}
+message SetClanDescriptionRequest {  string description = 1;}
+message GetPlayerStatsForSeasonResponse {  repeated PlayerStat stat = 1;}
+message StorePlayerStatsResponse {  string gpid = 1;  int64 updatedDate = 2;}
+message GetClanSettingsResponse {  ClanSettings clanSettings = 1;}
+message CancelRequestRequest {  string requestId = 1;}
+message HuaweiUnLinkAuthRequest {}
+message DontAskLaterRequest {  string internalData = 1;  string context = 2;}
+message GetClanByTagResponse {  Clan clan = 1;}
+message FacebookAuthResponse {  FacebookAuthResponse_TicketsOneofCase ticketsCase = 3;}
+message JoinLobbyAsResponse {  Lobby lobby = 1;}
+message GetPlayerSettingsResponse {  PlayerSettings settings = 1;}
+message RevokePlayerInvitationToLobbyResponse {}
+message CreateClanRequest {  string tag = 1;  string name = 2;  ClanType clanType = 3;}
+message BoltIdLinkAuthRequest {  AuthBoltId authBoltId = 1;}
+message GetChatUserResponse {  ChatUser chatUser = 1;}
+message GetClanByIdResponse {  Clan clan = 1;}
+message GetLastRateGameRequest {}
+message OnOnlineStatusChangedEvent {  PlayerStatus onlineStatus = 1;}
+message GetUnreadLogMessagesCountResponse {  int32 count = 1;}
+message DeleteClosedJoinRequestResponse {}
+message DeleteFriendMsgsRequest {  string friendGpid = 1;}
+message ReadFilesResponse {  repeated Storage files = 1;}
+message SearchLobbyResponse {  repeated Lobby lobbies = 1;}
+message GetAllGameAnnouncementsResponse {  repeated GameAnnouncement announcements = 1;}
+message OnInviteRequestDeclinedEvent {}
+message GetClanLogMessagesResponse {  repeated ClanUserMessage clanUserMessage = 1;}
+message GetClanStatsRequest {  string clanId = 1;  bool addLeaderboardStats = 2;}
+message SetLobbyDataRequest {  Dictionary data = 1;}
+message SubscribeCreatorResponse {  Creator creator = 1;}
+message ReadClanChatMessagesResponse {}
+message JoinLobbyAsRequest {  string lobbyId = 1;  LobbyPlayerType playerType = 2;  string token = 3;}
+message OnPlayerAvatarChangedEvent {  string gpid = 1;  string avatarId = 2;}
+message SetOnlineStatusResponse {}
+message GetRecommendedClansRequest {  int32 count = 1;}
+message GetIdTokenResponse {  string token = 1;}
+message InvitePlayerToLobbyAsRequest {  string invitedGpid = 1;  LobbyPlayerType playerType = 2;}
+message SendFriendMsgResponse {}
+message ValidateClanTagRequest {  string tag = 1;}
+message OnReceivedSpectatorInviteToLobbyEvent {  LobbyInvite invite = 1;}
+message OnJoinedToClanEvent {  Clan clan = 1;}
+message ChangeClanTypeResponse {}
+message SetDefaultAvatarRequest {  string avatarId = 1;}
+message RateGameResponse {  int32 rate = 1;  string message = 2;  string internalData = 3;  string context = 4;  int64 timestamp = 5;  GivenReward reward = 6;}
+message OnLobbyOwnerChangedEvent {  string lobbyOwnerGpid = 1;}
+message OnLobbyMaxSpectatorsChangedEvent {  int32 maxSpectators = 1;}
+message SendFriendRequestResponse {  RelationshipStatus relationshipStatus = 1;}
+message OnInventoryChangedEvent {  repeated PlayerInventoryItem addedItems = 1;  repeated PlayerInventoryItem changedItems = 2;  repeated CurrencyAmount currencies = 3;}
+message SetPlayerFirebaseTokenRequest {  string token = 1;}
+message VkLinkAuthRequest {  AuthVk authVk = 1;}
+message RateGameRequest {  int32 rate = 1;  string message = 2;  string internalData = 3;  string context = 4;}
+message ReadSystemMessagesResponse {}
+message KickMemberResponse {}
+message SetLobbyDataResponse {}
+message GetInventoryItemPropertyDefinitionsResponse {  repeated InventoryItemPropertyDefinitions inventoryItemPropertyDefinitions = 1;  string lastUpdated = 2;}
+message GetGameSettingsEncryptedResponse {  repeated GameSetting gameSettings = 1;}
+message SendFriendRequestRequest {  string friendGpid = 1;  string msg = 2;}
+message HuaweiLinkAuthRequest {  AuthHuawei authHuawei = 1;}
+message ReadClanLogMessagesRequest {}
+message OnMemberJoinedToClanEvent {  ClanMember clanMember = 1;  JoinClanType joinClanType = 2;  string joinRequestAcceptor = 3;}
+message GetPlayerResponse {  Player player = 1;  repeated int32 permissions = 2;  string uuid = 3;  string intercomHMAC = 4;  string email = 5;}
+message CreateRequestEncryptedResponse {}
+message GetClanStatsForSeasonRequest {  string seasonId = 1;  string clanId = 2;}
+message BEBFABBECGCAFCH {  AAGDEBAFFCFGFCH AHEABGBEHEGHDED = 1;  repeated DBAFACADFEBGFED EGFBCGECDCHABCB = 2;}
+message GetCurrentStatsRequest {  bool addLeaderboardStats = 1;}
+message OnLobbyPhotonGameChangedEvent {  PhotonGame photonGame = 1;}
+message AppStoreBuyInappRequest {  string base64 = 1;  Money price = 2;  repeated ProductInfo productInfos = 3;}
+message ReleasedDlcRequest {  string version = 1;  string gameUid = 2;  Platform platform = 3;}
+message GetChatUsersLiteRequest {}
+message CreatePurchaseRequestRequest {  int32 itemDefinitionId = 1;  float price = 2;  int32 quantity = 3;}
+message GetClanStatsForSeasonResponse {  ClanStats clanStats = 1;  repeated ClanMemberStats clanMemberStats = 2;}
+message GetClanClosedInviteRequestsCountResponse {  int32 count = 1;}
+message GetPlayerProcessingRequestRequest {}
+message OnMatchFinishedEvent {  FinishedMatch match = 1;}
+message GetGameSettingsEncryptedRequest {}
+message ReadClanChatMessagesRequest {}
+message OnPlayerRequestClosedEvent {  ClosedRequest request = 1;  PlayerInventoryItem item = 2;}
+message OnLeftFromClan {  string memberId = 1;}
+message AGCBFBCDCGGECGA {  string EFBFADAAEGEDGDE = 1;  AAGDEBAFFCFGFCH AHEABGBEHEGHDED = 2;}
+message GetPlayerInventoryResponse {  PlayerInventory playerInventory = 1;}
+message GetOtherPlayerItemsResponse {  repeated PlayerInventoryItem playerInventoryItems = 1;}
+message GoogleBuyInappResponse {  PlayerInventory reward = 1;}
+message KickPlayerFromLobbyResponse {}
+message ChangeLobbyOtherPlayerTypeResponse {}
+message BuyInventoryItemRequest {  int32 inventoryItemId = 1;  int32 quantity = 2;  int32 currencyId = 3;  bool toManyItems = 4;}
+message MountInventoryItemRequest {  int32 consumedItemId = 1;  int32 modifiedItemId = 2;  string modificationName = 3;}
+message OnPlayerLeftLobbyEvent {  string leftGpid = 1;}
+message DeclineJoinRequestResponse {}
+message RemoveFriendResponse {  RelationshipStatus relationshipStatus = 1;}
+message GoogleAuthRequest {  AuthGoogle authGoogle = 1;  AppVerification appVerification = 2;  DeviceInfo deviceInfo = 3;}
+message OnPlayerKickedFromLobbyEvent {  string kickInitiatorGpid = 1;  string kickedGpid = 2;}
+message FacebookUnLinkAuthRequest {}
+message ReadFilesRequest {  repeated string filenames = 1;}
+message GACHFBFBBEHDAAD {  string GFCCADHDDFAFHFE = 1;}
+message LeaveClanResponse {}
+message AskLaterResponse {  int64 timestampAskLater = 1;  string internalData = 2;  string context = 3;  int64 timestamp = 4;}
+message SetLobbyJoinableRequest {  bool joinable = 1;}
+message AssignRoleToMemberResponse {}
+message LeaveLobbyRequest {}
+message SetAwayStatusRequest {}
+message ReadSystemMessagesRequest {  repeated string messageIds = 1;  bool readAll = 2;}
+message SetClanDescriptionResponse {}
+message OnCouponActivatedEvent {  GivenReward reward = 1;}
+message CHGACEEHFADEDHH {  bytes DCAGCDFCHBBDCDB = 1;  bytes GABAFEDDDBEGGAE = 2;  bytes CGCGBGBEGCADABH = 3;}
+message GetClanInviteRequestsResponse {  repeated ClanInviteRequest clanInviteRequests = 1;}
+message GetPlayerFriendByIdRequest {  string gpid = 1;}
+message OnClanMemberDeclinedRequestEvent {}
+message OnNewPlayerJoinedLobbyEvent {  PlayerFriend newPlayer = 1;}
+message GetLinkedAuthResponse {  repeated LinkedAuth authTypes = 1;}
+message SetLobbyOwnerRequest {  string gpid = 1;}
+message RevokeFriendRequestRequest {  string friendGpid = 1;}
+message ADHHEGBDFBEBGGC {}
+message KickMemberRequest {  string memberId = 1;  string kickingReason = 2;}
+message RecoverAccountResponse {}
+message GetPlayerGameEventsProgressesResponse {  repeated GameEventProgress gameEventsProgresses = 1;}
+message BBFGDBCEGCBFBEE {  bytes FBHHACGFCHFEEED = 1;  string FCBHCCCADBCHHGB = 2;}
+message SetPlayerNameResponse {}
+message RefuseInvitationToLobbyResponse {}
+message OnTradeRequestOpenedEvent {  OpenRequest request = 1;}
+message BlockFriendResponse {  RelationshipStatus relationshipStatus = 1;}
+message GetCurrentClanStatsResponse {  string clanId = 1;  ClanStatsMap stats = 2;  ClanStats clanStats = 3;  repeated ClanMemberStats clanMemberStats = 4;}
+message GoogleBuyInappRequest {  string json = 1;  string signature = 2;}
+message ReadFriendMsgsRequest {  string friendGpid = 1;}
+message InviteToClanRequest {  string gpid = 1;}
+message GetLinkedAuthRequest {}
+message OnLobbyNameChangedEvent {  string name = 1;}
+message OnTradeUpdatedEvent {  Trade trade = 1;}
+message SubscribeRequest {  string topic = 1;}
+message GetPlayerFriendsIdsRequest {  repeated RelationshipStatus relationshipStatuses = 1;}
+message ActivateCouponResponse {  repeated CurrencyAmount currencies = 1;  repeated PlayerInventoryItem inventoryItems = 2;}
+message BoltIdLinkAuthResponse {  bool guestLinking = 1;}
+message GetTradeOpenSaleRequestsRequest {  int32 id = 1;  int32 page = 2;  int32 size = 3;  TradeFilters tradeFilters = 4;}
+message GetUnreadChatMessagesCountResponse {  int32 count = 1;}
+message DeclineInviteRequestResponse {}
+message UnsubscribeResponse {}
+message GetClanClosedInviteRequestsCountRequest {}
+message DontAskLaterResponse {  bool dontAskLater = 1;  string internalData = 2;  string context = 3;  int64 timestamp = 4;}
+message GetClanMembersResponse {  repeated ClanMember clanMembers = 1;}
+message VkUnLinkAuthResponse {}
+message HuaweiAuthResponse {  HuaweiAuthResponse_TicketsOneofCase ticketsCase = 3;}
+message OnReadClosedInviteRequestEvent {}
+message BuyInventoryItemResponse {  repeated PlayerInventoryItem playerInventoryItems = 1;}
+message OnLobbyJoinableChangedEvent {  bool joinable = 1;}
+message ActivateCouponRequest {  string couponId = 1;}
+message GetIdTokenRequest {}
+message SetLobbyOwnerResponse {}
+message DeclineJoinRequestRequest {  string requestId = 1;}
+message FindClanResponse {  repeated Clan clan = 1;}
+message GetAchievementDefinitionsRequest {}
+message CreateLobbyWithSpectatorsRequest {  string name = 1;  LobbyType lobbyType = 2;  int32 maxMembers = 3;  int32 maxSpectators = 4;  repeated string dataVisibleInSearch = 5;}
+message HuaweiAuthRequest {  AuthHuawei authHuawei = 1;  AppVerification appVerification = 2;  DeviceInfo deviceInfo = 3;}
+message OnInvitedToClanEvent {  string requestId = 1;  Clan clan = 2;  Player player = 3;}
+message OnNewSpectatorJoinedLobbyEvent {  PlayerFriend newSpectator = 1;}
+message GetDefaultAvatarsRequest {  string lastUpdated = 1;}
+message OnFriendNameChangedEvent {  string friendGpid = 1;  string newName = 2;}
+message OnRevokeFriendshipRequestEvent {  string friendGpid = 1;}
+message OnNewSpectatorInvitedToLobbyEvent {  string inviteSenderGpid = 1;  PlayerFriend newSpectator = 2;}
+message CFCGDGEAEHDEABF {  BHBHHDGDFCHFACH EGHCDGCBDAGFAEC = 1;  string GAFABGFBEDACDEB = 2;  HGBAGDBBFADCDGA GDBDGGFADACEHGC = 3;}
+message FacebookUnLinkAuthResponse {}
+message RevokePlayerInvitationToLobbyRequest {  string revokedGpid = 1;}
+message TestAuthResponse {  TestAuthResponse_TicketsOneofCase ticketsCase = 3;}
+message ProgressChallengeRequest {  string gameEventChallengeId = 1;  int32 points = 2;}
+message GameCenterAuthResponse {  GameCenterAuthResponse_TicketsOneofCase ticketsCase = 3;}
+message AppleIdLinkAuthRequest {  AuthAppleId authAppleId = 1;}
+message GameCenterAuthRequest {  AuthGameCenter authGameCenter = 1;  AppVerification appVerification = 2;  DeviceInfo deviceInfo = 3;}
+message VkAuthResponse {  VkAuthResponse_TicketsOneofCase ticketsCase = 3;}
+message FacebookLinkAuthRequest {  AuthFacebook authFacebook = 1;}
+message OnPlayerAttributesChanged {  string gpid = 1;  Attributes attributes = 2;}
+message GetPlayerClosedRequestsResponse {  repeated ClosedRequest closedRequests = 1;}
+message ExecuteRecipeRequest {  string recipeCode = 1;  repeated int32 inventoryItemIds = 3;}
+message GetClanResponse {  Clan clan = 1;}
+message OnInAppEvent {  GivenReward reward = 1;  Store store = 2;}
+message GetPlayerFriendsResponse {  repeated PlayerFriend playerFriends = 1;}
+message GetClanStatsResponse {  string clanId = 1;  ClanStatsMap stats = 2;  ClanStats clanStats = 3;  repeated ClanMemberStats clanMemberStats = 4;}
+message AppleIdAuthResponse {  AppleIdAuthResponse_TicketsOneofCase ticketsCase = 3;}
+message AssignLeaderRoleResponse {}
+message RemoveFriendRequest {  string friendGpid = 1;}
+message GetClanChatMessagesRequest {  int32 from = 1;  int32 count = 2;}
+message BoltIdAuthRequest {  AuthBoltId authBoltId = 1;  AppVerification appVerification = 2;  DeviceInfo deviceInfo = 3;}
+message OnGamePassChangedEvent {  string eventId = 1;  int32 points = 2;  map<string, int32> levels = 3;  GivenReward reward = 4;  map<string, ListOfLevelsToClaimReward> levelsToClaimReward = 5;}
+message GameCenterLinkAuthRequest {  AuthGameCenter authGameCenter = 1;}
+message DlcResponse {  repeated Dlc dlcs = 1;  repeated string cdnUrls = 2;}
+message SetItemsModificationsRequest {  repeated ItemModifications itemsModifications = 1;}
+message OnFriendRemovedEvent {  string friendGpid = 1;}
+message BlockFriendRequest {  string friendGpid = 1;}
+message LeaveLobbyResponse {}
+message GetMarketplaceSettingsRequest {}
+message OnClanMaxMembersCountIncreased {  int32 newMembersCountValue = 1;}
+message OnClanDescriptionChangedEvent {  string description = 1;}
+message GetAllGameAnnouncementsRequest {}
+message GetPlayerProcessingRequestResponse {  repeated ProcessingRequest processingRequests = 1;}
+message GetSystemMessagesRequest {  ContinuationToken continuationToken = 1;  bool unreadOnly = 2;}
+message GetPlayerFriendByUidResponse {  PlayerFriend playerFriend = 1;}
+message InviteToClanResponse {}
+message GetInventoryItemDefinitionsRequest {  string lastUpdated = 1;}
+message AppleIdUnLinkAuthResponse {}
+message SetAwayStatusResponse {}
+message GetSystemMessageDetailsRequest {  string messageId = 1;}
+message IgnoreFriendRequestResponse {  RelationshipStatus relationshipStatus = 1;}
+message GetPlayerInviteRequestsCountRequest {}
+message GetPlayerClosedRequestsRequest {  MarketRequestType type = 1;  ClosingReason reason = 2;  int32 page = 3;  int32 size = 4;}
+message GetSubscribedCreatorResponse {  Creator creator = 1;}
+message OnLobbyGameServerChangedEvent {  GameServer gameServer = 1;}
+message UnblockFriendRequest {  string friendGpid = 1;}
+message GetPlayerJoinRequestsResponse {  repeated ClanJoinRequest clanJoinRequests = 1;}
+message GetRolesResponse {  repeated ClanMemberRole clanMemberRole = 1;}
+message ValidateClanTagResponse {}
+message ValidateClanNameRequest {  string name = 1;}
+message OnProgressChallengeEvent {  string gameEventChallengeId = 1;  bool challengeCompleted = 2;  int32 challengePoints = 3;  GivenReward challengeReward = 4;  string gameEventId = 5;  int32 eventPoints = 6;  map<string, int32> eventLevels = 7;  GivenReward eventReward = 8;  map<string, ListOfLevelsToClaimReward> levelsToClaimReward = 9;  bool challengeRewardsObtained = 10;}
+message FindCreatorRequest {  string code = 1;}
+message GetClanByTagRequest {  string tag = 1;}
+message OnFriendAvatarChangedEvent {  string friendGpid = 1;  string avatarId = 2;}
+message OnLobbyMaxMembersChangedEvent {  int32 maxMembers = 1;}
+message OnClanTypeChanged {  ClanType newClanType = 1;}
+message OnTradeRequestClosedEvent {  ClosedRequest request = 1;}
+message OnMsgFromFriendEvent {  UserMessage message = 1;}
+message GetStatsForSeasonRequest {  string seasonId = 1;}
+message SendLobbyChatMsgRequest {  string message = 1;}
+message Handshake {  string ticket = 1;}
+message OnFriendAddedEvent {  PlayerFriend friend = 1;}
+message GetRolesRequest {}
+message SetDefaultAvatarResponse {}
+message SetItemsModificationsResponse {}
+message GetTradeRequest {  int32 id = 1;}
+message OnAssignedLeaderRoleEvent {  int32 oldLeaderRole = 1;  string newLeaderId = 2;}
+message RevokeFriendRequestResponse {  RelationshipStatus relationshipStatus = 1;}
+message OnRevokeInviteToLobbyEvent {  string inviteSenderGpid = 1;  string invitedGpid = 2;}
+message DeleteAccountResponse {  string email = 1;  int32 daysLeft = 2;}
+message CancelRequestResponse {}
+message SetLobbyMaxSpectatorsResponse {}
+message GetPlayerInviteRequestsResponse {  repeated ClanInviteRequest clanInviteRequests = 1;}
+message OnNewFriendshipRequestEvent {  PlayerFriend friend = 1;  string msg = 2;}
+message GetCurrentClanStatsForSeasonRequest {  string seasonId = 1;}
+message FindCreatorResponse {  Creator creator = 1;}
+message PreviewDlcRequest {}
+message UnmountInventoryItemResponse {  PlayerInventoryItem unmountedItem = 1;}
+message SetPlayerNameRequest {  string newName = 1;}
+message OnClanAvatarChangedEvent {  string avatarId = 1;  bytes avatar = 2;}
+message CountUnreadSystemMessagesResponse {  int32 count = 1;}
+message MountInventoryItemResponse {  PlayerInventoryItem modifiedItem = 1;  PlayerInventoryItem unmountedItem = 2;}
+message GetDefaultAvatarsResponse {  repeated DefaultAvatar avatars = 1;  string lastUpdated = 2;}
+message GetTradesRequest {  repeated int32 itemDefinitionIds = 1;}
+message AppleIdAuthRequest {  AuthAppleId authAppleId = 1;  AppVerification appVerification = 2;  DeviceInfo deviceInfo = 3;}
+message RecoverAccountRequest {}
+message GoogleLinkAuthRequest {  AuthGoogle authGoogle = 1;}
+message GetRecommendedClansResponse {  repeated Clan clan = 1;}
+message GetPlayerAchievementsRequest {  string gpid = 1;  bool showLocked = 2;}
+message GetChatUserRequest {  string friendGpid = 1;}
+message GoogleLinkAuthResponse {  bool guestLinking = 1;}
+message StorePlayerStats {  string gpid = 1;  repeated StorePlayerStat stats = 2;  string seasonId = 4;}
+message RateContext {  string id = 1;  string data = 2;}
+message RewardInfo {  repeated InventoryItemAmount items = 1;  repeated CurrencyAmount currencies = 2;  repeated RecipeInfo recipes = 3;}
+message PlayerStatus {  string gpid = 1;  PlayInGame playInGame = 2;  OnlineStatus onlineStatus = 3;}
+message ClanStats {  string clanId = 1;  repeated ClanStat stats = 2;  string seasonId = 3;}
+message ClanMemberStats {  string gpid = 1;  repeated ClanMemberStat stats = 2;  int64 version = 3;}
+message Stats {  repeated PlayerStat stat = 1;  string seasonId = 3;  int64 updatedDate = 4;}
+message ItemFlags {  map<int32, int32> flags = 1;}
+message CurrencyAmount {  int32 currencyId = 1;  int32 oldValue = 2;  float value = 3;}
+message PlayerInventoryItem {  int32 id = 1;  int32 itemDefinitionId = 2;  int32 quantity = 3;  int32 flags = 4;  int64 date = 5;  map<string, ItemModificationValue> modifications = 6;  BlockedAction block = 7;}
+message Lobby {  string id = 1;  string ownerGpid = 2;  string name = 3;  LobbyType lobbyType = 4;  bool joinable = 5;  int32 maxMembers = 6;  map<string, string> data = 7;  repeated PlayerFriend members = 8;  repeated PlayerFriend invites = 9;  GameServer gameServer = 10;  PhotonGame photonGame = 11;  int32 maxSpectators = 12;  repeated PlayerFriend spectators = 13;  repeated PlayerFriend spectatorInvites = 14;  int32 numberOfMembers = 15;  int32 numberOfSpectators = 16;  string token = 17;}
+message LobbyInvite {  string lobbyId = 1;  PlayerFriend inviteSender = 2;  int64 date = 3;  LobbyPlayerType playerType = 4;  string lobbyName = 5;}
+message Offset {  int32 offset = 1;  int32 length = 2;}
+message AAGDEBAFFCFGFCH {  repeated HGGCCFDEHCGDEAD GHEGBECBCEBHBDF = 1;  string EBGDDAACACBFAED = 2;  string ACHAFHDFCCBHDFD = 3;}
+message Dictionary {  map<string, string> content = 1;}
+message GivenReward {  repeated PlayerInventoryItem items = 1;  repeated CurrencyAmount currencies = 2;  repeated PlayerInventoryItem changedItems = 3;  repeated StatAmount stats = 4;}
+message ClanUserMessage {  string id = 1;  int64 timestamp = 2;  MessageType messageType = 3;  ClanChatMessage chatMessage = 4;  ClanLogMessage logMessage = 6;}
+message SystemMessageDetails {  string messageId = 1;  SystemMessageType type = 2;  int64 created = 3;  int64 deleteAt = 4;  SMAchievementUnlocked achievementUnlocked = 5;  SMAvatarRejected avatarRejected = 6;  SMClanMembershipAccepted clanMembershipAccepted = 7;  SMClanMembershipEnded clanMembershipEnded = 8;  SMDevelopersMessageReceived developersMessageReceived = 9;  SMFriendshipRequestAccepted friendshipRequestAccepted = 10;  SMGiftReceived giftReceived = 11;  SMMarketplaceTransactionReverted marketplaceTransactionReverted = 12;  SMMatchesCanceled matchesCanceled = 13;  SMGlobalBanReceived globalBanReceived = 14;  SMReportedPlayersBanned reportedPlayersBanned = 15;  SMSeasonFinished seasonFinished = 16;  SMMarketplaceBanReceived marketplaceBanReceived = 17;  SMChatBanReceived chatBanReceived = 18;  SMMatchesRestored matchesRestored = 19;  SMInAppSucceed inAppSucceed = 20;  SMNewDeviceLogined newDeviceLogined = 21;}
+message OpenRequest {  string id = 1;  Player creator = 2;  int32 itemDefinitionId = 3;  float price = 4;  int64 createDate = 5;  MarketRequestType type = 6;  int32 quantity = 7;  map<string, ItemModificationValue> modifications = 8;  bool isCreator = 9;}
+message ProgressGameEventContext {  ProgressGameEventType type = 1;}
+message ListOfLevelsToClaimReward {  repeated int32 levels = 1;}
+message Item {  string id = 1;  string definitionId = 2;  string gpid = 3;  string itemText = 4;  int64 timestamp = 5;}
+message PlayerSettings {  map<string, string> settings = 1;}
+message PlayerFriend {  Player player = 1;  RelationshipStatus relationshipStatus = 2;  int64 lastRelationshipUpdate = 3;  string msg = 4;}
+message AuthFacebook {  string gameId = 1;  string gameVersion = 2;  Platform platform = 3;  string token = 4;  string locale = 5;  Store store = 6;}
+message AppVerification {  bool isRooted = 1;  string apkHash = 2;  repeated string jsonForbiddenApps = 3;  string path = 4;  string contentHash = 5;  map<string, string> appSnapshot = 6;  bytes n = 7;  bytes e = 8;  EnvironmentInfo environment = 9;  string token = 10;}
+message DeviceInfo {  string deviceId = 1;  string deviceModel = 2;  string adsId = 3;}
+message Clan {  string id = 1;  string name = 2;  string tag = 3;  ClanType clanType = 4;  string avatarId = 5;  int64 createDate = 6;  int32 mebersCount = 7;  int32 maxMemberCount = 8;  string description = 9;}
+message UserMessage {  string senderGpid = 1;  string message = 2;  int64 timestamp = 3;  bool isRead = 4;}
+message PlayerStat {  string name = 1;  int32 intValue = 2;  float floatValue = 3;  float window = 4;  StatDefType type = 5;  int64 longValue = 6;}
+message Trade {  int32 id = 1;  int32 salesCount = 2;  int32 purchasesCount = 3;  float salesPrice = 4;  float purchasesPrice = 5;}
+message Player {  string gpid = 1;  string uid = 2;  string name = 3;  string avatarId = 4;  int32 timeInGame = 5;  PlayerStatus playerStatus = 6;  int64 logoutDate = 7;  int64 registrationDate = 8;  Attributes attributes = 9;  string testerRole = 10;  repeated PlayerBan bans = 11;  bool deleted = 12;  repeated int32 tags = 13;  bool guest = 14;}
+message SystemMessagePreview {  string messageId = 1;  SystemMessageType type = 2;  bool isRead = 3;  int64 created = 4;  int64 deleteAt = 5;}
+message SpecialOffer {  string id = 1;  string title = 2;  string body = 3;  string resourceUrl = 4;  OfferType type = 5;  InAppOffer inappOffer = 6;  StoreOffer storeOffer = 7;  int64 dateUntil = 8;  int32 offersCount = 9;  int64 dateSince = 10;  repeated Property settings = 11;  string key = 12;}
+message PhotonGame {  string region = 1;  string roomId = 2;  string appVersion = 3;  map<string, string> customProperties = 4;}
+message PlayerAchievement {  string id = 1;  string key = 2;  LocalizedTitle title = 3;  string imageLocked = 4;  string imageUnlocked = 5;  int32 progressCurrent = 6;  int32 progressTarget = 7;  int64 unlockDate = 8;}
+message AuthTest {  string gameId = 1;  string gameVersion = 2;  Platform platform = 3;  string token = 4;  string locale = 5;  Store store = 6;}
+message ChatUserLite {  string friendGpid = 1;  string groupId = 2;  string message = 3;  int64 timestamp = 4;  int32 unreadMsgsCount = 5;}
+message Filter {  string name = 1;  int32 intValue = 2;  float floatValue = 3;  string stringValue = 4;  Comparison comparison = 5;  repeated string stringsValue = 6;}
+message PlayerStats {  string gpid = 1;  Stats stats = 2;}
+message AchievementDefinition {  string id = 1;  string key = 2;  LocalizedTitle title = 3;  string imageLocked = 4;  string imageUnlocked = 5;}
+message PlayerInventory {  repeated CurrencyAmount currencies = 1;  repeated PlayerInventoryItem inventoryItems = 2;}
+message GameEventDefinition {  string id = 1;  string code = 2;  int64 dateSince = 3;  int64 dateUntil = 4;  int32 durationDays = 5;  repeated GamePassDefinition gamePasses = 6;  repeated ChallengeDefinition challenges = 7;  repeated Property settings = 8;  LocalizedTitle title = 9;}
+message InventoryItemDefinition {  int32 id = 1;  string displayName = 2;  map<string, string> properties = 3;  repeated CurrencyAmount buyPrice = 4;  repeated CurrencyAmount sellPrice = 5;  bool canBeTraded = 6;  map<string, InventoryItemPropertyDefinition> definitions = 7;  int32 maxStackSize = 8;}
+message ClanMember {  PlayerFriend playerFriend = 1;  string clanId = 2;  int32 roleId = 3;  int64 createDate = 4;}
+message ExchangeRecipeResult {  repeated CurrencyAmount currencies = 1;  repeated PlayerInventoryItem addedItems = 2;  repeated PlayerInventoryItem changedItems = 3;  repeated StatAmount stats = 4;}
+message ClanJoinRequest {  string id = 1;  Clan clan = 2;  Player requestSender = 3;  int64 createDate = 4;  int64 closeDate = 5;  RequestType requestType = 6;}
+message AuthVk {  string gameId = 1;  string gameVersion = 2;  Platform platform = 3;  string authCode = 4;  string locale = 5;  Store store = 6;}
+message MarketplaceSettings {  float commissionPercent = 1;  float minCommission = 2;  int32 currencyId = 3;  bool enabled = 4;  Banned banned = 6;}
+message ClanSettings {  int32 initialMembersCount = 1;  int32 membersCountLimit = 2;  CurrencyAmount membercCountUpgradeCost = 3;  CurrencyAmount changeClanNameOrTagCost = 4;  CurrencyAmount clanCreateCost = 5;}
+message AuthBoltId {  string gameId = 1;  string gameVersion = 2;  Platform platform = 3;  string token = 4;  string locale = 5;  Store store = 6;}
+message ChatUser {  PlayerFriend player = 1;  Group group = 2;  string message = 3;  int64 timestamp = 4;  int32 unreadMsgsCount = 5;}
+message Storage {  string filename = 1;  bytes file = 2;  string gpid = 3;  string token = 4;}
+message GameAnnouncement {  string id = 1;  string title = 2;  string body = 3;  string resourceUrl = 4;  int64 date = 5;  repeated ExternalLink links = 6;  repeated string tags = 7;  bool pinned = 8;  repeated Property properties = 9;  string code = 10;  int64 untilDate = 11;}
+message Creator {  string code = 1;  string nickName = 2;  int64 until = 3;}
+message InventoryItemPropertyDefinitions {  int32 itemDefinitionId = 1;  map<string, InventoryItemPropertyDefinition> definitions = 2;}
+message GameSetting {  string key = 1;  string value = 2;  int32 intValue = 3;  float floatValue = 4;  bool boolValue = 5;  SettingType type = 6;  int64 longValue = 7;}
+message AuthHuawei {  string gameId = 1;  string gameVersion = 2;  Platform platform = 3;  string idToken = 4;  string locale = 5;  Store store = 6;}
+message DBAFACADFEBGFED {  string EFBFADAAEGEDGDE = 1;  string GDDFHAECBGFDBEB = 2;  bool GACEFFAGBAAAHCA = 3;  bool ACFGFHBDBDDECDC = 4;  string GFDFFBHBEDFDCFA = 5;}
+message Money {  string currencyCode = 1;  int64 units = 2;  int32 nanos = 3;}
+message ProductInfo {  string productId = 1;  Money price = 2;  string country = 3;}
+message FinishedMatch {  string matchId = 1;  MatchType matchType = 2;  string creatorGpid = 3;  string region = 4;  string version = 5;  int64 startDate = 6;  int64 finishDate = 7;  string seasonId = 8;  MatchState state = 9;  repeated Property properties = 10;  repeated MatchPlayer players = 11;  repeated MatchClan clans = 12;}
+message ClosedRequest {  string id = 1;  string originId = 2;  Player creator = 3;  int32 itemDefinitionId = 4;  float price = 5;  int64 createDate = 6;  int64 closeDate = 7;  MarketRequestType type = 8;  Player partner = 9;  string partnerRequestId = 10;  ClosingReason reason = 11;  int32 quantity = 12;  map<string, ItemModificationValue> modifications = 13;}
+message AuthGoogle {  string gameId = 1;  string gameVersion = 2;  Platform platform = 3;  string authCode = 4;  string locale = 5;  Store store = 6;}
+message ClanInviteRequest {  string id = 1;  Clan clan = 2;  Player requestSender = 3;  int64 createDate = 4;  int64 closeDate = 5;  RequestType requestType = 6;  Player invitedPlayer = 7;}
+message LinkedAuth {  AuthType authType = 1;  bool primary = 2;}
+message GameEventProgress {  string id = 1;  int32 points = 2;  repeated GamePassProgress gamePassProgresses = 3;  repeated ChallengeProgress challengeProgresses = 4;  int32 currentDay = 5;}
+message ClanStatsMap {  map<string, ClanStat> stats = 1;}
+message TradeFilters {  map<string, OperationValuePair> filters = 1;}
+message HGBAGDBBFADCDGA {  repeated DBAFACADFEBGFED GBBHBHFEGFDBFDC = 1;}
+message AuthAppleId {  string gameId = 1;  string gameVersion = 2;  Platform platform = 3;  string identityToken = 4;  string defaultName = 5;  string locale = 6;  Store store = 7;}
+message AuthGameCenter {  string gameId = 1;  string gameVersion = 2;  Platform platform = 3;  string gpid = 4;  string bundleId = 5;  string publicKeyUrl = 6;  bytes signature = 7;  bytes salt = 8;  int64 timestamp = 9;  string defaultName = 10;  string locale = 11;  Store store = 12;}
+message Attributes {  map<string, Attribute> map = 1;}
+message Dlc {  string key = 1;  string name = 2;  repeated Property properties = 3;  repeated DlcFile files = 4;}
+message ItemModifications {  int32 id = 1;  map<string, ItemModificationValue> modifications = 2;}
+message ProcessingRequest {  string id = 1;  int32 itemDefinitionId = 2;  float price = 3;  int64 createDate = 4;  MarketRequestType type = 5;  string saleRequestId = 6;  ProcessingState state = 7;  int32 quantity = 8;  map<string, ItemModificationValue> modifications = 9;}
+message ContinuationToken {  int32 length = 1;  string token = 2;}
+message GameServer {  string id = 1;  string ip = 2;  int32 port = 3;}
+message ClanMemberRole {  int32 id = 1;  string name = 2;  int32 level = 3;  string descripption = 4;  repeated ClanMemberRolePermission permissions = 5;}
+message DefaultAvatar {  string avatarId = 1;}
+message StorePlayerStat {  string name = 1;  int32 storeInt = 2;  float storeFloat = 3;  int64 storeLong = 4;}
+message InventoryItemAmount {  int32 inventoryItemDefinitionId = 1;  int32 value = 2;}
+message RecipeInfo {  string recipe = 1;  repeated ExchangeEntity entities = 2;}
+message PlayInGame {  string gameCode = 1;  string gameVersion = 2;  string lobbyId = 3;  PhotonGame photonGame = 4;  string lobbyName = 5;}
+message ClanStat {  StatDefType type = 1;  int32 intValue = 2;  float floatValue = 3;  int64 longValue = 4;  string statId = 5;}
+message ClanMemberStat {  string statId = 1;  StatDefType type = 2;  int32 intValue = 3;  float floatValue = 4;  int64 longValue = 5;}
+message ItemModificationValue {  PropertyType type = 1;  int32 intValue = 2;  float floatValue = 3;  string stringValue = 4;  bool booleanValue = 5;}
+message BlockedAction {  bool blockMarketplace = 1;  int64 blockMarketplaceUntil = 2;}
+message HGGCCFDEHCGDEAD {  repeated HGBAGDBBFADCDGA AAGADDEGFDDEABE = 1;}
+message StatAmount {  string statId = 1;  PropertyType propertyType = 2;  int32 intValue = 3;  float floatValue = 4;  int64 longValue = 5;}
+message ClanChatMessage {  string senderGpid = 1;  string message = 2;}
+message ClanLogMessage {  int32 clanLogType = 1;  int32 changedClanType = 2;  string changedClanName = 3;  string changedClanTag = 4;  string primaryMember = 5;  string secondaryMember = 6;  int32 changedMaxMemberCount = 7;  int32 assignedRole = 8;}
+message SMAchievementUnlocked {  string key = 1;  string imageUnlocked = 2;  LocalizedTitle title = 3;}
+message SMAvatarRejected {}
+message SMClanMembershipAccepted {  string tag = 1;  string name = 2;  string avatarId = 3;  bool clanAlreadyDeleted = 4;}
+message SMClanMembershipEnded {  string tag = 1;  string name = 2;  string avatarId = 3;  bool clanAlreadyDeleted = 4;}
+message SMDevelopersMessageReceived {  string message = 1;  map<string, string> properties = 2;}
+message SMFriendshipRequestAccepted {  string playerId = 1;  string uid = 2;  string name = 3;  string avatarId = 4;  bool playerAlreadyDeleted = 5;}
+message SMGiftReceived {  repeated PlayerInventoryItem playerInventoryItem = 1;  repeated CurrencyAmount currencyAmount = 2;}
+message SMMarketplaceTransactionReverted {  MarketRequestType requestType = 1;  int32 itemDefinitionId = 2;  map<string, ItemModificationValue> modifications = 3;  int32 quantity = 4;  float price = 5;  int64 closeDate = 6;}
+message SMMatchesCanceled {  repeated FinishedMatch matches = 1;}
+message SMGlobalBanReceived {  int32 code = 1;  string message = 2;  int64 until = 3;}
+message SMReportedPlayersBanned {  int32 count = 1;}
+message SMSeasonFinished {  string seasonId = 1;  repeated PlayerInventoryItem items = 2;  repeated CurrencyAmount currencies = 3;  repeated PlayerStat playerStats = 4;  repeated ClanStat clanStats = 5;  repeated ClanMemberStat clanMemberStats = 6;}
+message SMMarketplaceBanReceived {  int32 code = 1;  string message = 2;  int64 until = 3;}
+message SMChatBanReceived {  int32 code = 1;  string message = 2;  int64 until = 3;}
+message SMMatchesRestored {  repeated FinishedMatch matches = 1;}
+message SMInAppSucceed {  repeated string productId = 1;}
+message SMNewDeviceLogined {  string deviceModel = 1;  string country = 2;  string ip = 3;}
+message EnvironmentInfo {  int32 version = 1;  bytes environment = 2;}
+message PlayerBan {  int32 banCode = 1;  string message = 2;  int64 until = 3;  BanScope banScope = 4;}
+message InAppOffer {  string productId = 1;  RewardInfo reward = 2;}
+message StoreOffer {  string itemPackId = 1;  repeated CurrencyAmount currencyAmounts = 2;  RewardInfo reward = 3;}
+message Property {  string name = 1;  PropertyType type = 2;  Property_ValueOneofCase valueCase = 7;}
+message LocalizedTitle {  string name = 1;  string description = 2;  string resourceUrl = 3;}
+message GamePassDefinition {  string id = 1;  string code = 2;  int32 keyItemDefinitionId = 3;  repeated GamePassLevel levels = 4;}
+message ChallengeDefinition {  string gameEventChallengeId = 1;  string gameEventId = 2;  string code = 3;  int32 keyItemDefinitionId = 4;  LocalizedTitle localizedTitle = 5;  string action = 6;  DayRange dayRange = 7;  string type = 8;  int32 eventPoints = 9;  int32 targetPoints = 10;  RewardInfo reward = 11;}
+message InventoryItemPropertyDefinition {  string name = 1;  PropertyType propertyType = 2;  bool saveInTrade = 3;  PropertySetByType setByType = 4;  RetrievableType retrievable = 5;  int32 boundExclusive = 6;}
+message Banned {  bool banned = 1;  int64 untilDate = 2;}
+message Group {  string id = 1;  string name = 2;  string avatarId = 3;  repeated Player players = 4;}
+message ExternalLink {  ExternalPlatform platform = 1;  string url = 2;}
+message MatchPlayer {  string gpid = 1;  string uid = 2;  string name = 3;  string avatarId = 4;  repeated Property properties = 5;  MatchPlayerReward reward = 6;  bool deleted = 7;}
+message MatchClan {  string clanId = 1;  string clanName = 2;  string clanTag = 3;  string avatarId = 4;  repeated MatchPlayer players = 5;  repeated Property properties = 6;  MatchClanReward reward = 7;}
+message GamePassProgress {  string id = 1;  int32 currentLevel = 2;  repeated int32 levelsToClaimReward = 3;}
+message ChallengeProgress {  string id = 1;  int32 points = 2;  bool completed = 3;  bool rewardsObtained = 4;}
+message OperationValuePair {  OperationValuePair_Types_Operation operation = 2;  OperationValuePair_ValueOneofCase valueCase = 4;}
+message Attribute {  PropertyType type = 1;  int32 int = 2;  float float = 3;  string string = 4;  bool boolean = 5;}
+message DlcFile {  repeated string resourceUrls = 1;  int64 fileSizeInBytes = 2;  string signature = 3;  repeated Property properties = 4;  string fileName = 5;}
+message ExchangeEntity {  repeated InventoryItemAmount items = 1;  repeated CurrencyAmount currencies = 2;}
+message GamePassLevel {  int32 level = 1;  int32 minPoints = 2;  RewardInfo reward = 3;  int32 reoccurringPoints = 4;}
+message DayRange {  int32 from = 1;  int32 to = 2;}
+message MatchPlayerReward {  repeated PlayerStat stats = 1;}
+message MatchClanReward {  ClanStats stats = 1;}

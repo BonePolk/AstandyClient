@@ -1,0 +1,25 @@
+site_name: Astandy Docs
+
+theme:
+  name: "readthedocs"
+
+plugins:
+- search
+- mkdocstrings:
+    handlers:
+      python:
+        options:
+          inherited_members: true
+          docstring_style: sphinx
+          show_source: false
+
+nav:
+  - Welcome to Astandy: index.md
+  - User Guide:
+    - Examples: examples.md
+    - Migration: migration.md
+  - Reference: 
+    - Standart: reference.md
+    - Raw: raw.md
+  - About:
+    - Changelog: changelog.md

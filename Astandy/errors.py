@@ -1,0 +1,1 @@
+class AstandyRPCException(Exception): pass

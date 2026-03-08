@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["Astandy"]
+
+[project]
+name = "astandy"
+version = "0.2.4"
+authors = [
+  { name="BonePolk", email="bonepolk@gmail.com" },
+]
+description = "Astandy is so2 game client"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography==44.0.0",
+    "lz4",
+    "protobuf==5.29.3",
+    "python-socks[asyncio]"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]

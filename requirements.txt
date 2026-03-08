@@ -1,0 +1,4 @@
+cryptography==44.0.0
+lz4
+python-socks[asyncio]
+protobuf==5.29.3

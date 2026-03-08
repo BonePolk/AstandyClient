@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package Astandy.Base;
+
+message BinaryValue {
+    bool isNull = 1;
+    repeated bytes array = 2;
+    bytes one = 3;
+}
+
+message ClientMsg {
+    string id = 1;
+    string cls = 2;
+    string func = 3;
+    repeated BinaryValue data = 4;
+    uint32 code = 5;
+}
+
+message Exception {
+    int64 at = 1;
+    int64 code = 2;
+    map<string, string> properties = 3;
+}
+
+message Response {
+    string id = 1;
+    Exception exception = 2;
+    repeated BinaryValue data = 3;
+}
+
+message Event {
+    string listener = 1;
+    string event = 2;
+    BinaryValue params = 3;
+    int64 code = 4;
+}
+
+message CompressedInstance {
+    uint64 uncompressed_size = 1;
+    bytes compressed = 2;
+}
+
+message ServerMsg {
+    repeated Response responses = 1;
+    repeated Event events = 2;
+    repeated CompressedInstance compressed_instances = 3;
+}

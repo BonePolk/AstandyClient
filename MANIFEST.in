@@ -1,0 +1,2 @@
+recursive-include Astandy *.py
+recursive-include Astandy *.pyi
