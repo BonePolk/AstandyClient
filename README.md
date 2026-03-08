@@ -10,7 +10,7 @@ pip install astandy
 
 ## Usage example
 
-You need to get handshake for your game account and push it as \_\_handshake\_\_
+You need to obtain handshake for your game account and push it as \_\_handshake\_\_
 
 ```
 import asyncio
@@ -40,3 +40,13 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 ```
+
+There also some docs on [readthedocs](https://astandyclient.readthedocs.io/en/latest/)
+
+## About handshake
+
+There some limitation with handshake:
+
+- AxleBolt always try to fix ways to obtain handshake of account and also can add some new limitations
+- Only one active handshake per account (If you log into the official Standoff 2 game client, your current session will be invalidated, and you will need to perform a new handshake.)
+- Handshake have limited lifetime 
