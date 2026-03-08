@@ -8,7 +8,7 @@ An *unofficial python client* for the Standoff 2 game
 
 ## Installation
 
-```
+```bash
 pip install astandy
 ```
 
@@ -16,7 +16,7 @@ pip install astandy
 
 You need to obtain handshake for your game account and pass it to client
 
-```
+```python
 import asyncio
 
 from Astandy import StandClient
