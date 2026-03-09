@@ -3,7 +3,6 @@
 An *unofficial python client* for the Standoff 2 game
 
 📢 **News: [Project Telegram Channel](https://t.me/astandy_api)**
-
 📚 **Documentation: [readthedocs](https://astandyclient.readthedocs.io/en/latest/)**
 
 ## Installation
