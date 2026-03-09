@@ -65,4 +65,4 @@ Also i am planning to release application for analyzing the official Standoff 2 
 
 ## Supported RPC methods
 
-There not all supported rpc methods implemented. I am already fix tools to autogen all rpc methods from game dump and i am planning to add them later.
+There not all supported rpc methods implemented. I am already fixed tools to autogen all rpc methods from game dump and i am planning to add them later.
