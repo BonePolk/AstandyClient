@@ -6,11 +6,10 @@ An *unofficial python client* for the Standoff 2 game
 
 📢 **News: [Project Telegram Channel](https://t.me/astandy_api)**
 📚 **Documentation: [readthedocs](https://astandyclient.readthedocs.io/en/latest/)**
-🦊 **Author of Fork: [Telegram Channel](https://t.me/fopzo)**
 ## Installation
 
 ```bash
-pip install https://github.com/punchbiter/AstandyClient/archive/refs/heads/main.zip
+pip install astandy
 ```
 
 ## Usage example
