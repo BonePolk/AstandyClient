@@ -1,4 +1,3 @@
-from .metadata import API_METHODS, API_METHODS_BY_SERVICE
 from Astandy.types.rpc_target import RpcTarget
 from .events import (
     GENERATED_UPDATES,
@@ -50,8 +49,6 @@ class Generated(GeneratedServices, GeneratedEvents):
 
 
 __all__ = [
-    "API_METHODS",
-    "API_METHODS_BY_SERVICE",
     "GENERATED_UPDATES",
     "GENERATED_UPDATES_BY_NAME",
     "UPDATE_INDEX",

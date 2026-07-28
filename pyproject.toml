@@ -7,9 +7,9 @@ include = ["Astandy*"]
 
 [project]
 name = "astandy"
-version = "0.3"
+version = "0.3.0.post2"
 authors = [
-  { name="BonePolk", email="bonepolk@gmail.com" },
+  { name="BonePolk", email="bonepolk@gmail.com" }
 ]
 description = "Astandy is so2 game client"
 readme = "README.md"

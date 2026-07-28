@@ -46,6 +46,25 @@ class Exception(_message.Message):
     properties: _containers.ScalarMap[str, str]
     def __init__(self, at: _Optional[int] = ..., code: _Optional[int] = ..., properties: _Optional[_Mapping[str, str]] = ...) -> None: ...
 
+class ExceptionExplained(_message.Message):
+    __slots__ = ("at", "code", "properties", "description")
+    class PropertiesEntry(_message.Message):
+        __slots__ = ("key", "value")
+        KEY_FIELD_NUMBER: _ClassVar[int]
+        VALUE_FIELD_NUMBER: _ClassVar[int]
+        key: str
+        value: str
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[str] = ...) -> None: ...
+    AT_FIELD_NUMBER: _ClassVar[int]
+    CODE_FIELD_NUMBER: _ClassVar[int]
+    PROPERTIES_FIELD_NUMBER: _ClassVar[int]
+    DESCRIPTION_FIELD_NUMBER: _ClassVar[int]
+    at: int
+    code: int
+    properties: _containers.ScalarMap[str, str]
+    description: str
+    def __init__(self, at: _Optional[int] = ..., code: _Optional[int] = ..., properties: _Optional[_Mapping[str, str]] = ..., description: _Optional[str] = ...) -> None: ...
+
 class Response(_message.Message):
     __slots__ = ("id", "exception", "data")
     ID_FIELD_NUMBER: _ClassVar[int]

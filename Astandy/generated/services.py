@@ -54,7 +54,7 @@ class HelloRemoteService:
 
     @staticmethod
     def helloRequest(request: hello_message_pb2.HelloRequest):
-        return RpcTarget(HelloRemoteService._hello_CODE, 'HelloRemoteService', HelloRemoteService._hello_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(HelloRemoteService._hello_CODE, 'HelloRemoteService', HelloRemoteService._hello_METHOD, request.SerializeToString())
 
     @staticmethod
     def helloResponse(response) -> hello_message_pb2.HelloResponse:
@@ -78,7 +78,7 @@ class AvatarRemoteService:
 
     @staticmethod
     def getAvatars2Request(request: common_message_pb2.GetAvatarsRequest):
-        return RpcTarget(AvatarRemoteService._getAvatars2_CODE, 'AvatarRemoteService', AvatarRemoteService._getAvatars2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(AvatarRemoteService._getAvatars2_CODE, 'AvatarRemoteService', AvatarRemoteService._getAvatars2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getAvatars2Response(response) -> common_message_pb2.GetAvatarsResponse:
@@ -95,7 +95,7 @@ class AvatarRemoteService:
 
     @staticmethod
     def getDefaultAvatarsRequest(request: avatar_message_pb2.GetDefaultAvatarsRequest):
-        return RpcTarget(AvatarRemoteService._getDefaultAvatars_CODE, 'AvatarRemoteService', AvatarRemoteService._getDefaultAvatars_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(AvatarRemoteService._getDefaultAvatars_CODE, 'AvatarRemoteService', AvatarRemoteService._getDefaultAvatars_METHOD, request.SerializeToString())
 
     @staticmethod
     def getDefaultAvatarsResponse(response) -> avatar_message_pb2.GetDefaultAvatarsResponse:
@@ -145,7 +145,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def getPlayerById3Request(request: player_message_pb2.GetPlayerByIdRequest):
-        return RpcTarget(PlayerRemoteService._getPlayerById3_CODE, 'PlayerRemoteService', PlayerRemoteService._getPlayerById3_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._getPlayerById3_CODE, 'PlayerRemoteService', PlayerRemoteService._getPlayerById3_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerById3Response(response) -> player_message_pb2.GetPlayerByIdResponse:
@@ -162,7 +162,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def deleteAccountByPermissionRequest(request: player_message_pb2.DeleteAccountByPermissionRequest):
-        return RpcTarget(PlayerRemoteService._deleteAccountByPermission_CODE, 'PlayerRemoteService', PlayerRemoteService._deleteAccountByPermission_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._deleteAccountByPermission_CODE, 'PlayerRemoteService', PlayerRemoteService._deleteAccountByPermission_METHOD, request.SerializeToString())
 
     @staticmethod
     def deleteAccountByPermissionResponse(response) -> player_message_pb2.DeleteAccountByPermissionResponse:
@@ -179,7 +179,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def setDefaultAvatarRequest(request: player_message_pb2.SetDefaultAvatarRequest):
-        return RpcTarget(PlayerRemoteService._setDefaultAvatar_CODE, 'PlayerRemoteService', PlayerRemoteService._setDefaultAvatar_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._setDefaultAvatar_CODE, 'PlayerRemoteService', PlayerRemoteService._setDefaultAvatar_METHOD, request.SerializeToString())
 
     @staticmethod
     def setDefaultAvatarResponse(response) -> player_message_pb2.SetDefaultAvatarResponse:
@@ -196,7 +196,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def getPlayerByUidRequest(request: player_message_pb2.GetPlayerByUidRequest):
-        return RpcTarget(PlayerRemoteService._getPlayerByUid_CODE, 'PlayerRemoteService', PlayerRemoteService._getPlayerByUid_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._getPlayerByUid_CODE, 'PlayerRemoteService', PlayerRemoteService._getPlayerByUid_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerByUidResponse(response) -> player_message_pb2.GetPlayerByUidResponse:
@@ -213,7 +213,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def setAwayStatus2Request(request: player_message_pb2.SetAwayStatusRequest):
-        return RpcTarget(PlayerRemoteService._setAwayStatus2_CODE, 'PlayerRemoteService', PlayerRemoteService._setAwayStatus2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._setAwayStatus2_CODE, 'PlayerRemoteService', PlayerRemoteService._setAwayStatus2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setAwayStatus2Response(response) -> player_message_pb2.SetAwayStatusResponse:
@@ -230,7 +230,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def setPlayerFirebaseToken2Request(request: player_message_pb2.SetPlayerFirebaseTokenRequest):
-        return RpcTarget(PlayerRemoteService._setPlayerFirebaseToken2_CODE, 'PlayerRemoteService', PlayerRemoteService._setPlayerFirebaseToken2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._setPlayerFirebaseToken2_CODE, 'PlayerRemoteService', PlayerRemoteService._setPlayerFirebaseToken2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setPlayerFirebaseToken2Response(response) -> player_message_pb2.SetPlayerFirebaseTokenResponse:
@@ -247,7 +247,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def getPlayerSettings2Request(request: player_message_pb2.GetPlayerSettingsRequest):
-        return RpcTarget(PlayerRemoteService._getPlayerSettings2_CODE, 'PlayerRemoteService', PlayerRemoteService._getPlayerSettings2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._getPlayerSettings2_CODE, 'PlayerRemoteService', PlayerRemoteService._getPlayerSettings2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerSettings2Response(response) -> player_message_pb2.GetPlayerSettingsResponse:
@@ -264,7 +264,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def setOnlineStatus2Request(request: player_message_pb2.SetOnlineStatusRequest):
-        return RpcTarget(PlayerRemoteService._setOnlineStatus2_CODE, 'PlayerRemoteService', PlayerRemoteService._setOnlineStatus2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._setOnlineStatus2_CODE, 'PlayerRemoteService', PlayerRemoteService._setOnlineStatus2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setOnlineStatus2Response(response) -> player_message_pb2.SetOnlineStatusResponse:
@@ -281,7 +281,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def setPlayerAvatar2Request(request: player_message_pb2.SetPlayerAvatarRequest):
-        return RpcTarget(PlayerRemoteService._setPlayerAvatar2_CODE, 'PlayerRemoteService', PlayerRemoteService._setPlayerAvatar2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._setPlayerAvatar2_CODE, 'PlayerRemoteService', PlayerRemoteService._setPlayerAvatar2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setPlayerAvatar2Response(response) -> player_message_pb2.SetPlayerAvatarResponse:
@@ -298,7 +298,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def getPlayer2Request(request: player_message_pb2.GetPlayerRequest):
-        return RpcTarget(PlayerRemoteService._getPlayer2_CODE, 'PlayerRemoteService', PlayerRemoteService._getPlayer2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._getPlayer2_CODE, 'PlayerRemoteService', PlayerRemoteService._getPlayer2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayer2Response(response) -> player_message_pb2.GetPlayerResponse:
@@ -315,7 +315,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def banMe2Request(request: player_message_pb2.BanMeRequest):
-        return RpcTarget(PlayerRemoteService._banMe2_CODE, 'PlayerRemoteService', PlayerRemoteService._banMe2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._banMe2_CODE, 'PlayerRemoteService', PlayerRemoteService._banMe2_METHOD, request.SerializeToString())
 
     @staticmethod
     def banMe2Response(response) -> player_message_pb2.BanMeResponse:
@@ -332,7 +332,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def setPlayerSettings2Request(request: player_message_pb2.SetPlayerSettingsRequest):
-        return RpcTarget(PlayerRemoteService._setPlayerSettings2_CODE, 'PlayerRemoteService', PlayerRemoteService._setPlayerSettings2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._setPlayerSettings2_CODE, 'PlayerRemoteService', PlayerRemoteService._setPlayerSettings2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setPlayerSettings2Response(response) -> player_message_pb2.SetPlayerSettingsResponse:
@@ -349,7 +349,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def setAndGetPlayerName2Request(request: player_message_pb2.SetAndGetPlayerNameRequest):
-        return RpcTarget(PlayerRemoteService._setAndGetPlayerName2_CODE, 'PlayerRemoteService', PlayerRemoteService._setAndGetPlayerName2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._setAndGetPlayerName2_CODE, 'PlayerRemoteService', PlayerRemoteService._setAndGetPlayerName2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setAndGetPlayerName2Response(response) -> player_message_pb2.SetAndGetPlayerNameResponse:
@@ -366,7 +366,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def setPlayerName2Request(request: player_message_pb2.SetPlayerNameRequest):
-        return RpcTarget(PlayerRemoteService._setPlayerName2_CODE, 'PlayerRemoteService', PlayerRemoteService._setPlayerName2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._setPlayerName2_CODE, 'PlayerRemoteService', PlayerRemoteService._setPlayerName2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setPlayerName2Response(response) -> player_message_pb2.SetPlayerNameResponse:
@@ -383,7 +383,7 @@ class PlayerRemoteService:
 
     @staticmethod
     def getOnlineStatus2Request(request: player_message_pb2.GetOnlineStatusRequest):
-        return RpcTarget(PlayerRemoteService._getOnlineStatus2_CODE, 'PlayerRemoteService', PlayerRemoteService._getOnlineStatus2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerRemoteService._getOnlineStatus2_CODE, 'PlayerRemoteService', PlayerRemoteService._getOnlineStatus2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getOnlineStatus2Response(response) -> player_message_pb2.GetOnlineStatusResponse:
@@ -431,7 +431,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def getRentMarketSettingsRequest(request: rent_market_message_pb2.GetRentMarketSettingsRequest):
-        return RpcTarget(RentMarketRemoteService._getRentMarketSettings_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getRentMarketSettings_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._getRentMarketSettings_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getRentMarketSettings_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRentMarketSettingsResponse(response) -> rent_market_message_pb2.GetRentMarketSettingsResponse:
@@ -448,7 +448,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def createRentPurchaseRequestRequest(request: rent_market_message_pb2.CreateRentPurchaseRequestRequest):
-        return RpcTarget(RentMarketRemoteService._createRentPurchaseRequest_CODE, 'RentMarketRemoteService', RentMarketRemoteService._createRentPurchaseRequest_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._createRentPurchaseRequest_CODE, 'RentMarketRemoteService', RentMarketRemoteService._createRentPurchaseRequest_METHOD, request.SerializeToString())
 
     @staticmethod
     def createRentPurchaseRequestResponse(response) -> rent_market_message_pb2.CreateRentPurchaseRequestResponse:
@@ -465,7 +465,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def getRentTradeRequest(request: rent_market_message_pb2.GetRentTradeRequest):
-        return RpcTarget(RentMarketRemoteService._getRentTrade_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getRentTrade_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._getRentTrade_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getRentTrade_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRentTradeResponse(response) -> rent_market_message_pb2.GetRentTradeResponse:
@@ -482,7 +482,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def getRentTradesRequest(request: rent_market_message_pb2.GetRentTradesRequest):
-        return RpcTarget(RentMarketRemoteService._getRentTrades_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getRentTrades_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._getRentTrades_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getRentTrades_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRentTradesResponse(response) -> rent_market_message_pb2.GetRentTradesResponse:
@@ -499,7 +499,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def getPlayerRentOpenRequestsRequest(request: rent_market_message_pb2.GetPlayerRentOpenRequestsRequest):
-        return RpcTarget(RentMarketRemoteService._getPlayerRentOpenRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getPlayerRentOpenRequests_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._getPlayerRentOpenRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getPlayerRentOpenRequests_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerRentOpenRequestsResponse(response) -> rent_market_message_pb2.GetPlayerRentOpenRequestsResponse:
@@ -516,7 +516,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def createRentSaleRequest(request: rent_market_message_pb2.CreateRentSaleRequest):
-        return RpcTarget(RentMarketRemoteService._createRentSale_CODE, 'RentMarketRemoteService', RentMarketRemoteService._createRentSale_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._createRentSale_CODE, 'RentMarketRemoteService', RentMarketRemoteService._createRentSale_METHOD, request.SerializeToString())
 
     @staticmethod
     def createRentSaleResponse(response) -> rent_market_message_pb2.CreateRentSaleResponse:
@@ -533,7 +533,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def getPlayerRentProcessingRequestsRequest(request: rent_market_message_pb2.GetPlayerRentProcessingRequestsRequest):
-        return RpcTarget(RentMarketRemoteService._getPlayerRentProcessingRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getPlayerRentProcessingRequests_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._getPlayerRentProcessingRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getPlayerRentProcessingRequests_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerRentProcessingRequestsResponse(response) -> rent_market_message_pb2.GetPlayerRentProcessingRequestsResponse:
@@ -550,7 +550,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def getPlayerRentClosedRequestsCountRequest(request: rent_market_message_pb2.GetPlayerRentClosedRequestsCountRequest):
-        return RpcTarget(RentMarketRemoteService._getPlayerRentClosedRequestsCount_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getPlayerRentClosedRequestsCount_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._getPlayerRentClosedRequestsCount_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getPlayerRentClosedRequestsCount_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerRentClosedRequestsCountResponse(response) -> rent_market_message_pb2.GetPlayerRentClosedRequestsCountResponse:
@@ -567,7 +567,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def getPlayerRentClosedRequestsRequest(request: rent_market_message_pb2.GetPlayerRentClosedRequestsRequest):
-        return RpcTarget(RentMarketRemoteService._getPlayerRentClosedRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getPlayerRentClosedRequests_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._getPlayerRentClosedRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getPlayerRentClosedRequests_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerRentClosedRequestsResponse(response) -> rent_market_message_pb2.GetPlayerRentClosedRequestsResponse:
@@ -584,7 +584,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def getFilteredRentTradeOpenSaleRequestsRequest(request: rent_market_message_pb2.GetRentTradeOpenSaleRequestsRequest):
-        return RpcTarget(RentMarketRemoteService._getFilteredRentTradeOpenSaleRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getFilteredRentTradeOpenSaleRequests_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._getFilteredRentTradeOpenSaleRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getFilteredRentTradeOpenSaleRequests_METHOD, request.SerializeToString())
 
     @staticmethod
     def getFilteredRentTradeOpenSaleRequestsResponse(response) -> rent_market_message_pb2.GetRentTradeOpenSaleRequestsResponse:
@@ -601,7 +601,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def createRentPurchaseRequestBySaleRequest(request: rent_market_message_pb2.CreateRentPurchaseRequestBySaleRequest):
-        return RpcTarget(RentMarketRemoteService._createRentPurchaseRequestBySale_CODE, 'RentMarketRemoteService', RentMarketRemoteService._createRentPurchaseRequestBySale_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._createRentPurchaseRequestBySale_CODE, 'RentMarketRemoteService', RentMarketRemoteService._createRentPurchaseRequestBySale_METHOD, request.SerializeToString())
 
     @staticmethod
     def createRentPurchaseRequestBySaleResponse(response) -> rent_market_message_pb2.CreateRentPurchaseRequestBySaleResponse:
@@ -618,7 +618,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def getRentTradeOpenSaleRequestsRequest(request: rent_market_message_pb2.GetRentTradeOpenSaleRequestsRequest):
-        return RpcTarget(RentMarketRemoteService._getRentTradeOpenSaleRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getRentTradeOpenSaleRequests_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._getRentTradeOpenSaleRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getRentTradeOpenSaleRequests_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRentTradeOpenSaleRequestsResponse(response) -> rent_market_message_pb2.GetRentTradeOpenSaleRequestsResponse:
@@ -635,7 +635,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def cancelRentRequestRequest(request: rent_market_message_pb2.CancelRentRequestRequest):
-        return RpcTarget(RentMarketRemoteService._cancelRentRequest_CODE, 'RentMarketRemoteService', RentMarketRemoteService._cancelRentRequest_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._cancelRentRequest_CODE, 'RentMarketRemoteService', RentMarketRemoteService._cancelRentRequest_METHOD, request.SerializeToString())
 
     @staticmethod
     def cancelRentRequestResponse(response) -> rent_market_message_pb2.CancelRentRequestResponse:
@@ -652,7 +652,7 @@ class RentMarketRemoteService:
 
     @staticmethod
     def getRentTradeOpenPurchaseRequestsRequest(request: rent_market_message_pb2.GetRentTradeOpenPurchaseRequestsRequest):
-        return RpcTarget(RentMarketRemoteService._getRentTradeOpenPurchaseRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getRentTradeOpenPurchaseRequests_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RentMarketRemoteService._getRentTradeOpenPurchaseRequests_CODE, 'RentMarketRemoteService', RentMarketRemoteService._getRentTradeOpenPurchaseRequests_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRentTradeOpenPurchaseRequestsResponse(response) -> rent_market_message_pb2.GetRentTradeOpenPurchaseRequestsResponse:
@@ -682,7 +682,7 @@ class SystemMessagesRemoteService:
 
     @staticmethod
     def getSystemMessagesRequest(request: system_messages_message_pb2.GetSystemMessagesRequest):
-        return RpcTarget(SystemMessagesRemoteService._getSystemMessages_CODE, 'SystemMessagesRemoteService', SystemMessagesRemoteService._getSystemMessages_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(SystemMessagesRemoteService._getSystemMessages_CODE, 'SystemMessagesRemoteService', SystemMessagesRemoteService._getSystemMessages_METHOD, request.SerializeToString())
 
     @staticmethod
     def getSystemMessagesResponse(response) -> system_messages_message_pb2.GetSystemMessagesResponse:
@@ -699,7 +699,7 @@ class SystemMessagesRemoteService:
 
     @staticmethod
     def countUnreadSystemMessagesRequest(request: system_messages_message_pb2.CountUnreadSystemMessagesRequest):
-        return RpcTarget(SystemMessagesRemoteService._countUnreadSystemMessages_CODE, 'SystemMessagesRemoteService', SystemMessagesRemoteService._countUnreadSystemMessages_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(SystemMessagesRemoteService._countUnreadSystemMessages_CODE, 'SystemMessagesRemoteService', SystemMessagesRemoteService._countUnreadSystemMessages_METHOD, request.SerializeToString())
 
     @staticmethod
     def countUnreadSystemMessagesResponse(response) -> system_messages_message_pb2.CountUnreadSystemMessagesResponse:
@@ -716,7 +716,7 @@ class SystemMessagesRemoteService:
 
     @staticmethod
     def deleteSystemMessagesRequest(request: system_messages_message_pb2.DeleteSystemMessagesRequest):
-        return RpcTarget(SystemMessagesRemoteService._deleteSystemMessages_CODE, 'SystemMessagesRemoteService', SystemMessagesRemoteService._deleteSystemMessages_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(SystemMessagesRemoteService._deleteSystemMessages_CODE, 'SystemMessagesRemoteService', SystemMessagesRemoteService._deleteSystemMessages_METHOD, request.SerializeToString())
 
     @staticmethod
     def deleteSystemMessagesResponse(response) -> system_messages_message_pb2.DeleteSystemMessagesResponse:
@@ -733,7 +733,7 @@ class SystemMessagesRemoteService:
 
     @staticmethod
     def getSystemMessageDetailsRequest(request: system_messages_message_pb2.GetSystemMessageDetailsRequest):
-        return RpcTarget(SystemMessagesRemoteService._getSystemMessageDetails_CODE, 'SystemMessagesRemoteService', SystemMessagesRemoteService._getSystemMessageDetails_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(SystemMessagesRemoteService._getSystemMessageDetails_CODE, 'SystemMessagesRemoteService', SystemMessagesRemoteService._getSystemMessageDetails_METHOD, request.SerializeToString())
 
     @staticmethod
     def getSystemMessageDetailsResponse(response) -> system_messages_message_pb2.GetSystemMessageDetailsResponse:
@@ -750,7 +750,7 @@ class SystemMessagesRemoteService:
 
     @staticmethod
     def readSystemMessagesRequest(request: system_messages_message_pb2.ReadSystemMessagesRequest):
-        return RpcTarget(SystemMessagesRemoteService._readSystemMessages_CODE, 'SystemMessagesRemoteService', SystemMessagesRemoteService._readSystemMessages_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(SystemMessagesRemoteService._readSystemMessages_CODE, 'SystemMessagesRemoteService', SystemMessagesRemoteService._readSystemMessages_METHOD, request.SerializeToString())
 
     @staticmethod
     def readSystemMessagesResponse(response) -> system_messages_message_pb2.ReadSystemMessagesResponse:
@@ -774,7 +774,7 @@ class NewsFeedRemoteService:
 
     @staticmethod
     def sendNews2Request(request: newsfeed_message_pb2.SendNewsRequest):
-        return RpcTarget(NewsFeedRemoteService._sendNews2_CODE, 'NewsFeedRemoteService', NewsFeedRemoteService._sendNews2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(NewsFeedRemoteService._sendNews2_CODE, 'NewsFeedRemoteService', NewsFeedRemoteService._sendNews2_METHOD, request.SerializeToString())
 
     @staticmethod
     def sendNews2Response(response) -> newsfeed_message_pb2.SendNewsResponse:
@@ -791,7 +791,7 @@ class NewsFeedRemoteService:
 
     @staticmethod
     def getItems2Request(request: newsfeed_message_pb2.GetItemsRequest):
-        return RpcTarget(NewsFeedRemoteService._getItems2_CODE, 'NewsFeedRemoteService', NewsFeedRemoteService._getItems2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(NewsFeedRemoteService._getItems2_CODE, 'NewsFeedRemoteService', NewsFeedRemoteService._getItems2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getItems2Response(response) -> newsfeed_message_pb2.GetItemsResponse:
@@ -815,7 +815,7 @@ class GSClanStatsRemoteService:
 
     @staticmethod
     def getClanStatsRequest(request: gs_clan_stats_message_pb2.GSGetClanStatsRequest):
-        return RpcTarget(GSClanStatsRemoteService._getClanStats_CODE, 'GSClanStatsRemoteService', GSClanStatsRemoteService._getClanStats_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GSClanStatsRemoteService._getClanStats_CODE, 'GSClanStatsRemoteService', GSClanStatsRemoteService._getClanStats_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanStatsResponse(response) -> gs_clan_stats_message_pb2.GSGetClanStatsResponse:
@@ -832,7 +832,7 @@ class GSClanStatsRemoteService:
 
     @staticmethod
     def saveClanStatsRequest(request: gs_clan_stats_message_pb2.GSSaveClanStatsRequest):
-        return RpcTarget(GSClanStatsRemoteService._saveClanStats_CODE, 'GSClanStatsRemoteService', GSClanStatsRemoteService._saveClanStats_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GSClanStatsRemoteService._saveClanStats_CODE, 'GSClanStatsRemoteService', GSClanStatsRemoteService._saveClanStats_METHOD, request.SerializeToString())
 
     @staticmethod
     def saveClanStatsResponse(response) -> gs_clan_stats_message_pb2.GSSaveClanStatsResponse:
@@ -854,7 +854,7 @@ class IdTokenRemoteService:
 
     @staticmethod
     def getIdTokenRequest(request: id_token_message_pb2.GetIdTokenRequest):
-        return RpcTarget(IdTokenRemoteService._getIdToken_CODE, 'IdTokenRemoteService', IdTokenRemoteService._getIdToken_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(IdTokenRemoteService._getIdToken_CODE, 'IdTokenRemoteService', IdTokenRemoteService._getIdToken_METHOD, request.SerializeToString())
 
     @staticmethod
     def getIdTokenResponse(response) -> id_token_message_pb2.GetIdTokenResponse:
@@ -880,7 +880,7 @@ class AchievementRemoteService:
 
     @staticmethod
     def getPlayerAchievementsRequest(request: achievement_message_pb2.GetPlayerAchievementsRequest):
-        return RpcTarget(AchievementRemoteService._getPlayerAchievements_CODE, 'AchievementRemoteService', AchievementRemoteService._getPlayerAchievements_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(AchievementRemoteService._getPlayerAchievements_CODE, 'AchievementRemoteService', AchievementRemoteService._getPlayerAchievements_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerAchievementsResponse(response) -> achievement_message_pb2.GetPlayerAchievementsResponse:
@@ -897,7 +897,7 @@ class AchievementRemoteService:
 
     @staticmethod
     def getAchievementDefinitionsRequest(request: achievement_message_pb2.GetAchievementDefinitionsRequest):
-        return RpcTarget(AchievementRemoteService._getAchievementDefinitions_CODE, 'AchievementRemoteService', AchievementRemoteService._getAchievementDefinitions_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(AchievementRemoteService._getAchievementDefinitions_CODE, 'AchievementRemoteService', AchievementRemoteService._getAchievementDefinitions_METHOD, request.SerializeToString())
 
     @staticmethod
     def getAchievementDefinitionsResponse(response) -> achievement_message_pb2.GetAchievementDefinitionsResponse:
@@ -914,7 +914,7 @@ class AchievementRemoteService:
 
     @staticmethod
     def getCurrentPlayerAchievementsRequest(request: achievement_message_pb2.GetCurrentPlayerAchievementsRequest):
-        return RpcTarget(AchievementRemoteService._getCurrentPlayerAchievements_CODE, 'AchievementRemoteService', AchievementRemoteService._getCurrentPlayerAchievements_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(AchievementRemoteService._getCurrentPlayerAchievements_CODE, 'AchievementRemoteService', AchievementRemoteService._getCurrentPlayerAchievements_METHOD, request.SerializeToString())
 
     @staticmethod
     def getCurrentPlayerAchievementsResponse(response) -> achievement_message_pb2.GetCurrentPlayerAchievementsResponse:
@@ -938,7 +938,7 @@ class HandshakeRemoteService:
 
     @staticmethod
     def encryptedHandshakeRequest(request: auth_message_pb2.Handshake):
-        return RpcTarget(HandshakeRemoteService._encryptedHandshake_CODE, 'HandshakeRemoteService', HandshakeRemoteService._encryptedHandshake_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(HandshakeRemoteService._encryptedHandshake_CODE, 'HandshakeRemoteService', HandshakeRemoteService._encryptedHandshake_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedHandshakeResponse(response) -> auth_message_pb2.HandshakeResponse:
@@ -955,7 +955,7 @@ class HandshakeRemoteService:
 
     @staticmethod
     def logout2Request(request: auth_message_pb2.LogoutRequest):
-        return RpcTarget(HandshakeRemoteService._logout2_CODE, 'HandshakeRemoteService', HandshakeRemoteService._logout2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(HandshakeRemoteService._logout2_CODE, 'HandshakeRemoteService', HandshakeRemoteService._logout2_METHOD, request.SerializeToString())
 
     @staticmethod
     def logout2Response(response) -> auth_message_pb2.LogoutResponse:
@@ -979,7 +979,7 @@ class TestAuthRemoteService:
 
     @staticmethod
     def encryptedAuthRequest(request: auth_message_pb2.TestAuthRequest):
-        return RpcTarget(TestAuthRemoteService._encryptedAuth_CODE, 'TestAuthRemoteService', TestAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(TestAuthRemoteService._encryptedAuth_CODE, 'TestAuthRemoteService', TestAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuthResponse(response) -> auth_message_pb2.TestAuthResponse:
@@ -996,7 +996,7 @@ class TestAuthRemoteService:
 
     @staticmethod
     def encryptedAuth2Request(request: auth_message_pb2.TestAuthRequest):
-        return RpcTarget(TestAuthRemoteService._encryptedAuth2_CODE, 'TestAuthRemoteService', TestAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(TestAuthRemoteService._encryptedAuth2_CODE, 'TestAuthRemoteService', TestAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuth2Response(response) -> auth_message_pb2.TestAuthResponse:
@@ -1020,7 +1020,7 @@ class TwitchAuthRemoteService:
 
     @staticmethod
     def linkAuthRequest(request: auth_message_pb2.TwitchLinkAuthRequest):
-        return RpcTarget(TwitchAuthRemoteService._linkAuth_CODE, 'TwitchAuthRemoteService', TwitchAuthRemoteService._linkAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(TwitchAuthRemoteService._linkAuth_CODE, 'TwitchAuthRemoteService', TwitchAuthRemoteService._linkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def linkAuthResponse(response) -> auth_message_pb2.TwitchLinkAuthResponse:
@@ -1037,7 +1037,7 @@ class TwitchAuthRemoteService:
 
     @staticmethod
     def unLinkAuthRequest(request: auth_message_pb2.TwitchUnLinkAuthRequest):
-        return RpcTarget(TwitchAuthRemoteService._unLinkAuth_CODE, 'TwitchAuthRemoteService', TwitchAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(TwitchAuthRemoteService._unLinkAuth_CODE, 'TwitchAuthRemoteService', TwitchAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def unLinkAuthResponse(response) -> auth_message_pb2.TwitchUnLinkAuthResponse:
@@ -1065,7 +1065,7 @@ class RateGameRemoteService:
 
     @staticmethod
     def dontAskLaterRequest(request: rate_message_pb2.DontAskLaterRequest):
-        return RpcTarget(RateGameRemoteService._dontAskLater_CODE, 'RateGameRemoteService', RateGameRemoteService._dontAskLater_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RateGameRemoteService._dontAskLater_CODE, 'RateGameRemoteService', RateGameRemoteService._dontAskLater_METHOD, request.SerializeToString())
 
     @staticmethod
     def dontAskLaterResponse(response) -> rate_message_pb2.DontAskLaterResponse:
@@ -1082,7 +1082,7 @@ class RateGameRemoteService:
 
     @staticmethod
     def askLaterRequest(request: rate_message_pb2.AskLaterRequest):
-        return RpcTarget(RateGameRemoteService._askLater_CODE, 'RateGameRemoteService', RateGameRemoteService._askLater_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RateGameRemoteService._askLater_CODE, 'RateGameRemoteService', RateGameRemoteService._askLater_METHOD, request.SerializeToString())
 
     @staticmethod
     def askLaterResponse(response) -> rate_message_pb2.AskLaterResponse:
@@ -1099,7 +1099,7 @@ class RateGameRemoteService:
 
     @staticmethod
     def getLastRateGameRequest(request: rate_message_pb2.GetLastRateGameRequest):
-        return RpcTarget(RateGameRemoteService._getLastRateGame_CODE, 'RateGameRemoteService', RateGameRemoteService._getLastRateGame_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RateGameRemoteService._getLastRateGame_CODE, 'RateGameRemoteService', RateGameRemoteService._getLastRateGame_METHOD, request.SerializeToString())
 
     @staticmethod
     def getLastRateGameResponse(response) -> rate_message_pb2.GetLastRateGameResponse:
@@ -1116,7 +1116,7 @@ class RateGameRemoteService:
 
     @staticmethod
     def rateGameRequest(request: rate_message_pb2.RateGameRequest):
-        return RpcTarget(RateGameRemoteService._rateGame_CODE, 'RateGameRemoteService', RateGameRemoteService._rateGame_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(RateGameRemoteService._rateGame_CODE, 'RateGameRemoteService', RateGameRemoteService._rateGame_METHOD, request.SerializeToString())
 
     @staticmethod
     def rateGameResponse(response) -> rate_message_pb2.RateGameResponse:
@@ -1144,7 +1144,7 @@ class VkAuthRemoteService:
 
     @staticmethod
     def encryptedAuth2Request(request: auth_message_pb2.VkAuthRequest):
-        return RpcTarget(VkAuthRemoteService._encryptedAuth2_CODE, 'VkAuthRemoteService', VkAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(VkAuthRemoteService._encryptedAuth2_CODE, 'VkAuthRemoteService', VkAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuth2Response(response) -> auth_message_pb2.VkAuthResponse:
@@ -1161,7 +1161,7 @@ class VkAuthRemoteService:
 
     @staticmethod
     def encryptedAuthRequest(request: auth_message_pb2.VkAuthRequest):
-        return RpcTarget(VkAuthRemoteService._encryptedAuth_CODE, 'VkAuthRemoteService', VkAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(VkAuthRemoteService._encryptedAuth_CODE, 'VkAuthRemoteService', VkAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuthResponse(response) -> auth_message_pb2.VkAuthResponse:
@@ -1178,7 +1178,7 @@ class VkAuthRemoteService:
 
     @staticmethod
     def unLinkAuthRequest(request: auth_message_pb2.VkUnLinkAuthRequest):
-        return RpcTarget(VkAuthRemoteService._unLinkAuth_CODE, 'VkAuthRemoteService', VkAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(VkAuthRemoteService._unLinkAuth_CODE, 'VkAuthRemoteService', VkAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def unLinkAuthResponse(response) -> auth_message_pb2.VkUnLinkAuthResponse:
@@ -1195,7 +1195,7 @@ class VkAuthRemoteService:
 
     @staticmethod
     def linkAuthRequest(request: auth_message_pb2.VkLinkAuthRequest):
-        return RpcTarget(VkAuthRemoteService._linkAuth_CODE, 'VkAuthRemoteService', VkAuthRemoteService._linkAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(VkAuthRemoteService._linkAuth_CODE, 'VkAuthRemoteService', VkAuthRemoteService._linkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def linkAuthResponse(response) -> auth_message_pb2.VkLinkAuthResponse:
@@ -1217,7 +1217,7 @@ class GameSettingsRemoteService:
 
     @staticmethod
     def getGameSettingsEncrypted2Request(request: game_settings_message_pb2.GetGameSettingsEncryptedRequest):
-        return RpcTarget(GameSettingsRemoteService._getGameSettingsEncrypted2_CODE, 'GameSettingsRemoteService', GameSettingsRemoteService._getGameSettingsEncrypted2_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(GameSettingsRemoteService._getGameSettingsEncrypted2_CODE, 'GameSettingsRemoteService', GameSettingsRemoteService._getGameSettingsEncrypted2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getGameSettingsEncrypted2Response(response) -> game_settings_message_pb2.GetGameSettingsEncryptedResponse:
@@ -1245,7 +1245,7 @@ class GdprRemoteService:
 
     @staticmethod
     def getRequestsEncryptedRequest(request: gdpr_message_pb2.GetRequestsEncryptedRequest):
-        return RpcTarget(GdprRemoteService._getRequestsEncrypted_CODE, 'GdprRemoteService', GdprRemoteService._getRequestsEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(GdprRemoteService._getRequestsEncrypted_CODE, 'GdprRemoteService', GdprRemoteService._getRequestsEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRequestsEncryptedResponse(response) -> gdpr_message_pb2.GetRequestsEncryptedResponse:
@@ -1262,7 +1262,7 @@ class GdprRemoteService:
 
     @staticmethod
     def recoverAccountRequest(request: gdpr_message_pb2.RecoverAccountRequest):
-        return RpcTarget(GdprRemoteService._recoverAccount_CODE, 'GdprRemoteService', GdprRemoteService._recoverAccount_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GdprRemoteService._recoverAccount_CODE, 'GdprRemoteService', GdprRemoteService._recoverAccount_METHOD, request.SerializeToString())
 
     @staticmethod
     def recoverAccountResponse(response) -> gdpr_message_pb2.RecoverAccountResponse:
@@ -1279,7 +1279,7 @@ class GdprRemoteService:
 
     @staticmethod
     def createRequestEncryptedRequest(request: gdpr_message_pb2.CreateRequestEncryptedRequest):
-        return RpcTarget(GdprRemoteService._createRequestEncrypted_CODE, 'GdprRemoteService', GdprRemoteService._createRequestEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(GdprRemoteService._createRequestEncrypted_CODE, 'GdprRemoteService', GdprRemoteService._createRequestEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def createRequestEncryptedResponse(response) -> gdpr_message_pb2.CreateRequestEncryptedResponse:
@@ -1296,7 +1296,7 @@ class GdprRemoteService:
 
     @staticmethod
     def deleteAccountRequest(request: gdpr_message_pb2.DeleteAccountRequest):
-        return RpcTarget(GdprRemoteService._deleteAccount_CODE, 'GdprRemoteService', GdprRemoteService._deleteAccount_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GdprRemoteService._deleteAccount_CODE, 'GdprRemoteService', GdprRemoteService._deleteAccount_METHOD, request.SerializeToString())
 
     @staticmethod
     def deleteAccountResponse(response) -> gdpr_message_pb2.DeleteAccountResponse:
@@ -1324,7 +1324,7 @@ class SeasonalStatsRemoteService:
 
     @staticmethod
     def getCurrentClanStatsForSeasonRequest(request: seasonal_stats_message_pb2.GetCurrentClanStatsForSeasonRequest):
-        return RpcTarget(SeasonalStatsRemoteService._getCurrentClanStatsForSeason_CODE, 'SeasonalStatsRemoteService', SeasonalStatsRemoteService._getCurrentClanStatsForSeason_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(SeasonalStatsRemoteService._getCurrentClanStatsForSeason_CODE, 'SeasonalStatsRemoteService', SeasonalStatsRemoteService._getCurrentClanStatsForSeason_METHOD, request.SerializeToString())
 
     @staticmethod
     def getCurrentClanStatsForSeasonResponse(response) -> seasonal_stats_message_pb2.GetCurrentClanStatsForSeasonResponse:
@@ -1341,7 +1341,7 @@ class SeasonalStatsRemoteService:
 
     @staticmethod
     def getPlayerStatsForSeasonRequest(request: seasonal_stats_message_pb2.GetPlayerStatsForSeasonRequest):
-        return RpcTarget(SeasonalStatsRemoteService._getPlayerStatsForSeason_CODE, 'SeasonalStatsRemoteService', SeasonalStatsRemoteService._getPlayerStatsForSeason_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(SeasonalStatsRemoteService._getPlayerStatsForSeason_CODE, 'SeasonalStatsRemoteService', SeasonalStatsRemoteService._getPlayerStatsForSeason_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerStatsForSeasonResponse(response) -> seasonal_stats_message_pb2.GetPlayerStatsForSeasonResponse:
@@ -1358,7 +1358,7 @@ class SeasonalStatsRemoteService:
 
     @staticmethod
     def getStatsForSeasonRequest(request: seasonal_stats_message_pb2.GetStatsForSeasonRequest):
-        return RpcTarget(SeasonalStatsRemoteService._getStatsForSeason_CODE, 'SeasonalStatsRemoteService', SeasonalStatsRemoteService._getStatsForSeason_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(SeasonalStatsRemoteService._getStatsForSeason_CODE, 'SeasonalStatsRemoteService', SeasonalStatsRemoteService._getStatsForSeason_METHOD, request.SerializeToString())
 
     @staticmethod
     def getStatsForSeasonResponse(response) -> seasonal_stats_message_pb2.GetPlayerStatsForSeasonResponse:
@@ -1375,7 +1375,7 @@ class SeasonalStatsRemoteService:
 
     @staticmethod
     def getClanStatsForSeasonRequest(request: seasonal_stats_message_pb2.GetClanStatsForSeasonRequest):
-        return RpcTarget(SeasonalStatsRemoteService._getClanStatsForSeason_CODE, 'SeasonalStatsRemoteService', SeasonalStatsRemoteService._getClanStatsForSeason_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(SeasonalStatsRemoteService._getClanStatsForSeason_CODE, 'SeasonalStatsRemoteService', SeasonalStatsRemoteService._getClanStatsForSeason_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanStatsForSeasonResponse(response) -> seasonal_stats_message_pb2.GetClanStatsForSeasonResponse:
@@ -1403,7 +1403,7 @@ class MatchesRemoteService:
 
     @staticmethod
     def getPlayerMatchesRequest(request: matches_message_pb2.GetPlayerMatchesRequest):
-        return RpcTarget(MatchesRemoteService._getPlayerMatches_CODE, 'MatchesRemoteService', MatchesRemoteService._getPlayerMatches_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchesRemoteService._getPlayerMatches_CODE, 'MatchesRemoteService', MatchesRemoteService._getPlayerMatches_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerMatchesResponse(response) -> matches_message_pb2.GetPlayerMatchesResponse:
@@ -1420,7 +1420,7 @@ class MatchesRemoteService:
 
     @staticmethod
     def getMatchRequest(request: matches_message_pb2.GetMatchRequest):
-        return RpcTarget(MatchesRemoteService._getMatch_CODE, 'MatchesRemoteService', MatchesRemoteService._getMatch_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchesRemoteService._getMatch_CODE, 'MatchesRemoteService', MatchesRemoteService._getMatch_METHOD, request.SerializeToString())
 
     @staticmethod
     def getMatchResponse(response) -> matches_message_pb2.GetMatchResponse:
@@ -1437,7 +1437,7 @@ class MatchesRemoteService:
 
     @staticmethod
     def getClanMatchesRequest(request: matches_message_pb2.GetClanMatchesRequest):
-        return RpcTarget(MatchesRemoteService._getClanMatches_CODE, 'MatchesRemoteService', MatchesRemoteService._getClanMatches_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchesRemoteService._getClanMatches_CODE, 'MatchesRemoteService', MatchesRemoteService._getClanMatches_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanMatchesResponse(response) -> matches_message_pb2.GetClanMatchesResponse:
@@ -1454,7 +1454,7 @@ class MatchesRemoteService:
 
     @staticmethod
     def getCurrentPlayerLastMatchRequest(request: matches_message_pb2.GetCurrentPlayerLastMatchRequest):
-        return RpcTarget(MatchesRemoteService._getCurrentPlayerLastMatch_CODE, 'MatchesRemoteService', MatchesRemoteService._getCurrentPlayerLastMatch_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchesRemoteService._getCurrentPlayerLastMatch_CODE, 'MatchesRemoteService', MatchesRemoteService._getCurrentPlayerLastMatch_METHOD, request.SerializeToString())
 
     @staticmethod
     def getCurrentPlayerLastMatchResponse(response) -> matches_message_pb2.GetCurrentPlayerLastMatchResponse:
@@ -1478,7 +1478,7 @@ class GameServerRemoteService:
 
     @staticmethod
     def serverHandshake2Request(request: gameserver_message_pb2.ServerHandshake):
-        return RpcTarget(GameServerRemoteService._serverHandshake2_CODE, 'GameServerRemoteService', GameServerRemoteService._serverHandshake2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerRemoteService._serverHandshake2_CODE, 'GameServerRemoteService', GameServerRemoteService._serverHandshake2_METHOD, request.SerializeToString())
 
     @staticmethod
     def serverHandshake2Response(response) -> gameserver_message_pb2.ServerHandshakeResponse:
@@ -1495,7 +1495,7 @@ class GameServerRemoteService:
 
     @staticmethod
     def logout2Request(request: gameserver_message_pb2.ServerLogoutRequest):
-        return RpcTarget(GameServerRemoteService._logout2_CODE, 'GameServerRemoteService', GameServerRemoteService._logout2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerRemoteService._logout2_CODE, 'GameServerRemoteService', GameServerRemoteService._logout2_METHOD, request.SerializeToString())
 
     @staticmethod
     def logout2Response(response) -> gameserver_message_pb2.ServerLogoutResponse:
@@ -1517,7 +1517,7 @@ class GameSeasonRemoteService:
 
     @staticmethod
     def getGameSeasons2Request(request: game_season_message_pb2.GetGameSeasonsRequest):
-        return RpcTarget(GameSeasonRemoteService._getGameSeasons2_CODE, 'GameSeasonRemoteService', GameSeasonRemoteService._getGameSeasons2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameSeasonRemoteService._getGameSeasons2_CODE, 'GameSeasonRemoteService', GameSeasonRemoteService._getGameSeasons2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getGameSeasons2Response(response) -> game_season_message_pb2.GetGameSeasonsResponse:
@@ -1539,7 +1539,7 @@ class GoogleInAppRemoteService:
 
     @staticmethod
     def buyInApp2Request(request: inapps_message_pb2.GoogleBuyInappRequest):
-        return RpcTarget(GoogleInAppRemoteService._buyInApp2_CODE, 'GoogleInAppRemoteService', GoogleInAppRemoteService._buyInApp2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GoogleInAppRemoteService._buyInApp2_CODE, 'GoogleInAppRemoteService', GoogleInAppRemoteService._buyInApp2_METHOD, request.SerializeToString())
 
     @staticmethod
     def buyInApp2Response(response) -> inapps_message_pb2.GoogleBuyInappResponse:
@@ -1563,7 +1563,7 @@ class GuestAuthRemoteService:
 
     @staticmethod
     def encryptedAuth2Request(request: auth_message_pb2.GuestAuthRequest):
-        return RpcTarget(GuestAuthRemoteService._encryptedAuth2_CODE, 'GuestAuthRemoteService', GuestAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(GuestAuthRemoteService._encryptedAuth2_CODE, 'GuestAuthRemoteService', GuestAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuth2Response(response) -> auth_message_pb2.GuestAuthResponse:
@@ -1580,7 +1580,7 @@ class GuestAuthRemoteService:
 
     @staticmethod
     def encryptedAuthRequest(request: auth_message_pb2.GuestAuthRequest):
-        return RpcTarget(GuestAuthRemoteService._encryptedAuth_CODE, 'GuestAuthRemoteService', GuestAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(GuestAuthRemoteService._encryptedAuth_CODE, 'GuestAuthRemoteService', GuestAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuthResponse(response) -> auth_message_pb2.GuestAuthResponse:
@@ -1602,7 +1602,7 @@ class GameServerAccusationRemoteService:
 
     @staticmethod
     def accusationByServerRequest(request: accusation_message_pb2.AccusationByServerRequest):
-        return RpcTarget(GameServerAccusationRemoteService._accusationByServer_CODE, 'GameServerAccusationRemoteService', GameServerAccusationRemoteService._accusationByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerAccusationRemoteService._accusationByServer_CODE, 'GameServerAccusationRemoteService', GameServerAccusationRemoteService._accusationByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def accusationByServerResponse(response) -> accusation_message_pb2.AccusationByServerResponse:
@@ -1696,7 +1696,7 @@ class ClanRemoteService:
 
     @staticmethod
     def setClanDescription2Request(request: clan_actions_message_pb2.SetClanDescriptionRequest):
-        return RpcTarget(ClanRemoteService._setClanDescription2_CODE, 'ClanRemoteService', ClanRemoteService._setClanDescription2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._setClanDescription2_CODE, 'ClanRemoteService', ClanRemoteService._setClanDescription2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setClanDescription2Response(response) -> clan_actions_message_pb2.SetClanDescriptionResponse:
@@ -1713,7 +1713,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getClanByTagRequest(request: clan_actions_message_pb2.GetClanByTagRequest):
-        return RpcTarget(ClanRemoteService._getClanByTag_CODE, 'ClanRemoteService', ClanRemoteService._getClanByTag_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getClanByTag_CODE, 'ClanRemoteService', ClanRemoteService._getClanByTag_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanByTagResponse(response) -> clan_actions_message_pb2.GetClanByTagResponse:
@@ -1730,7 +1730,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getClanSettings2Request(request: clan_actions_message_pb2.GetClanSettingsRequest):
-        return RpcTarget(ClanRemoteService._getClanSettings2_CODE, 'ClanRemoteService', ClanRemoteService._getClanSettings2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getClanSettings2_CODE, 'ClanRemoteService', ClanRemoteService._getClanSettings2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanSettings2Response(response) -> clan_actions_message_pb2.GetClanSettingsResponse:
@@ -1747,7 +1747,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getClanJoinRequestsCount2Request(request: clan_actions_message_pb2.GetClanJoinRequestsCountRequest):
-        return RpcTarget(ClanRemoteService._getClanJoinRequestsCount2_CODE, 'ClanRemoteService', ClanRemoteService._getClanJoinRequestsCount2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getClanJoinRequestsCount2_CODE, 'ClanRemoteService', ClanRemoteService._getClanJoinRequestsCount2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanJoinRequestsCount2Response(response) -> clan_actions_message_pb2.GetClanJoinRequestsCountResponse:
@@ -1764,7 +1764,7 @@ class ClanRemoteService:
 
     @staticmethod
     def validateClanName2Request(request: clan_actions_message_pb2.ValidateClanNameRequest):
-        return RpcTarget(ClanRemoteService._validateClanName2_CODE, 'ClanRemoteService', ClanRemoteService._validateClanName2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._validateClanName2_CODE, 'ClanRemoteService', ClanRemoteService._validateClanName2_METHOD, request.SerializeToString())
 
     @staticmethod
     def validateClanName2Response(response) -> clan_actions_message_pb2.ValidateClanNameResponse:
@@ -1781,7 +1781,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getRoles2Request(request: clan_actions_message_pb2.GetRolesRequest):
-        return RpcTarget(ClanRemoteService._getRoles2_CODE, 'ClanRemoteService', ClanRemoteService._getRoles2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getRoles2_CODE, 'ClanRemoteService', ClanRemoteService._getRoles2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRoles2Response(response) -> clan_actions_message_pb2.GetRolesResponse:
@@ -1798,7 +1798,7 @@ class ClanRemoteService:
 
     @staticmethod
     def increaseMaxMembersCount2Request(request: clan_actions_message_pb2.IncreaseMaxMembersCountRequest):
-        return RpcTarget(ClanRemoteService._increaseMaxMembersCount2_CODE, 'ClanRemoteService', ClanRemoteService._increaseMaxMembersCount2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._increaseMaxMembersCount2_CODE, 'ClanRemoteService', ClanRemoteService._increaseMaxMembersCount2_METHOD, request.SerializeToString())
 
     @staticmethod
     def increaseMaxMembersCount2Response(response) -> clan_actions_message_pb2.IncreaseMaxMembersCountResponse:
@@ -1815,7 +1815,7 @@ class ClanRemoteService:
 
     @staticmethod
     def assignLeaderRole2Request(request: clan_actions_message_pb2.AssignLeaderRoleRequest):
-        return RpcTarget(ClanRemoteService._assignLeaderRole2_CODE, 'ClanRemoteService', ClanRemoteService._assignLeaderRole2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._assignLeaderRole2_CODE, 'ClanRemoteService', ClanRemoteService._assignLeaderRole2_METHOD, request.SerializeToString())
 
     @staticmethod
     def assignLeaderRole2Response(response) -> clan_actions_message_pb2.AssignLeaderRoleResponse:
@@ -1832,7 +1832,7 @@ class ClanRemoteService:
 
     @staticmethod
     def declineJoinRequest2Request(request: clan_actions_message_pb2.DeclineJoinRequestRequest):
-        return RpcTarget(ClanRemoteService._declineJoinRequest2_CODE, 'ClanRemoteService', ClanRemoteService._declineJoinRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._declineJoinRequest2_CODE, 'ClanRemoteService', ClanRemoteService._declineJoinRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def declineJoinRequest2Response(response) -> clan_actions_message_pb2.DeclineJoinRequestResponse:
@@ -1849,7 +1849,7 @@ class ClanRemoteService:
 
     @staticmethod
     def leaveClan2Request(request: clan_actions_message_pb2.LeaveClanRequest):
-        return RpcTarget(ClanRemoteService._leaveClan2_CODE, 'ClanRemoteService', ClanRemoteService._leaveClan2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._leaveClan2_CODE, 'ClanRemoteService', ClanRemoteService._leaveClan2_METHOD, request.SerializeToString())
 
     @staticmethod
     def leaveClan2Response(response) -> clan_actions_message_pb2.LeaveClanResponse:
@@ -1866,7 +1866,7 @@ class ClanRemoteService:
 
     @staticmethod
     def findClan2Request(request: clan_actions_message_pb2.FindClanRequest):
-        return RpcTarget(ClanRemoteService._findClan2_CODE, 'ClanRemoteService', ClanRemoteService._findClan2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._findClan2_CODE, 'ClanRemoteService', ClanRemoteService._findClan2_METHOD, request.SerializeToString())
 
     @staticmethod
     def findClan2Response(response) -> clan_actions_message_pb2.FindClanResponse:
@@ -1883,7 +1883,7 @@ class ClanRemoteService:
 
     @staticmethod
     def requestToJoinClan2Request(request: clan_actions_message_pb2.RequestToJoinClanRequest):
-        return RpcTarget(ClanRemoteService._requestToJoinClan2_CODE, 'ClanRemoteService', ClanRemoteService._requestToJoinClan2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._requestToJoinClan2_CODE, 'ClanRemoteService', ClanRemoteService._requestToJoinClan2_METHOD, request.SerializeToString())
 
     @staticmethod
     def requestToJoinClan2Response(response) -> clan_actions_message_pb2.RequestToJoinClanResponse:
@@ -1900,7 +1900,7 @@ class ClanRemoteService:
 
     @staticmethod
     def cancelJoinRequest2Request(request: clan_actions_message_pb2.CancelJoinRequestRequest):
-        return RpcTarget(ClanRemoteService._cancelJoinRequest2_CODE, 'ClanRemoteService', ClanRemoteService._cancelJoinRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._cancelJoinRequest2_CODE, 'ClanRemoteService', ClanRemoteService._cancelJoinRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def cancelJoinRequest2Response(response) -> clan_actions_message_pb2.CancelJoinRequestResponse:
@@ -1917,7 +1917,7 @@ class ClanRemoteService:
 
     @staticmethod
     def deleteClosedInviteRequest2Request(request: clan_actions_message_pb2.DeleteClosedInviteRequestRequest):
-        return RpcTarget(ClanRemoteService._deleteClosedInviteRequest2_CODE, 'ClanRemoteService', ClanRemoteService._deleteClosedInviteRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._deleteClosedInviteRequest2_CODE, 'ClanRemoteService', ClanRemoteService._deleteClosedInviteRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def deleteClosedInviteRequest2Response(response) -> clan_actions_message_pb2.DeleteClosedInviteRequestResponse:
@@ -1934,7 +1934,7 @@ class ClanRemoteService:
 
     @staticmethod
     def setClanAvatar2Request(request: clan_actions_message_pb2.SetClanAvatarRequest):
-        return RpcTarget(ClanRemoteService._setClanAvatar2_CODE, 'ClanRemoteService', ClanRemoteService._setClanAvatar2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._setClanAvatar2_CODE, 'ClanRemoteService', ClanRemoteService._setClanAvatar2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setClanAvatar2Response(response) -> clan_actions_message_pb2.SetClanAvatarResponse:
@@ -1951,7 +1951,7 @@ class ClanRemoteService:
 
     @staticmethod
     def kickMember2Request(request: clan_actions_message_pb2.KickMemberRequest):
-        return RpcTarget(ClanRemoteService._kickMember2_CODE, 'ClanRemoteService', ClanRemoteService._kickMember2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._kickMember2_CODE, 'ClanRemoteService', ClanRemoteService._kickMember2_METHOD, request.SerializeToString())
 
     @staticmethod
     def kickMember2Response(response) -> clan_actions_message_pb2.KickMemberResponse:
@@ -1968,7 +1968,7 @@ class ClanRemoteService:
 
     @staticmethod
     def changeClanType2Request(request: clan_actions_message_pb2.ChangeClanTypeRequest):
-        return RpcTarget(ClanRemoteService._changeClanType2_CODE, 'ClanRemoteService', ClanRemoteService._changeClanType2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._changeClanType2_CODE, 'ClanRemoteService', ClanRemoteService._changeClanType2_METHOD, request.SerializeToString())
 
     @staticmethod
     def changeClanType2Response(response) -> clan_actions_message_pb2.ChangeClanTypeResponse:
@@ -1985,7 +1985,7 @@ class ClanRemoteService:
 
     @staticmethod
     def deleteClosedJoinRequest2Request(request: clan_actions_message_pb2.DeleteClosedJoinRequestRequest):
-        return RpcTarget(ClanRemoteService._deleteClosedJoinRequest2_CODE, 'ClanRemoteService', ClanRemoteService._deleteClosedJoinRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._deleteClosedJoinRequest2_CODE, 'ClanRemoteService', ClanRemoteService._deleteClosedJoinRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def deleteClosedJoinRequest2Response(response) -> clan_actions_message_pb2.DeleteClosedJoinRequestResponse:
@@ -2002,7 +2002,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getPlayerInviteRequests2Request(request: clan_actions_message_pb2.GetPlayerInviteRequestsRequest):
-        return RpcTarget(ClanRemoteService._getPlayerInviteRequests2_CODE, 'ClanRemoteService', ClanRemoteService._getPlayerInviteRequests2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getPlayerInviteRequests2_CODE, 'ClanRemoteService', ClanRemoteService._getPlayerInviteRequests2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerInviteRequests2Response(response) -> clan_actions_message_pb2.GetPlayerInviteRequestsResponse:
@@ -2019,7 +2019,7 @@ class ClanRemoteService:
 
     @staticmethod
     def createClan2Request(request: clan_actions_message_pb2.CreateClanRequest):
-        return RpcTarget(ClanRemoteService._createClan2_CODE, 'ClanRemoteService', ClanRemoteService._createClan2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._createClan2_CODE, 'ClanRemoteService', ClanRemoteService._createClan2_METHOD, request.SerializeToString())
 
     @staticmethod
     def createClan2Response(response) -> clan_actions_message_pb2.CreateClanResponse:
@@ -2036,7 +2036,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getClan2Request(request: clan_actions_message_pb2.GetClanRequest):
-        return RpcTarget(ClanRemoteService._getClan2_CODE, 'ClanRemoteService', ClanRemoteService._getClan2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getClan2_CODE, 'ClanRemoteService', ClanRemoteService._getClan2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClan2Response(response) -> clan_actions_message_pb2.GetClanResponse:
@@ -2053,7 +2053,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getPlayerInviteRequestsCount2Request(request: clan_actions_message_pb2.GetPlayerInviteRequestsCountRequest):
-        return RpcTarget(ClanRemoteService._getPlayerInviteRequestsCount2_CODE, 'ClanRemoteService', ClanRemoteService._getPlayerInviteRequestsCount2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getPlayerInviteRequestsCount2_CODE, 'ClanRemoteService', ClanRemoteService._getPlayerInviteRequestsCount2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerInviteRequestsCount2Response(response) -> clan_actions_message_pb2.GetPlayerInviteRequestsCountResponse:
@@ -2070,7 +2070,7 @@ class ClanRemoteService:
 
     @staticmethod
     def validateClanTag2Request(request: clan_actions_message_pb2.ValidateClanTagRequest):
-        return RpcTarget(ClanRemoteService._validateClanTag2_CODE, 'ClanRemoteService', ClanRemoteService._validateClanTag2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._validateClanTag2_CODE, 'ClanRemoteService', ClanRemoteService._validateClanTag2_METHOD, request.SerializeToString())
 
     @staticmethod
     def validateClanTag2Response(response) -> clan_actions_message_pb2.ValidateClanTagResponse:
@@ -2087,7 +2087,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getClanMembers2Request(request: clan_actions_message_pb2.GetClanMembersRequest):
-        return RpcTarget(ClanRemoteService._getClanMembers2_CODE, 'ClanRemoteService', ClanRemoteService._getClanMembers2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getClanMembers2_CODE, 'ClanRemoteService', ClanRemoteService._getClanMembers2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanMembers2Response(response) -> clan_actions_message_pb2.GetClanMembersResponse:
@@ -2104,7 +2104,7 @@ class ClanRemoteService:
 
     @staticmethod
     def renameClan2Request(request: clan_actions_message_pb2.RenameClanRequest):
-        return RpcTarget(ClanRemoteService._renameClan2_CODE, 'ClanRemoteService', ClanRemoteService._renameClan2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._renameClan2_CODE, 'ClanRemoteService', ClanRemoteService._renameClan2_METHOD, request.SerializeToString())
 
     @staticmethod
     def renameClan2Response(response) -> clan_actions_message_pb2.RenameClanResponse:
@@ -2121,7 +2121,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getClanJoinRequests2Request(request: clan_actions_message_pb2.GetClanJoinRequestsRequest):
-        return RpcTarget(ClanRemoteService._getClanJoinRequests2_CODE, 'ClanRemoteService', ClanRemoteService._getClanJoinRequests2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getClanJoinRequests2_CODE, 'ClanRemoteService', ClanRemoteService._getClanJoinRequests2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanJoinRequests2Response(response) -> clan_actions_message_pb2.GetClanJoinRequestsResponse:
@@ -2138,7 +2138,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getClanClosedInviteRequestsCount2Request(request: clan_actions_message_pb2.GetClanClosedInviteRequestsCountRequest):
-        return RpcTarget(ClanRemoteService._getClanClosedInviteRequestsCount2_CODE, 'ClanRemoteService', ClanRemoteService._getClanClosedInviteRequestsCount2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getClanClosedInviteRequestsCount2_CODE, 'ClanRemoteService', ClanRemoteService._getClanClosedInviteRequestsCount2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanClosedInviteRequestsCount2Response(response) -> clan_actions_message_pb2.GetClanClosedInviteRequestsCountResponse:
@@ -2155,7 +2155,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getPlayerJoinRequests2Request(request: clan_actions_message_pb2.GetPlayerJoinRequestsRequest):
-        return RpcTarget(ClanRemoteService._getPlayerJoinRequests2_CODE, 'ClanRemoteService', ClanRemoteService._getPlayerJoinRequests2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getPlayerJoinRequests2_CODE, 'ClanRemoteService', ClanRemoteService._getPlayerJoinRequests2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerJoinRequests2Response(response) -> clan_actions_message_pb2.GetPlayerJoinRequestsResponse:
@@ -2172,7 +2172,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getClanById2Request(request: clan_actions_message_pb2.GetClanByIdRequest):
-        return RpcTarget(ClanRemoteService._getClanById2_CODE, 'ClanRemoteService', ClanRemoteService._getClanById2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getClanById2_CODE, 'ClanRemoteService', ClanRemoteService._getClanById2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanById2Response(response) -> clan_actions_message_pb2.GetClanByIdResponse:
@@ -2189,7 +2189,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getClanMembersById2Request(request: clan_actions_message_pb2.GetClanMembersByIdRequest):
-        return RpcTarget(ClanRemoteService._getClanMembersById2_CODE, 'ClanRemoteService', ClanRemoteService._getClanMembersById2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getClanMembersById2_CODE, 'ClanRemoteService', ClanRemoteService._getClanMembersById2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanMembersById2Response(response) -> clan_actions_message_pb2.GetClanMembersByIdResponse:
@@ -2206,7 +2206,7 @@ class ClanRemoteService:
 
     @staticmethod
     def assignRoleToMember2Request(request: clan_actions_message_pb2.AssignRoleToMemberRequest):
-        return RpcTarget(ClanRemoteService._assignRoleToMember2_CODE, 'ClanRemoteService', ClanRemoteService._assignRoleToMember2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._assignRoleToMember2_CODE, 'ClanRemoteService', ClanRemoteService._assignRoleToMember2_METHOD, request.SerializeToString())
 
     @staticmethod
     def assignRoleToMember2Response(response) -> clan_actions_message_pb2.AssignRoleToMemberResponse:
@@ -2223,7 +2223,7 @@ class ClanRemoteService:
 
     @staticmethod
     def cancelInviteRequest2Request(request: clan_actions_message_pb2.CancelInviteRequestRequest):
-        return RpcTarget(ClanRemoteService._cancelInviteRequest2_CODE, 'ClanRemoteService', ClanRemoteService._cancelInviteRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._cancelInviteRequest2_CODE, 'ClanRemoteService', ClanRemoteService._cancelInviteRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def cancelInviteRequest2Response(response) -> clan_actions_message_pb2.CancelInviteRequestResponse:
@@ -2240,7 +2240,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getRecommendedClans2Request(request: clan_actions_message_pb2.GetRecommendedClansRequest):
-        return RpcTarget(ClanRemoteService._getRecommendedClans2_CODE, 'ClanRemoteService', ClanRemoteService._getRecommendedClans2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getRecommendedClans2_CODE, 'ClanRemoteService', ClanRemoteService._getRecommendedClans2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRecommendedClans2Response(response) -> clan_actions_message_pb2.GetRecommendedClansResponse:
@@ -2257,7 +2257,7 @@ class ClanRemoteService:
 
     @staticmethod
     def declineInviteRequest2Request(request: clan_actions_message_pb2.DeclineInviteRequestRequest):
-        return RpcTarget(ClanRemoteService._declineInviteRequest2_CODE, 'ClanRemoteService', ClanRemoteService._declineInviteRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._declineInviteRequest2_CODE, 'ClanRemoteService', ClanRemoteService._declineInviteRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def declineInviteRequest2Response(response) -> clan_actions_message_pb2.DeclineInviteRequestResponse:
@@ -2274,7 +2274,7 @@ class ClanRemoteService:
 
     @staticmethod
     def inviteToClan2Request(request: clan_actions_message_pb2.InviteToClanRequest):
-        return RpcTarget(ClanRemoteService._inviteToClan2_CODE, 'ClanRemoteService', ClanRemoteService._inviteToClan2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._inviteToClan2_CODE, 'ClanRemoteService', ClanRemoteService._inviteToClan2_METHOD, request.SerializeToString())
 
     @staticmethod
     def inviteToClan2Response(response) -> clan_actions_message_pb2.InviteToClanResponse:
@@ -2291,7 +2291,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getClanInviteRequests2Request(request: clan_actions_message_pb2.GetClanInviteRequestsRequest):
-        return RpcTarget(ClanRemoteService._getClanInviteRequests2_CODE, 'ClanRemoteService', ClanRemoteService._getClanInviteRequests2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getClanInviteRequests2_CODE, 'ClanRemoteService', ClanRemoteService._getClanInviteRequests2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanInviteRequests2Response(response) -> clan_actions_message_pb2.GetClanInviteRequestsResponse:
@@ -2308,7 +2308,7 @@ class ClanRemoteService:
 
     @staticmethod
     def getPlayerClosedJoinRequestsCount2Request(request: clan_actions_message_pb2.GetPlayerClosedJoinRequestsCountRequest):
-        return RpcTarget(ClanRemoteService._getPlayerClosedJoinRequestsCount2_CODE, 'ClanRemoteService', ClanRemoteService._getPlayerClosedJoinRequestsCount2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanRemoteService._getPlayerClosedJoinRequestsCount2_CODE, 'ClanRemoteService', ClanRemoteService._getPlayerClosedJoinRequestsCount2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerClosedJoinRequestsCount2Response(response) -> clan_actions_message_pb2.GetPlayerClosedJoinRequestsCountResponse:
@@ -2336,7 +2336,7 @@ class GameCenterAuthRemoteService:
 
     @staticmethod
     def encryptedAuth2Request(request: auth_message_pb2.GameCenterAuthRequest):
-        return RpcTarget(GameCenterAuthRemoteService._encryptedAuth2_CODE, 'GameCenterAuthRemoteService', GameCenterAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(GameCenterAuthRemoteService._encryptedAuth2_CODE, 'GameCenterAuthRemoteService', GameCenterAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuth2Response(response) -> auth_message_pb2.GameCenterAuthResponse:
@@ -2353,7 +2353,7 @@ class GameCenterAuthRemoteService:
 
     @staticmethod
     def linkAuthRequest(request: auth_message_pb2.GameCenterLinkAuthRequest):
-        return RpcTarget(GameCenterAuthRemoteService._linkAuth_CODE, 'GameCenterAuthRemoteService', GameCenterAuthRemoteService._linkAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(GameCenterAuthRemoteService._linkAuth_CODE, 'GameCenterAuthRemoteService', GameCenterAuthRemoteService._linkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def linkAuthResponse(response) -> auth_message_pb2.GameCenterLinkAuthResponse:
@@ -2370,7 +2370,7 @@ class GameCenterAuthRemoteService:
 
     @staticmethod
     def unLinkAuthRequest(request: auth_message_pb2.GameCenterUnLinkAuthRequest):
-        return RpcTarget(GameCenterAuthRemoteService._unLinkAuth_CODE, 'GameCenterAuthRemoteService', GameCenterAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameCenterAuthRemoteService._unLinkAuth_CODE, 'GameCenterAuthRemoteService', GameCenterAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def unLinkAuthResponse(response) -> auth_message_pb2.GameCenterUnLinkAuthResponse:
@@ -2387,7 +2387,7 @@ class GameCenterAuthRemoteService:
 
     @staticmethod
     def encryptedAuthRequest(request: auth_message_pb2.GameCenterAuthRequest):
-        return RpcTarget(GameCenterAuthRemoteService._encryptedAuth_CODE, 'GameCenterAuthRemoteService', GameCenterAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(GameCenterAuthRemoteService._encryptedAuth_CODE, 'GameCenterAuthRemoteService', GameCenterAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuthResponse(response) -> auth_message_pb2.GameCenterAuthResponse:
@@ -2417,7 +2417,7 @@ class GameServerGameEventRemoteService:
 
     @staticmethod
     def setChallengeProgressesByServerRequest(request: challenges_message_pb2.ProgressChallengesByServerRequest):
-        return RpcTarget(GameServerGameEventRemoteService._setChallengeProgressesByServer_CODE, 'GameServerGameEventRemoteService', GameServerGameEventRemoteService._setChallengeProgressesByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerGameEventRemoteService._setChallengeProgressesByServer_CODE, 'GameServerGameEventRemoteService', GameServerGameEventRemoteService._setChallengeProgressesByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def setChallengeProgressesByServerResponse(response) -> challenges_message_pb2.ProgressChallengesByServerResponse:
@@ -2434,7 +2434,7 @@ class GameServerGameEventRemoteService:
 
     @staticmethod
     def getCurrentGameEventsByServerRequest(request: game_event_message_pb2.GetCurrentGameEventsByServerRequest):
-        return RpcTarget(GameServerGameEventRemoteService._getCurrentGameEventsByServer_CODE, 'GameServerGameEventRemoteService', GameServerGameEventRemoteService._getCurrentGameEventsByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerGameEventRemoteService._getCurrentGameEventsByServer_CODE, 'GameServerGameEventRemoteService', GameServerGameEventRemoteService._getCurrentGameEventsByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def getCurrentGameEventsByServerResponse(response) -> game_event_message_pb2.GetCurrentGameEventsByServerResponse:
@@ -2451,7 +2451,7 @@ class GameServerGameEventRemoteService:
 
     @staticmethod
     def progressGameEventsByServerRequest(request: game_event_message_pb2.ProgressGameEventsByServerRequest):
-        return RpcTarget(GameServerGameEventRemoteService._progressGameEventsByServer_CODE, 'GameServerGameEventRemoteService', GameServerGameEventRemoteService._progressGameEventsByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerGameEventRemoteService._progressGameEventsByServer_CODE, 'GameServerGameEventRemoteService', GameServerGameEventRemoteService._progressGameEventsByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def progressGameEventsByServerResponse(response) -> game_event_message_pb2.ProgressGameEventsByServerResponse:
@@ -2468,7 +2468,7 @@ class GameServerGameEventRemoteService:
 
     @staticmethod
     def getAllChallengesByServerRequest(request: game_event_message_pb2.GetAllChallengesByServerRequest):
-        return RpcTarget(GameServerGameEventRemoteService._getAllChallengesByServer_CODE, 'GameServerGameEventRemoteService', GameServerGameEventRemoteService._getAllChallengesByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerGameEventRemoteService._getAllChallengesByServer_CODE, 'GameServerGameEventRemoteService', GameServerGameEventRemoteService._getAllChallengesByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def getAllChallengesByServerResponse(response) -> game_event_message_pb2.GetAllChallengesByServerResponse:
@@ -2485,7 +2485,7 @@ class GameServerGameEventRemoteService:
 
     @staticmethod
     def progressGameEventByServerRequest(request: game_event_message_pb2.ProgressGameEventByServerRequest):
-        return RpcTarget(GameServerGameEventRemoteService._progressGameEventByServer_CODE, 'GameServerGameEventRemoteService', GameServerGameEventRemoteService._progressGameEventByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerGameEventRemoteService._progressGameEventByServer_CODE, 'GameServerGameEventRemoteService', GameServerGameEventRemoteService._progressGameEventByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def progressGameEventByServerResponse(response) -> game_event_message_pb2.ProgressGameEventByServerResponse:
@@ -2521,7 +2521,7 @@ class ClanMessagesRemoteService:
 
     @staticmethod
     def getClanChatMessages2Request(request: clan_messages_message_pb2.GetClanChatMessagesRequest):
-        return RpcTarget(ClanMessagesRemoteService._getClanChatMessages2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._getClanChatMessages2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanMessagesRemoteService._getClanChatMessages2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._getClanChatMessages2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanChatMessages2Response(response) -> clan_messages_message_pb2.GetClanChatMessagesResponse:
@@ -2538,7 +2538,7 @@ class ClanMessagesRemoteService:
 
     @staticmethod
     def readClanChatMessages2Request(request: clan_messages_message_pb2.ReadClanChatMessagesRequest):
-        return RpcTarget(ClanMessagesRemoteService._readClanChatMessages2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._readClanChatMessages2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanMessagesRemoteService._readClanChatMessages2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._readClanChatMessages2_METHOD, request.SerializeToString())
 
     @staticmethod
     def readClanChatMessages2Response(response) -> clan_messages_message_pb2.ReadClanChatMessagesResponse:
@@ -2555,7 +2555,7 @@ class ClanMessagesRemoteService:
 
     @staticmethod
     def getClanLogMessages2Request(request: clan_messages_message_pb2.GetClanLogMessagesRequest):
-        return RpcTarget(ClanMessagesRemoteService._getClanLogMessages2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._getClanLogMessages2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanMessagesRemoteService._getClanLogMessages2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._getClanLogMessages2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanLogMessages2Response(response) -> clan_messages_message_pb2.GetClanLogMessagesResponse:
@@ -2572,7 +2572,7 @@ class ClanMessagesRemoteService:
 
     @staticmethod
     def sendClanChatMessage2Request(request: clan_messages_message_pb2.SendClanChatMessageRequest):
-        return RpcTarget(ClanMessagesRemoteService._sendClanChatMessage2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._sendClanChatMessage2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanMessagesRemoteService._sendClanChatMessage2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._sendClanChatMessage2_METHOD, request.SerializeToString())
 
     @staticmethod
     def sendClanChatMessage2Response(response) -> clan_messages_message_pb2.SendClanChatMessageResponse:
@@ -2589,7 +2589,7 @@ class ClanMessagesRemoteService:
 
     @staticmethod
     def getUnreadLogMessagesCount2Request(request: clan_messages_message_pb2.GetUnreadLogMessagesCountRequest):
-        return RpcTarget(ClanMessagesRemoteService._getUnreadLogMessagesCount2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._getUnreadLogMessagesCount2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanMessagesRemoteService._getUnreadLogMessagesCount2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._getUnreadLogMessagesCount2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getUnreadLogMessagesCount2Response(response) -> clan_messages_message_pb2.GetUnreadLogMessagesCountResponse:
@@ -2606,7 +2606,7 @@ class ClanMessagesRemoteService:
 
     @staticmethod
     def readClanLogMessages2Request(request: clan_messages_message_pb2.ReadClanLogMessagesRequest):
-        return RpcTarget(ClanMessagesRemoteService._readClanLogMessages2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._readClanLogMessages2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanMessagesRemoteService._readClanLogMessages2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._readClanLogMessages2_METHOD, request.SerializeToString())
 
     @staticmethod
     def readClanLogMessages2Response(response) -> clan_messages_message_pb2.ReadClanLogMessagesResponse:
@@ -2623,7 +2623,7 @@ class ClanMessagesRemoteService:
 
     @staticmethod
     def getClanMessages2Request(request: clan_messages_message_pb2.GetClanMessagesRequest):
-        return RpcTarget(ClanMessagesRemoteService._getClanMessages2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._getClanMessages2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanMessagesRemoteService._getClanMessages2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._getClanMessages2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanMessages2Response(response) -> clan_messages_message_pb2.GetClanMessagesResponse:
@@ -2640,7 +2640,7 @@ class ClanMessagesRemoteService:
 
     @staticmethod
     def getUnreadChatMessagesCount2Request(request: clan_messages_message_pb2.GetUnreadChatMessagesCountRequest):
-        return RpcTarget(ClanMessagesRemoteService._getUnreadChatMessagesCount2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._getUnreadChatMessagesCount2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanMessagesRemoteService._getUnreadChatMessagesCount2_CODE, 'ClanMessagesRemoteService', ClanMessagesRemoteService._getUnreadChatMessagesCount2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getUnreadChatMessagesCount2Response(response) -> clan_messages_message_pb2.GetUnreadChatMessagesCountResponse:
@@ -2672,7 +2672,7 @@ class ReferralRemoteService:
 
     @staticmethod
     def findPlayerStateRequest(request: referral_message_pb2.FindReferralStateRequest):
-        return RpcTarget(ReferralRemoteService._findPlayerState_CODE, 'ReferralRemoteService', ReferralRemoteService._findPlayerState_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ReferralRemoteService._findPlayerState_CODE, 'ReferralRemoteService', ReferralRemoteService._findPlayerState_METHOD, request.SerializeToString())
 
     @staticmethod
     def findPlayerStateResponse(response) -> referral_message_pb2.FindReferralStateResponse:
@@ -2689,7 +2689,7 @@ class ReferralRemoteService:
 
     @staticmethod
     def getSettingsRequest(request: referral_message_pb2.GetReferralSystemSettingsRequest):
-        return RpcTarget(ReferralRemoteService._getSettings_CODE, 'ReferralRemoteService', ReferralRemoteService._getSettings_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ReferralRemoteService._getSettings_CODE, 'ReferralRemoteService', ReferralRemoteService._getSettings_METHOD, request.SerializeToString())
 
     @staticmethod
     def getSettingsResponse(response) -> referral_message_pb2.GetReferralSystemSettingsResponse:
@@ -2706,7 +2706,7 @@ class ReferralRemoteService:
 
     @staticmethod
     def getRecruitByIdRequest(request: referral_message_pb2.GetRecruitByIdRequest):
-        return RpcTarget(ReferralRemoteService._getRecruitById_CODE, 'ReferralRemoteService', ReferralRemoteService._getRecruitById_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ReferralRemoteService._getRecruitById_CODE, 'ReferralRemoteService', ReferralRemoteService._getRecruitById_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRecruitByIdResponse(response) -> referral_message_pb2.GetRecruitByIdResponse:
@@ -2723,7 +2723,7 @@ class ReferralRemoteService:
 
     @staticmethod
     def getPlayerStateRequest(request: referral_message_pb2.GetReferralPlayerStateRequest):
-        return RpcTarget(ReferralRemoteService._getPlayerState_CODE, 'ReferralRemoteService', ReferralRemoteService._getPlayerState_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ReferralRemoteService._getPlayerState_CODE, 'ReferralRemoteService', ReferralRemoteService._getPlayerState_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerStateResponse(response) -> referral_message_pb2.GetReferralPlayerStateResponse:
@@ -2740,7 +2740,7 @@ class ReferralRemoteService:
 
     @staticmethod
     def getRecruitsRequest(request: referral_message_pb2.GetRecruitsByOffsetRequest):
-        return RpcTarget(ReferralRemoteService._getRecruits_CODE, 'ReferralRemoteService', ReferralRemoteService._getRecruits_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ReferralRemoteService._getRecruits_CODE, 'ReferralRemoteService', ReferralRemoteService._getRecruits_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRecruitsResponse(response) -> referral_message_pb2.GetRecruitsByOffsetResponse:
@@ -2757,7 +2757,7 @@ class ReferralRemoteService:
 
     @staticmethod
     def subscribeToCommanderRequest(request: referral_message_pb2.SubscribeToCommanderRequest):
-        return RpcTarget(ReferralRemoteService._subscribeToCommander_CODE, 'ReferralRemoteService', ReferralRemoteService._subscribeToCommander_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ReferralRemoteService._subscribeToCommander_CODE, 'ReferralRemoteService', ReferralRemoteService._subscribeToCommander_METHOD, request.SerializeToString())
 
     @staticmethod
     def subscribeToCommanderResponse(response) -> referral_message_pb2.SubscribeToCommanderResponse:
@@ -2783,7 +2783,7 @@ class UgcRemoteService:
 
     @staticmethod
     def saveFeedback2Request(request: ugc_message_pb2.SaveFeedbackRequest):
-        return RpcTarget(UgcRemoteService._saveFeedback2_CODE, 'UgcRemoteService', UgcRemoteService._saveFeedback2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(UgcRemoteService._saveFeedback2_CODE, 'UgcRemoteService', UgcRemoteService._saveFeedback2_METHOD, request.SerializeToString())
 
     @staticmethod
     def saveFeedback2Response(response) -> ugc_message_pb2.SaveFeedbackResponse:
@@ -2800,7 +2800,7 @@ class UgcRemoteService:
 
     @staticmethod
     def listUgc2Request(request: ugc_message_pb2.ListUgcRequest):
-        return RpcTarget(UgcRemoteService._listUgc2_CODE, 'UgcRemoteService', UgcRemoteService._listUgc2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(UgcRemoteService._listUgc2_CODE, 'UgcRemoteService', UgcRemoteService._listUgc2_METHOD, request.SerializeToString())
 
     @staticmethod
     def listUgc2Response(response) -> ugc_message_pb2.ListUgcResponse:
@@ -2817,7 +2817,7 @@ class UgcRemoteService:
 
     @staticmethod
     def listFeedback2Request(request: ugc_message_pb2.ListFeedbackRequest):
-        return RpcTarget(UgcRemoteService._listFeedback2_CODE, 'UgcRemoteService', UgcRemoteService._listFeedback2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(UgcRemoteService._listFeedback2_CODE, 'UgcRemoteService', UgcRemoteService._listFeedback2_METHOD, request.SerializeToString())
 
     @staticmethod
     def listFeedback2Response(response) -> ugc_message_pb2.ListFeedbackResponse:
@@ -2839,7 +2839,7 @@ class GameServerInAppRemoteService:
 
     @staticmethod
     def getPlayersInAppPurchasesByServerRequest(request: inapps_message_pb2.GetPlayersInAppPurchasesByServerRequest):
-        return RpcTarget(GameServerInAppRemoteService._getPlayersInAppPurchasesByServer_CODE, 'GameServerInAppRemoteService', GameServerInAppRemoteService._getPlayersInAppPurchasesByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerInAppRemoteService._getPlayersInAppPurchasesByServer_CODE, 'GameServerInAppRemoteService', GameServerInAppRemoteService._getPlayersInAppPurchasesByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayersInAppPurchasesByServerResponse(response) -> inapps_message_pb2.GetPlayersInAppPurchasesByServerResponse:
@@ -2871,7 +2871,7 @@ class PlayerStatsRemoteService:
 
     @staticmethod
     def getGlobalStats2Request(request: player_stats_message_pb2.GetGlobalStatsRequest):
-        return RpcTarget(PlayerStatsRemoteService._getGlobalStats2_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._getGlobalStats2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerStatsRemoteService._getGlobalStats2_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._getGlobalStats2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getGlobalStats2Response(response) -> player_stats_message_pb2.GetGlobalStatsResponse:
@@ -2888,7 +2888,7 @@ class PlayerStatsRemoteService:
 
     @staticmethod
     def getCurrentStatsRequest(request: player_stats_message_pb2.GetCurrentStatsRequest):
-        return RpcTarget(PlayerStatsRemoteService._getCurrentStats_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._getCurrentStats_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerStatsRemoteService._getCurrentStats_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._getCurrentStats_METHOD, request.SerializeToString())
 
     @staticmethod
     def getCurrentStatsResponse(response) -> player_stats_message_pb2.GetCurrentStatsResponse:
@@ -2905,7 +2905,7 @@ class PlayerStatsRemoteService:
 
     @staticmethod
     def resetStats2Request(request: player_stats_message_pb2.ResetStatsRequest):
-        return RpcTarget(PlayerStatsRemoteService._resetStats2_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._resetStats2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerStatsRemoteService._resetStats2_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._resetStats2_METHOD, request.SerializeToString())
 
     @staticmethod
     def resetStats2Response(response) -> player_stats_message_pb2.ResetStatsResponse:
@@ -2922,7 +2922,7 @@ class PlayerStatsRemoteService:
 
     @staticmethod
     def getPlayerStats2Request(request: player_stats_message_pb2.GetPlayerStatsRequest):
-        return RpcTarget(PlayerStatsRemoteService._getPlayerStats2_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._getPlayerStats2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerStatsRemoteService._getPlayerStats2_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._getPlayerStats2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerStats2Response(response) -> player_stats_message_pb2.GetPlayerStatsResponse:
@@ -2939,7 +2939,7 @@ class PlayerStatsRemoteService:
 
     @staticmethod
     def getStatsRequest():
-        return RpcTarget(PlayerStatsRemoteService._getStats_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._getStats_METHOD, None, secure=False)
+        return RpcTarget(PlayerStatsRemoteService._getStats_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._getStats_METHOD, None)
 
     @staticmethod
     def getStatsResponse(response) -> player_stats_message_pb2.Stats:
@@ -2956,7 +2956,7 @@ class PlayerStatsRemoteService:
 
     @staticmethod
     def storeStats2Request(request: player_stats_message_pb2.StorePlayerStatsRequest):
-        return RpcTarget(PlayerStatsRemoteService._storeStats2_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._storeStats2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(PlayerStatsRemoteService._storeStats2_CODE, 'PlayerStatsRemoteService', PlayerStatsRemoteService._storeStats2_METHOD, request.SerializeToString())
 
     @staticmethod
     def storeStats2Response(response) -> player_stats_message_pb2.StorePlayerStatsResponse:
@@ -2984,7 +2984,7 @@ class AppleIdAuthRemoteService:
 
     @staticmethod
     def linkAuthRequest(request: auth_message_pb2.AppleIdLinkAuthRequest):
-        return RpcTarget(AppleIdAuthRemoteService._linkAuth_CODE, 'AppleIdAuthRemoteService', AppleIdAuthRemoteService._linkAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(AppleIdAuthRemoteService._linkAuth_CODE, 'AppleIdAuthRemoteService', AppleIdAuthRemoteService._linkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def linkAuthResponse(response) -> auth_message_pb2.AppleIdLinkAuthResponse:
@@ -3001,7 +3001,7 @@ class AppleIdAuthRemoteService:
 
     @staticmethod
     def encryptedAuthRequest(request: auth_message_pb2.AppleIdAuthRequest):
-        return RpcTarget(AppleIdAuthRemoteService._encryptedAuth_CODE, 'AppleIdAuthRemoteService', AppleIdAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(AppleIdAuthRemoteService._encryptedAuth_CODE, 'AppleIdAuthRemoteService', AppleIdAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuthResponse(response) -> auth_message_pb2.AppleIdAuthResponse:
@@ -3018,7 +3018,7 @@ class AppleIdAuthRemoteService:
 
     @staticmethod
     def unLinkAuthRequest(request: auth_message_pb2.AppleIdUnLinkAuthRequest):
-        return RpcTarget(AppleIdAuthRemoteService._unLinkAuth_CODE, 'AppleIdAuthRemoteService', AppleIdAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(AppleIdAuthRemoteService._unLinkAuth_CODE, 'AppleIdAuthRemoteService', AppleIdAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def unLinkAuthResponse(response) -> auth_message_pb2.AppleIdUnLinkAuthResponse:
@@ -3035,7 +3035,7 @@ class AppleIdAuthRemoteService:
 
     @staticmethod
     def encryptedAuth2Request(request: auth_message_pb2.AppleIdAuthRequest):
-        return RpcTarget(AppleIdAuthRemoteService._encryptedAuth2_CODE, 'AppleIdAuthRemoteService', AppleIdAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(AppleIdAuthRemoteService._encryptedAuth2_CODE, 'AppleIdAuthRemoteService', AppleIdAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuth2Response(response) -> auth_message_pb2.AppleIdAuthResponse:
@@ -3061,7 +3061,7 @@ class ClanMemberStatsRemoteService:
 
     @staticmethod
     def getCurrentClanMemberStatsRequest(request: clan_member_stats_message_pb2.GetCurrentClanMemberStatsRequest):
-        return RpcTarget(ClanMemberStatsRemoteService._getCurrentClanMemberStats_CODE, 'ClanMemberStatsRemoteService', ClanMemberStatsRemoteService._getCurrentClanMemberStats_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanMemberStatsRemoteService._getCurrentClanMemberStats_CODE, 'ClanMemberStatsRemoteService', ClanMemberStatsRemoteService._getCurrentClanMemberStats_METHOD, request.SerializeToString())
 
     @staticmethod
     def getCurrentClanMemberStatsResponse(response) -> clan_member_stats_message_pb2.GetCurrentClanMemberStatsResponse:
@@ -3078,7 +3078,7 @@ class ClanMemberStatsRemoteService:
 
     @staticmethod
     def saveCurrentClanMemberStatsRequest(request: clan_member_stats_message_pb2.SaveCurrentClanMemberStatsRequest):
-        return RpcTarget(ClanMemberStatsRemoteService._saveCurrentClanMemberStats_CODE, 'ClanMemberStatsRemoteService', ClanMemberStatsRemoteService._saveCurrentClanMemberStats_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanMemberStatsRemoteService._saveCurrentClanMemberStats_CODE, 'ClanMemberStatsRemoteService', ClanMemberStatsRemoteService._saveCurrentClanMemberStats_METHOD, request.SerializeToString())
 
     @staticmethod
     def saveCurrentClanMemberStatsResponse(response) -> clan_member_stats_message_pb2.SaveCurrentClanMemberStatsResponse:
@@ -3095,7 +3095,7 @@ class ClanMemberStatsRemoteService:
 
     @staticmethod
     def getClanMembersStatsRequest(request: clan_member_stats_message_pb2.GetClanMembersStatsRequest):
-        return RpcTarget(ClanMemberStatsRemoteService._getClanMembersStats_CODE, 'ClanMemberStatsRemoteService', ClanMemberStatsRemoteService._getClanMembersStats_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanMemberStatsRemoteService._getClanMembersStats_CODE, 'ClanMemberStatsRemoteService', ClanMemberStatsRemoteService._getClanMembersStats_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanMembersStatsResponse(response) -> clan_member_stats_message_pb2.GetClanMembersStatsResponse:
@@ -3117,7 +3117,7 @@ class GameServerAchievementRemoteService:
 
     @staticmethod
     def giveAchievementsRequest(request: achievement_message_pb2.GiveAchievementsRequest):
-        return RpcTarget(GameServerAchievementRemoteService._giveAchievements_CODE, 'GameServerAchievementRemoteService', GameServerAchievementRemoteService._giveAchievements_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerAchievementRemoteService._giveAchievements_CODE, 'GameServerAchievementRemoteService', GameServerAchievementRemoteService._giveAchievements_METHOD, request.SerializeToString())
 
     @staticmethod
     def giveAchievementsResponse(response) -> achievement_message_pb2.GiveAchievementsResponse:
@@ -3141,7 +3141,7 @@ class DlcRemoteService:
 
     @staticmethod
     def getAllReleasedDlcRequest(request: dlc_message_pb2.ReleasedDlcRequest):
-        return RpcTarget(DlcRemoteService._getAllReleasedDlc_CODE, 'DlcRemoteService', DlcRemoteService._getAllReleasedDlc_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(DlcRemoteService._getAllReleasedDlc_CODE, 'DlcRemoteService', DlcRemoteService._getAllReleasedDlc_METHOD, request.SerializeToString())
 
     @staticmethod
     def getAllReleasedDlcResponse(response) -> dlc_message_pb2.DlcResponse:
@@ -3158,7 +3158,7 @@ class DlcRemoteService:
 
     @staticmethod
     def getAllDlcRequest(request: dlc_message_pb2.PreviewDlcRequest):
-        return RpcTarget(DlcRemoteService._getAllDlc_CODE, 'DlcRemoteService', DlcRemoteService._getAllDlc_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(DlcRemoteService._getAllDlc_CODE, 'DlcRemoteService', DlcRemoteService._getAllDlc_METHOD, request.SerializeToString())
 
     @staticmethod
     def getAllDlcResponse(response) -> dlc_message_pb2.DlcResponse:
@@ -3190,7 +3190,7 @@ class GameServerStatsRemoteService:
 
     @staticmethod
     def storePlayersStats2Request(request: player_stats_message_pb2.StorePlayersStatsRequest):
-        return RpcTarget(GameServerStatsRemoteService._storePlayersStats2_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._storePlayersStats2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerStatsRemoteService._storePlayersStats2_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._storePlayersStats2_METHOD, request.SerializeToString())
 
     @staticmethod
     def storePlayersStats2Response(response) -> player_stats_message_pb2.StorePlayersStatsResponse:
@@ -3207,7 +3207,7 @@ class GameServerStatsRemoteService:
 
     @staticmethod
     def storeStats2Request(request: player_stats_message_pb2.StoreStatsRequest):
-        return RpcTarget(GameServerStatsRemoteService._storeStats2_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._storeStats2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerStatsRemoteService._storeStats2_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._storeStats2_METHOD, request.SerializeToString())
 
     @staticmethod
     def storeStats2Response(response) -> player_stats_message_pb2.StoreStatsResponse:
@@ -3224,7 +3224,7 @@ class GameServerStatsRemoteService:
 
     @staticmethod
     def getStats2Request(request: player_stats_message_pb2.GetStatsRequest):
-        return RpcTarget(GameServerStatsRemoteService._getStats2_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._getStats2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerStatsRemoteService._getStats2_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._getStats2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getStats2Response(response) -> player_stats_message_pb2.GetStatsResponse:
@@ -3241,7 +3241,7 @@ class GameServerStatsRemoteService:
 
     @staticmethod
     def getPlayerStatsRequest(request: player_stats_message_pb2.GetPlayerStatsRequest):
-        return RpcTarget(GameServerStatsRemoteService._getPlayerStats_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._getPlayerStats_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerStatsRemoteService._getPlayerStats_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._getPlayerStats_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerStatsResponse(response) -> player_stats_message_pb2.GetPlayerStatsResponse:
@@ -3258,7 +3258,7 @@ class GameServerStatsRemoteService:
 
     @staticmethod
     def getPlayersStatsV2Request(request: player_stats_message_pb2.GetPlayersStatsRequest):
-        return RpcTarget(GameServerStatsRemoteService._getPlayersStatsV2_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._getPlayersStatsV2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerStatsRemoteService._getPlayersStatsV2_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._getPlayersStatsV2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayersStatsV2Response(response) -> player_stats_message_pb2.GetPlayersStatsResponse:
@@ -3275,7 +3275,7 @@ class GameServerStatsRemoteService:
 
     @staticmethod
     def storePlayerStats2Request(request: player_stats_message_pb2.StorePlayerStatsRequest):
-        return RpcTarget(GameServerStatsRemoteService._storePlayerStats2_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._storePlayerStats2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerStatsRemoteService._storePlayerStats2_CODE, 'GameServerStatsRemoteService', GameServerStatsRemoteService._storePlayerStats2_METHOD, request.SerializeToString())
 
     @staticmethod
     def storePlayerStats2Response(response) -> player_stats_message_pb2.StorePlayerStatsResponse:
@@ -3329,7 +3329,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def getOnlineStatus2Request(request: player_message_pb2.GetOnlineStatusRequest):
-        return RpcTarget(FriendsRemoteService._getOnlineStatus2_CODE, 'FriendsRemoteService', FriendsRemoteService._getOnlineStatus2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._getOnlineStatus2_CODE, 'FriendsRemoteService', FriendsRemoteService._getOnlineStatus2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getOnlineStatus2Response(response) -> player_message_pb2.GetOnlineStatusResponse:
@@ -3346,7 +3346,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def revokeFriendRequest2Request(request: friends_message_pb2.RevokeFriendRequestRequest):
-        return RpcTarget(FriendsRemoteService._revokeFriendRequest2_CODE, 'FriendsRemoteService', FriendsRemoteService._revokeFriendRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._revokeFriendRequest2_CODE, 'FriendsRemoteService', FriendsRemoteService._revokeFriendRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def revokeFriendRequest2Response(response) -> friends_message_pb2.RevokeFriendRequestResponse:
@@ -3363,7 +3363,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def getPlayerFriendsIds2Request(request: friends_message_pb2.GetPlayerFriendsIdsRequest):
-        return RpcTarget(FriendsRemoteService._getPlayerFriendsIds2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerFriendsIds2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._getPlayerFriendsIds2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerFriendsIds2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerFriendsIds2Response(response) -> friends_message_pb2.GetPlayerFriendsIdsResponse:
@@ -3380,7 +3380,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def removeFriend2Request(request: friends_message_pb2.RemoveFriendRequest):
-        return RpcTarget(FriendsRemoteService._removeFriend2_CODE, 'FriendsRemoteService', FriendsRemoteService._removeFriend2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._removeFriend2_CODE, 'FriendsRemoteService', FriendsRemoteService._removeFriend2_METHOD, request.SerializeToString())
 
     @staticmethod
     def removeFriend2Response(response) -> friends_message_pb2.RemoveFriendResponse:
@@ -3397,7 +3397,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def getPlayerFriendByUid2Request(request: friends_message_pb2.GetPlayerFriendByUidRequest):
-        return RpcTarget(FriendsRemoteService._getPlayerFriendByUid2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerFriendByUid2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._getPlayerFriendByUid2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerFriendByUid2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerFriendByUid2Response(response) -> friends_message_pb2.GetPlayerFriendByUidResponse:
@@ -3414,7 +3414,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def ignoreFriendRequest2Request(request: friends_message_pb2.IgnoreFriendRequestRequest):
-        return RpcTarget(FriendsRemoteService._ignoreFriendRequest2_CODE, 'FriendsRemoteService', FriendsRemoteService._ignoreFriendRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._ignoreFriendRequest2_CODE, 'FriendsRemoteService', FriendsRemoteService._ignoreFriendRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def ignoreFriendRequest2Response(response) -> friends_message_pb2.IgnoreFriendRequestResponse:
@@ -3431,7 +3431,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def sendFriendRequest2Request(request: friends_message_pb2.SendFriendRequestRequest):
-        return RpcTarget(FriendsRemoteService._sendFriendRequest2_CODE, 'FriendsRemoteService', FriendsRemoteService._sendFriendRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._sendFriendRequest2_CODE, 'FriendsRemoteService', FriendsRemoteService._sendFriendRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def sendFriendRequest2Response(response) -> friends_message_pb2.SendFriendRequestResponse:
@@ -3448,7 +3448,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def getPlayerFriendsCount2Request(request: friends_message_pb2.GetPlayerFriendsCountRequest):
-        return RpcTarget(FriendsRemoteService._getPlayerFriendsCount2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerFriendsCount2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._getPlayerFriendsCount2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerFriendsCount2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerFriendsCount2Response(response) -> friends_message_pb2.GetPlayerFriendsCountResponse:
@@ -3465,7 +3465,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def acceptFriendRequest2Request(request: friends_message_pb2.AcceptFriendRequestRequest):
-        return RpcTarget(FriendsRemoteService._acceptFriendRequest2_CODE, 'FriendsRemoteService', FriendsRemoteService._acceptFriendRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._acceptFriendRequest2_CODE, 'FriendsRemoteService', FriendsRemoteService._acceptFriendRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def acceptFriendRequest2Response(response) -> friends_message_pb2.AcceptFriendRequestResponse:
@@ -3482,7 +3482,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def searchPlayers2Request(request: friends_message_pb2.SearchPlayersRequest):
-        return RpcTarget(FriendsRemoteService._searchPlayers2_CODE, 'FriendsRemoteService', FriendsRemoteService._searchPlayers2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._searchPlayers2_CODE, 'FriendsRemoteService', FriendsRemoteService._searchPlayers2_METHOD, request.SerializeToString())
 
     @staticmethod
     def searchPlayers2Response(response) -> friends_message_pb2.SearchPlayersResponse:
@@ -3499,7 +3499,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def getPlayersCount2Request(request: friends_message_pb2.GetPlayersCountRequest):
-        return RpcTarget(FriendsRemoteService._getPlayersCount2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayersCount2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._getPlayersCount2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayersCount2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayersCount2Response(response) -> friends_message_pb2.GetPlayersCountResponse:
@@ -3516,7 +3516,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def ignoreAllFriendRequestsRequest(request: friends_message_pb2.IgnoreAllFriendRequestsRequest):
-        return RpcTarget(FriendsRemoteService._ignoreAllFriendRequests_CODE, 'FriendsRemoteService', FriendsRemoteService._ignoreAllFriendRequests_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._ignoreAllFriendRequests_CODE, 'FriendsRemoteService', FriendsRemoteService._ignoreAllFriendRequests_METHOD, request.SerializeToString())
 
     @staticmethod
     def ignoreAllFriendRequestsResponse(response) -> friends_message_pb2.IgnoreAllFriendRequestsResponse:
@@ -3533,7 +3533,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def unblockFriend2Request(request: friends_message_pb2.UnblockFriendRequest):
-        return RpcTarget(FriendsRemoteService._unblockFriend2_CODE, 'FriendsRemoteService', FriendsRemoteService._unblockFriend2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._unblockFriend2_CODE, 'FriendsRemoteService', FriendsRemoteService._unblockFriend2_METHOD, request.SerializeToString())
 
     @staticmethod
     def unblockFriend2Response(response) -> friends_message_pb2.UnblockFriendResponse:
@@ -3550,7 +3550,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def getPlayerFriends2Request(request: friends_message_pb2.GetPlayerFriendsRequest):
-        return RpcTarget(FriendsRemoteService._getPlayerFriends2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerFriends2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._getPlayerFriends2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerFriends2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerFriends2Response(response) -> friends_message_pb2.GetPlayerFriendsResponse:
@@ -3567,7 +3567,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def blockFriend2Request(request: friends_message_pb2.BlockFriendRequest):
-        return RpcTarget(FriendsRemoteService._blockFriend2_CODE, 'FriendsRemoteService', FriendsRemoteService._blockFriend2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._blockFriend2_CODE, 'FriendsRemoteService', FriendsRemoteService._blockFriend2_METHOD, request.SerializeToString())
 
     @staticmethod
     def blockFriend2Response(response) -> friends_message_pb2.BlockFriendResponse:
@@ -3584,7 +3584,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def getPlayerFriendById2Request(request: friends_message_pb2.GetPlayerFriendByIdRequest):
-        return RpcTarget(FriendsRemoteService._getPlayerFriendById2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerFriendById2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._getPlayerFriendById2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerFriendById2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerFriendById2Response(response) -> friends_message_pb2.GetPlayerFriendByIdResponse:
@@ -3601,7 +3601,7 @@ class FriendsRemoteService:
 
     @staticmethod
     def getPlayerById2Request(request: player_message_pb2.GetPlayerByIdRequest):
-        return RpcTarget(FriendsRemoteService._getPlayerById2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerById2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FriendsRemoteService._getPlayerById2_CODE, 'FriendsRemoteService', FriendsRemoteService._getPlayerById2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerById2Response(response) -> player_message_pb2.GetPlayerByIdResponse:
@@ -3651,7 +3651,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def getMarketplaceSettings2Request(request: marketplace_message_pb2.GetMarketplaceSettingsRequest):
-        return RpcTarget(MarketplaceRemoteService._getMarketplaceSettings2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getMarketplaceSettings2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._getMarketplaceSettings2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getMarketplaceSettings2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getMarketplaceSettings2Response(response) -> marketplace_message_pb2.GetMarketplaceSettingsResponse:
@@ -3668,7 +3668,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def getPlayerProcessingRequests2Request(request: marketplace_message_pb2.GetPlayerProcessingRequestRequest):
-        return RpcTarget(MarketplaceRemoteService._getPlayerProcessingRequests2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getPlayerProcessingRequests2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._getPlayerProcessingRequests2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getPlayerProcessingRequests2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerProcessingRequests2Response(response) -> marketplace_message_pb2.GetPlayerProcessingRequestResponse:
@@ -3685,7 +3685,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def getFilteredTradeOpenSaleRequestsRequest(request: marketplace_message_pb2.GetTradeOpenSaleRequestsRequest):
-        return RpcTarget(MarketplaceRemoteService._getFilteredTradeOpenSaleRequests_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getFilteredTradeOpenSaleRequests_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._getFilteredTradeOpenSaleRequests_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getFilteredTradeOpenSaleRequests_METHOD, request.SerializeToString())
 
     @staticmethod
     def getFilteredTradeOpenSaleRequestsResponse(response) -> marketplace_message_pb2.GetTradeOpenSaleRequestsResponse:
@@ -3702,7 +3702,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def getPlayerClosedRequestsCount2Request(request: marketplace_message_pb2.GetPlayerClosedRequestsCountRequest):
-        return RpcTarget(MarketplaceRemoteService._getPlayerClosedRequestsCount2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getPlayerClosedRequestsCount2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._getPlayerClosedRequestsCount2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getPlayerClosedRequestsCount2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerClosedRequestsCount2Response(response) -> marketplace_message_pb2.GetPlayerClosedRequestsCountResponse:
@@ -3719,7 +3719,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def createMultipleSalesRequest(request: marketplace_message_pb2.CreateMultipleSalesRequest):
-        return RpcTarget(MarketplaceRemoteService._createMultipleSales_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._createMultipleSales_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._createMultipleSales_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._createMultipleSales_METHOD, request.SerializeToString())
 
     @staticmethod
     def createMultipleSalesResponse(response) -> marketplace_message_pb2.CreateMultipleSalesResponse:
@@ -3736,7 +3736,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def getPlayerOpenRequests2Request(request: marketplace_message_pb2.GetPlayerOpenRequestsRequest):
-        return RpcTarget(MarketplaceRemoteService._getPlayerOpenRequests2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getPlayerOpenRequests2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._getPlayerOpenRequests2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getPlayerOpenRequests2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerOpenRequests2Response(response) -> marketplace_message_pb2.GetPlayerOpenRequestsResponse:
@@ -3753,7 +3753,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def createPurchaseRequestBySale2Request(request: marketplace_message_pb2.CreatePurchaseRequestBySaleRequest):
-        return RpcTarget(MarketplaceRemoteService._createPurchaseRequestBySale2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._createPurchaseRequestBySale2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._createPurchaseRequestBySale2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._createPurchaseRequestBySale2_METHOD, request.SerializeToString())
 
     @staticmethod
     def createPurchaseRequestBySale2Response(response) -> marketplace_message_pb2.CreatePurchaseRequestBySaleResponse:
@@ -3770,7 +3770,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def getTrades2Request(request: marketplace_message_pb2.GetTradesRequest):
-        return RpcTarget(MarketplaceRemoteService._getTrades2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getTrades2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._getTrades2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getTrades2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getTrades2Response(response) -> marketplace_message_pb2.GetTradesResponse:
@@ -3787,7 +3787,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def getPlayerClosedRequests2Request(request: marketplace_message_pb2.GetPlayerClosedRequestsRequest):
-        return RpcTarget(MarketplaceRemoteService._getPlayerClosedRequests2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getPlayerClosedRequests2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._getPlayerClosedRequests2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getPlayerClosedRequests2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerClosedRequests2Response(response) -> marketplace_message_pb2.GetPlayerClosedRequestsResponse:
@@ -3804,7 +3804,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def getTradeOpenSaleRequests2Request(request: marketplace_message_pb2.GetTradeOpenSaleRequestsRequest):
-        return RpcTarget(MarketplaceRemoteService._getTradeOpenSaleRequests2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getTradeOpenSaleRequests2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._getTradeOpenSaleRequests2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getTradeOpenSaleRequests2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getTradeOpenSaleRequests2Response(response) -> marketplace_message_pb2.GetTradeOpenSaleRequestsResponse:
@@ -3821,7 +3821,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def getTradeOpenPurchaseRequests2Request(request: marketplace_message_pb2.GetTradeOpenPurchaseRequestsRequest):
-        return RpcTarget(MarketplaceRemoteService._getTradeOpenPurchaseRequests2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getTradeOpenPurchaseRequests2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._getTradeOpenPurchaseRequests2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getTradeOpenPurchaseRequests2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getTradeOpenPurchaseRequests2Response(response) -> marketplace_message_pb2.GetTradeOpenPurchaseRequestsResponse:
@@ -3838,7 +3838,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def cancelRequest2Request(request: marketplace_message_pb2.CancelRequestRequest):
-        return RpcTarget(MarketplaceRemoteService._cancelRequest2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._cancelRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._cancelRequest2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._cancelRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def cancelRequest2Response(response) -> marketplace_message_pb2.CancelRequestResponse:
@@ -3855,7 +3855,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def getTrade2Request(request: marketplace_message_pb2.GetTradeRequest):
-        return RpcTarget(MarketplaceRemoteService._getTrade2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getTrade2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._getTrade2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._getTrade2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getTrade2Response(response) -> marketplace_message_pb2.GetTradeResponse:
@@ -3872,7 +3872,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def createSaleRequest(request: marketplace_message_pb2.CreateSaleRequest):
-        return RpcTarget(MarketplaceRemoteService._createSale_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._createSale_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._createSale_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._createSale_METHOD, request.SerializeToString())
 
     @staticmethod
     def createSaleResponse(response) -> marketplace_message_pb2.CreateSaleResponse:
@@ -3889,7 +3889,7 @@ class MarketplaceRemoteService:
 
     @staticmethod
     def createPurchaseRequest2Request(request: marketplace_message_pb2.CreatePurchaseRequestRequest):
-        return RpcTarget(MarketplaceRemoteService._createPurchaseRequest2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._createPurchaseRequest2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MarketplaceRemoteService._createPurchaseRequest2_CODE, 'MarketplaceRemoteService', MarketplaceRemoteService._createPurchaseRequest2_METHOD, request.SerializeToString())
 
     @staticmethod
     def createPurchaseRequest2Response(response) -> marketplace_message_pb2.CreatePurchaseRequestResponse:
@@ -3925,7 +3925,7 @@ class TournamentsRemoteService:
 
     @staticmethod
     def finishTournament2Request(request: tournaments_message_pb2.FinishTournamentRequest):
-        return RpcTarget(TournamentsRemoteService._finishTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._finishTournament2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(TournamentsRemoteService._finishTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._finishTournament2_METHOD, request.SerializeToString())
 
     @staticmethod
     def finishTournament2Response(response) -> tournaments_message_pb2.FinishTournamentResponse:
@@ -3942,7 +3942,7 @@ class TournamentsRemoteService:
 
     @staticmethod
     def leaveTournament2Request(request: tournaments_message_pb2.LeaveTournamentRequest):
-        return RpcTarget(TournamentsRemoteService._leaveTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._leaveTournament2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(TournamentsRemoteService._leaveTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._leaveTournament2_METHOD, request.SerializeToString())
 
     @staticmethod
     def leaveTournament2Response(response) -> tournaments_message_pb2.LeaveTournamentResponse:
@@ -3959,7 +3959,7 @@ class TournamentsRemoteService:
 
     @staticmethod
     def announceTournament2Request(request: tournaments_message_pb2.AnnounceTournamentRequest):
-        return RpcTarget(TournamentsRemoteService._announceTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._announceTournament2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(TournamentsRemoteService._announceTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._announceTournament2_METHOD, request.SerializeToString())
 
     @staticmethod
     def announceTournament2Response(response) -> tournaments_message_pb2.AnnounceTournamentResponse:
@@ -3976,7 +3976,7 @@ class TournamentsRemoteService:
 
     @staticmethod
     def joinTournament2Request(request: tournaments_message_pb2.JoinTournamentRequest):
-        return RpcTarget(TournamentsRemoteService._joinTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._joinTournament2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(TournamentsRemoteService._joinTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._joinTournament2_METHOD, request.SerializeToString())
 
     @staticmethod
     def joinTournament2Response(response) -> tournaments_message_pb2.JoinTournamentResponse:
@@ -3993,7 +3993,7 @@ class TournamentsRemoteService:
 
     @staticmethod
     def tournaments2Request(request: tournaments_message_pb2.TournamentsRequest):
-        return RpcTarget(TournamentsRemoteService._tournaments2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._tournaments2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(TournamentsRemoteService._tournaments2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._tournaments2_METHOD, request.SerializeToString())
 
     @staticmethod
     def tournaments2Response(response) -> tournaments_message_pb2.TournamentsResponse:
@@ -4010,7 +4010,7 @@ class TournamentsRemoteService:
 
     @staticmethod
     def playTournamentGame2Request(request: tournaments_message_pb2.PlayTournamentGameRequest):
-        return RpcTarget(TournamentsRemoteService._playTournamentGame2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._playTournamentGame2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(TournamentsRemoteService._playTournamentGame2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._playTournamentGame2_METHOD, request.SerializeToString())
 
     @staticmethod
     def playTournamentGame2Response(response) -> tournaments_message_pb2.PlayTournamentGameResponse:
@@ -4027,7 +4027,7 @@ class TournamentsRemoteService:
 
     @staticmethod
     def getTournament2Request(request: tournaments_message_pb2.GetTournamentRequest):
-        return RpcTarget(TournamentsRemoteService._getTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._getTournament2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(TournamentsRemoteService._getTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._getTournament2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getTournament2Response(response) -> tournaments_message_pb2.GetTournamentResponse:
@@ -4044,7 +4044,7 @@ class TournamentsRemoteService:
 
     @staticmethod
     def startTournament2Request(request: tournaments_message_pb2.StartTournamentRequest):
-        return RpcTarget(TournamentsRemoteService._startTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._startTournament2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(TournamentsRemoteService._startTournament2_CODE, 'TournamentsRemoteService', TournamentsRemoteService._startTournament2_METHOD, request.SerializeToString())
 
     @staticmethod
     def startTournament2Response(response) -> tournaments_message_pb2.StartTournamentResponse:
@@ -4130,7 +4130,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def refuseInvitationToLobby2Request(request: matchmaking_message_pb2.RefuseInvitationToLobbyRequest):
-        return RpcTarget(MatchmakingRemoteService._refuseInvitationToLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._refuseInvitationToLobby2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._refuseInvitationToLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._refuseInvitationToLobby2_METHOD, request.SerializeToString())
 
     @staticmethod
     def refuseInvitationToLobby2Response(response) -> matchmaking_message_pb2.RefuseInvitationToLobbyResponse:
@@ -4147,7 +4147,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def leaveLobby2Request(request: matchmaking_message_pb2.LeaveLobbyRequest):
-        return RpcTarget(MatchmakingRemoteService._leaveLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._leaveLobby2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._leaveLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._leaveLobby2_METHOD, request.SerializeToString())
 
     @staticmethod
     def leaveLobby2Response(response) -> matchmaking_message_pb2.LeaveLobbyResponse:
@@ -4164,7 +4164,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def getGameServerPlayers2Request(request: matchmaking_message_pb2.GetGameServerPlayersRequest):
-        return RpcTarget(MatchmakingRemoteService._getGameServerPlayers2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getGameServerPlayers2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._getGameServerPlayers2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getGameServerPlayers2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getGameServerPlayers2Response(response) -> matchmaking_message_pb2.GetGameServerPlayersResponse:
@@ -4181,7 +4181,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def searchLobbyRequest(request: matchmaking_message_pb2.SearchLobbyRequest):
-        return RpcTarget(MatchmakingRemoteService._searchLobby_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._searchLobby_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._searchLobby_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._searchLobby_METHOD, request.SerializeToString())
 
     @staticmethod
     def searchLobbyResponse(response) -> matchmaking_message_pb2.SearchLobbyResponse:
@@ -4198,7 +4198,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def revokePlayerInvitationToLobby2Request(request: matchmaking_message_pb2.RevokePlayerInvitationToLobbyRequest):
-        return RpcTarget(MatchmakingRemoteService._revokePlayerInvitationToLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._revokePlayerInvitationToLobby2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._revokePlayerInvitationToLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._revokePlayerInvitationToLobby2_METHOD, request.SerializeToString())
 
     @staticmethod
     def revokePlayerInvitationToLobby2Response(response) -> matchmaking_message_pb2.RevokePlayerInvitationToLobbyResponse:
@@ -4215,7 +4215,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def getLobbyOwner2Request(request: matchmaking_message_pb2.GetLobbyOwnerRequest):
-        return RpcTarget(MatchmakingRemoteService._getLobbyOwner2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getLobbyOwner2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._getLobbyOwner2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getLobbyOwner2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getLobbyOwner2Response(response) -> matchmaking_message_pb2.GetLobbyOwnerResponse:
@@ -4232,7 +4232,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def joinLobbyAs2Request(request: matchmaking_message_pb2.JoinLobbyAsRequest):
-        return RpcTarget(MatchmakingRemoteService._joinLobbyAs2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._joinLobbyAs2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._joinLobbyAs2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._joinLobbyAs2_METHOD, request.SerializeToString())
 
     @staticmethod
     def joinLobbyAs2Response(response) -> matchmaking_message_pb2.JoinLobbyAsResponse:
@@ -4249,7 +4249,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def kickPlayerFromLobby2Request(request: matchmaking_message_pb2.KickPlayerFromLobbyRequest):
-        return RpcTarget(MatchmakingRemoteService._kickPlayerFromLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._kickPlayerFromLobby2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._kickPlayerFromLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._kickPlayerFromLobby2_METHOD, request.SerializeToString())
 
     @staticmethod
     def kickPlayerFromLobby2Response(response) -> matchmaking_message_pb2.KickPlayerFromLobbyResponse:
@@ -4266,7 +4266,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def joinLobby2Request(request: matchmaking_message_pb2.JoinLobbyRequest):
-        return RpcTarget(MatchmakingRemoteService._joinLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._joinLobby2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._joinLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._joinLobby2_METHOD, request.SerializeToString())
 
     @staticmethod
     def joinLobby2Response(response) -> matchmaking_message_pb2.JoinLobbyResponse:
@@ -4283,7 +4283,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def setLobbyPhotonGame2Request(request: matchmaking_message_pb2.SetLobbyPhotonGameRequest):
-        return RpcTarget(MatchmakingRemoteService._setLobbyPhotonGame2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyPhotonGame2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._setLobbyPhotonGame2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyPhotonGame2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setLobbyPhotonGame2Response(response) -> matchmaking_message_pb2.SetLobbyPhotonGameResponse:
@@ -4300,7 +4300,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def createLobbyWithSpectators2Request(request: matchmaking_message_pb2.CreateLobbyWithSpectatorsRequest):
-        return RpcTarget(MatchmakingRemoteService._createLobbyWithSpectators2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._createLobbyWithSpectators2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._createLobbyWithSpectators2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._createLobbyWithSpectators2_METHOD, request.SerializeToString())
 
     @staticmethod
     def createLobbyWithSpectators2Response(response) -> matchmaking_message_pb2.CreateLobbyWithSpectatorsResponse:
@@ -4317,7 +4317,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def requestLobbyList2Request(request: matchmaking_message_pb2.RequestLobbyListRequest):
-        return RpcTarget(MatchmakingRemoteService._requestLobbyList2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._requestLobbyList2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._requestLobbyList2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._requestLobbyList2_METHOD, request.SerializeToString())
 
     @staticmethod
     def requestLobbyList2Response(response) -> matchmaking_message_pb2.RequestLobbyListResponse:
@@ -4334,7 +4334,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def getGameServerDetails2Request(request: matchmaking_message_pb2.GetGameServerDetailsRequest):
-        return RpcTarget(MatchmakingRemoteService._getGameServerDetails2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getGameServerDetails2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._getGameServerDetails2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getGameServerDetails2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getGameServerDetails2Response(response) -> matchmaking_message_pb2.GetGameServerDetailsResponse:
@@ -4351,7 +4351,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def deleteLobbyData2Request(request: matchmaking_message_pb2.DeleteLobbyDataRequest):
-        return RpcTarget(MatchmakingRemoteService._deleteLobbyData2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._deleteLobbyData2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._deleteLobbyData2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._deleteLobbyData2_METHOD, request.SerializeToString())
 
     @staticmethod
     def deleteLobbyData2Response(response) -> matchmaking_message_pb2.DeleteLobbyDataResponse:
@@ -4368,7 +4368,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def invitePlayerToLobby2Request(request: matchmaking_message_pb2.InvitePlayerToLobbyRequest):
-        return RpcTarget(MatchmakingRemoteService._invitePlayerToLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._invitePlayerToLobby2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._invitePlayerToLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._invitePlayerToLobby2_METHOD, request.SerializeToString())
 
     @staticmethod
     def invitePlayerToLobby2Response(response) -> matchmaking_message_pb2.InvitePlayerToLobbyResponse:
@@ -4385,7 +4385,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def setLobbyMaxMembers2Request(request: matchmaking_message_pb2.SetLobbyMaxMembersRequest):
-        return RpcTarget(MatchmakingRemoteService._setLobbyMaxMembers2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyMaxMembers2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._setLobbyMaxMembers2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyMaxMembers2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setLobbyMaxMembers2Response(response) -> matchmaking_message_pb2.SetLobbyMaxMembersResponse:
@@ -4402,7 +4402,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def changeLobbyPlayerType2Request(request: matchmaking_message_pb2.ChangeLobbyPlayerTypeRequest):
-        return RpcTarget(MatchmakingRemoteService._changeLobbyPlayerType2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._changeLobbyPlayerType2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._changeLobbyPlayerType2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._changeLobbyPlayerType2_METHOD, request.SerializeToString())
 
     @staticmethod
     def changeLobbyPlayerType2Response(response) -> matchmaking_message_pb2.ChangeLobbyPlayerTypeResponse:
@@ -4419,7 +4419,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def getLobbyGameServer2Request(request: matchmaking_message_pb2.GetLobbyGameServerRequest):
-        return RpcTarget(MatchmakingRemoteService._getLobbyGameServer2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getLobbyGameServer2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._getLobbyGameServer2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getLobbyGameServer2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getLobbyGameServer2Response(response) -> matchmaking_message_pb2.GetLobbyGameServerResponse:
@@ -4436,7 +4436,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def setLobbyName2Request(request: matchmaking_message_pb2.SetLobbyNameRequest):
-        return RpcTarget(MatchmakingRemoteService._setLobbyName2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyName2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._setLobbyName2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyName2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setLobbyName2Response(response) -> matchmaking_message_pb2.SetLobbyNameResponse:
@@ -4453,7 +4453,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def invitePlayerToLobbyAs2Request(request: matchmaking_message_pb2.InvitePlayerToLobbyAsRequest):
-        return RpcTarget(MatchmakingRemoteService._invitePlayerToLobbyAs2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._invitePlayerToLobbyAs2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._invitePlayerToLobbyAs2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._invitePlayerToLobbyAs2_METHOD, request.SerializeToString())
 
     @staticmethod
     def invitePlayerToLobbyAs2Response(response) -> matchmaking_message_pb2.InvitePlayerToLobbyAsResponse:
@@ -4470,7 +4470,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def changeLobbyOtherPlayerType2Request(request: matchmaking_message_pb2.ChangeLobbyOtherPlayerTypeRequest):
-        return RpcTarget(MatchmakingRemoteService._changeLobbyOtherPlayerType2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._changeLobbyOtherPlayerType2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._changeLobbyOtherPlayerType2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._changeLobbyOtherPlayerType2_METHOD, request.SerializeToString())
 
     @staticmethod
     def changeLobbyOtherPlayerType2Response(response) -> matchmaking_message_pb2.ChangeLobbyOtherPlayerTypeResponse:
@@ -4487,7 +4487,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def requestInternetServerList2Request(request: matchmaking_message_pb2.RequestInternetServerListRequest):
-        return RpcTarget(MatchmakingRemoteService._requestInternetServerList2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._requestInternetServerList2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._requestInternetServerList2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._requestInternetServerList2_METHOD, request.SerializeToString())
 
     @staticmethod
     def requestInternetServerList2Response(response) -> matchmaking_message_pb2.RequestInternetServerListResponse:
@@ -4504,7 +4504,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def setLobbyData2Request(request: matchmaking_message_pb2.SetLobbyDataRequest):
-        return RpcTarget(MatchmakingRemoteService._setLobbyData2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyData2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._setLobbyData2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyData2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setLobbyData2Response(response) -> matchmaking_message_pb2.SetLobbyDataResponse:
@@ -4521,7 +4521,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def setLobbyType2Request(request: matchmaking_message_pb2.SetLobbyTypeRequest):
-        return RpcTarget(MatchmakingRemoteService._setLobbyType2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyType2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._setLobbyType2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyType2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setLobbyType2Response(response) -> matchmaking_message_pb2.SetLobbyTypeResponse:
@@ -4538,7 +4538,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def getLobbyPhotonGame2Request(request: matchmaking_message_pb2.GetLobbyPhotonGameRequest):
-        return RpcTarget(MatchmakingRemoteService._getLobbyPhotonGame2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getLobbyPhotonGame2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._getLobbyPhotonGame2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getLobbyPhotonGame2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getLobbyPhotonGame2Response(response) -> matchmaking_message_pb2.GetLobbyPhotonGameResponse:
@@ -4555,7 +4555,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def getLobby2Request(request: matchmaking_message_pb2.GetLobbyRequest):
-        return RpcTarget(MatchmakingRemoteService._getLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getLobby2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._getLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getLobby2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getLobby2Response(response) -> matchmaking_message_pb2.GetLobbyResponse:
@@ -4572,7 +4572,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def setLobbyOwner2Request(request: matchmaking_message_pb2.SetLobbyOwnerRequest):
-        return RpcTarget(MatchmakingRemoteService._setLobbyOwner2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyOwner2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._setLobbyOwner2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyOwner2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setLobbyOwner2Response(response) -> matchmaking_message_pb2.SetLobbyOwnerResponse:
@@ -4589,7 +4589,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def getInvitesToLobby2Request(request: matchmaking_message_pb2.GetInvitesToLobbyRequest):
-        return RpcTarget(MatchmakingRemoteService._getInvitesToLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getInvitesToLobby2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._getInvitesToLobby2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getInvitesToLobby2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getInvitesToLobby2Response(response) -> matchmaking_message_pb2.GetInvitesToLobbyResponse:
@@ -4606,7 +4606,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def setLobbyJoinable2Request(request: matchmaking_message_pb2.SetLobbyJoinableRequest):
-        return RpcTarget(MatchmakingRemoteService._setLobbyJoinable2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyJoinable2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._setLobbyJoinable2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyJoinable2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setLobbyJoinable2Response(response) -> matchmaking_message_pb2.SetLobbyJoinableResponse:
@@ -4623,7 +4623,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def getLobbyMembers2Request(request: matchmaking_message_pb2.GetLobbyMembersRequest):
-        return RpcTarget(MatchmakingRemoteService._getLobbyMembers2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getLobbyMembers2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._getLobbyMembers2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._getLobbyMembers2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getLobbyMembers2Response(response) -> matchmaking_message_pb2.GetLobbyMembersResponse:
@@ -4640,7 +4640,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def setLobbyGameServer2Request(request: matchmaking_message_pb2.SetLobbyGameServerRequest):
-        return RpcTarget(MatchmakingRemoteService._setLobbyGameServer2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyGameServer2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._setLobbyGameServer2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyGameServer2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setLobbyGameServer2Response(response) -> matchmaking_message_pb2.SetLobbyGameServerResponse:
@@ -4657,7 +4657,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def setLobbyMaxSpectators2Request(request: matchmaking_message_pb2.SetLobbyMaxSpectatorsRequest):
-        return RpcTarget(MatchmakingRemoteService._setLobbyMaxSpectators2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyMaxSpectators2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._setLobbyMaxSpectators2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._setLobbyMaxSpectators2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setLobbyMaxSpectators2Response(response) -> matchmaking_message_pb2.SetLobbyMaxSpectatorsResponse:
@@ -4674,7 +4674,7 @@ class MatchmakingRemoteService:
 
     @staticmethod
     def sendLobbyChatMsg2Request(request: matchmaking_message_pb2.SendLobbyChatMsgRequest):
-        return RpcTarget(MatchmakingRemoteService._sendLobbyChatMsg2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._sendLobbyChatMsg2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(MatchmakingRemoteService._sendLobbyChatMsg2_CODE, 'MatchmakingRemoteService', MatchmakingRemoteService._sendLobbyChatMsg2_METHOD, request.SerializeToString())
 
     @staticmethod
     def sendLobbyChatMsg2Response(response) -> matchmaking_message_pb2.SendLobbyChatMsgResponse:
@@ -4696,7 +4696,7 @@ class GetAppsInAppRemoteService:
 
     @staticmethod
     def buyInAppRequest(request: inapps_message_pb2.GetAppsBuyInappRequest):
-        return RpcTarget(GetAppsInAppRemoteService._buyInApp_CODE, 'GetAppsInAppRemoteService', GetAppsInAppRemoteService._buyInApp_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GetAppsInAppRemoteService._buyInApp_CODE, 'GetAppsInAppRemoteService', GetAppsInAppRemoteService._buyInApp_METHOD, request.SerializeToString())
 
     @staticmethod
     def buyInAppResponse(response) -> inapps_message_pb2.GetAppsBuyInappResponse:
@@ -4720,7 +4720,7 @@ class BoltRemoteService:
 
     @staticmethod
     def subscribe2Request(request: common_message_pb2.SubscribeRequest):
-        return RpcTarget(BoltRemoteService._subscribe2_CODE, 'BoltRemoteService', BoltRemoteService._subscribe2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(BoltRemoteService._subscribe2_CODE, 'BoltRemoteService', BoltRemoteService._subscribe2_METHOD, request.SerializeToString())
 
     @staticmethod
     def subscribe2Response(response) -> common_message_pb2.SubscribeResponse:
@@ -4737,7 +4737,7 @@ class BoltRemoteService:
 
     @staticmethod
     def unsubscribe2Request(request: common_message_pb2.UnsubscribeRequest):
-        return RpcTarget(BoltRemoteService._unsubscribe2_CODE, 'BoltRemoteService', BoltRemoteService._unsubscribe2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(BoltRemoteService._unsubscribe2_CODE, 'BoltRemoteService', BoltRemoteService._unsubscribe2_METHOD, request.SerializeToString())
 
     @staticmethod
     def unsubscribe2Response(response) -> common_message_pb2.UnsubscribeResponse:
@@ -4765,7 +4765,7 @@ class LeaderboardRemoteService:
 
     @staticmethod
     def getPlayerRankRequest(request: leaderboard_message_pb2.GetPlayerRankRequest):
-        return RpcTarget(LeaderboardRemoteService._getPlayerRank_CODE, 'LeaderboardRemoteService', LeaderboardRemoteService._getPlayerRank_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(LeaderboardRemoteService._getPlayerRank_CODE, 'LeaderboardRemoteService', LeaderboardRemoteService._getPlayerRank_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerRankResponse(response) -> leaderboard_message_pb2.GetPlayerRankResponse:
@@ -4782,7 +4782,7 @@ class LeaderboardRemoteService:
 
     @staticmethod
     def getPlayerLeaderBoardRequest(request: leaderboard_message_pb2.GetPlayerLeaderboardRequest):
-        return RpcTarget(LeaderboardRemoteService._getPlayerLeaderBoard_CODE, 'LeaderboardRemoteService', LeaderboardRemoteService._getPlayerLeaderBoard_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(LeaderboardRemoteService._getPlayerLeaderBoard_CODE, 'LeaderboardRemoteService', LeaderboardRemoteService._getPlayerLeaderBoard_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerLeaderBoardResponse(response) -> leaderboard_message_pb2.GetPlayerLeaderboardResponse:
@@ -4799,7 +4799,7 @@ class LeaderboardRemoteService:
 
     @staticmethod
     def getClanLeaderBoardRequest(request: leaderboard_message_pb2.GetClanLeaderboardRequest):
-        return RpcTarget(LeaderboardRemoteService._getClanLeaderBoard_CODE, 'LeaderboardRemoteService', LeaderboardRemoteService._getClanLeaderBoard_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(LeaderboardRemoteService._getClanLeaderBoard_CODE, 'LeaderboardRemoteService', LeaderboardRemoteService._getClanLeaderBoard_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanLeaderBoardResponse(response) -> leaderboard_message_pb2.GetClanLeaderboardResponse:
@@ -4816,7 +4816,7 @@ class LeaderboardRemoteService:
 
     @staticmethod
     def getClanRankRequest(request: leaderboard_message_pb2.GetClanRankRequest):
-        return RpcTarget(LeaderboardRemoteService._getClanRank_CODE, 'LeaderboardRemoteService', LeaderboardRemoteService._getClanRank_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(LeaderboardRemoteService._getClanRank_CODE, 'LeaderboardRemoteService', LeaderboardRemoteService._getClanRank_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanRankResponse(response) -> leaderboard_message_pb2.GetClanRankResponse:
@@ -4838,7 +4838,7 @@ class AccountLinkRemoteService:
 
     @staticmethod
     def getLinkedAuthRequest(request: auth_message_pb2.GetLinkedAuthRequest):
-        return RpcTarget(AccountLinkRemoteService._getLinkedAuth_CODE, 'AccountLinkRemoteService', AccountLinkRemoteService._getLinkedAuth_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(AccountLinkRemoteService._getLinkedAuth_CODE, 'AccountLinkRemoteService', AccountLinkRemoteService._getLinkedAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def getLinkedAuthResponse(response) -> auth_message_pb2.GetLinkedAuthResponse:
@@ -4862,7 +4862,7 @@ class ClanStatsRemoteService:
 
     @staticmethod
     def getClanStatsRequest(request: clan_stats_message_pb2.GetClanStatsRequest):
-        return RpcTarget(ClanStatsRemoteService._getClanStats_CODE, 'ClanStatsRemoteService', ClanStatsRemoteService._getClanStats_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanStatsRemoteService._getClanStats_CODE, 'ClanStatsRemoteService', ClanStatsRemoteService._getClanStats_METHOD, request.SerializeToString())
 
     @staticmethod
     def getClanStatsResponse(response) -> clan_stats_message_pb2.GetClanStatsResponse:
@@ -4879,7 +4879,7 @@ class ClanStatsRemoteService:
 
     @staticmethod
     def getCurrentClanStatsRequest(request: clan_stats_message_pb2.GetCurrentClanStatsRequest):
-        return RpcTarget(ClanStatsRemoteService._getCurrentClanStats_CODE, 'ClanStatsRemoteService', ClanStatsRemoteService._getCurrentClanStats_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ClanStatsRemoteService._getCurrentClanStats_CODE, 'ClanStatsRemoteService', ClanStatsRemoteService._getCurrentClanStats_METHOD, request.SerializeToString())
 
     @staticmethod
     def getCurrentClanStatsResponse(response) -> clan_stats_message_pb2.GetCurrentClanStatsResponse:
@@ -4901,7 +4901,7 @@ class AppStoreInAppRemoteService:
 
     @staticmethod
     def buyInApp2Request(request: inapps_message_pb2.AppStoreBuyInappRequest):
-        return RpcTarget(AppStoreInAppRemoteService._buyInApp2_CODE, 'AppStoreInAppRemoteService', AppStoreInAppRemoteService._buyInApp2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(AppStoreInAppRemoteService._buyInApp2_CODE, 'AppStoreInAppRemoteService', AppStoreInAppRemoteService._buyInApp2_METHOD, request.SerializeToString())
 
     @staticmethod
     def buyInApp2Response(response) -> inapps_message_pb2.AppStoreBuyInappResponse:
@@ -4927,7 +4927,7 @@ class GroupRemoteService:
 
     @staticmethod
     def joinGroup2Request(request: groups_message_pb2.JoinGroupRequest):
-        return RpcTarget(GroupRemoteService._joinGroup2_CODE, 'GroupRemoteService', GroupRemoteService._joinGroup2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GroupRemoteService._joinGroup2_CODE, 'GroupRemoteService', GroupRemoteService._joinGroup2_METHOD, request.SerializeToString())
 
     @staticmethod
     def joinGroup2Response(response) -> groups_message_pb2.JoinGroupResponse:
@@ -4944,7 +4944,7 @@ class GroupRemoteService:
 
     @staticmethod
     def leaveGroup2Request(request: groups_message_pb2.LeaveGroupRequest):
-        return RpcTarget(GroupRemoteService._leaveGroup2_CODE, 'GroupRemoteService', GroupRemoteService._leaveGroup2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GroupRemoteService._leaveGroup2_CODE, 'GroupRemoteService', GroupRemoteService._leaveGroup2_METHOD, request.SerializeToString())
 
     @staticmethod
     def leaveGroup2Response(response) -> groups_message_pb2.LeaveGroupResponse:
@@ -4961,7 +4961,7 @@ class GroupRemoteService:
 
     @staticmethod
     def createGroup2Request(request: groups_message_pb2.CreateGroupRequest):
-        return RpcTarget(GroupRemoteService._createGroup2_CODE, 'GroupRemoteService', GroupRemoteService._createGroup2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GroupRemoteService._createGroup2_CODE, 'GroupRemoteService', GroupRemoteService._createGroup2_METHOD, request.SerializeToString())
 
     @staticmethod
     def createGroup2Response(response) -> groups_message_pb2.CreateGroupResponse:
@@ -4989,7 +4989,7 @@ class HuaweiAuthRemoteService:
 
     @staticmethod
     def encryptedAuthRequest(request: auth_message_pb2.HuaweiAuthRequest):
-        return RpcTarget(HuaweiAuthRemoteService._encryptedAuth_CODE, 'HuaweiAuthRemoteService', HuaweiAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(HuaweiAuthRemoteService._encryptedAuth_CODE, 'HuaweiAuthRemoteService', HuaweiAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuthResponse(response) -> auth_message_pb2.HuaweiAuthResponse:
@@ -5006,7 +5006,7 @@ class HuaweiAuthRemoteService:
 
     @staticmethod
     def linkAuthRequest(request: auth_message_pb2.HuaweiLinkAuthRequest):
-        return RpcTarget(HuaweiAuthRemoteService._linkAuth_CODE, 'HuaweiAuthRemoteService', HuaweiAuthRemoteService._linkAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(HuaweiAuthRemoteService._linkAuth_CODE, 'HuaweiAuthRemoteService', HuaweiAuthRemoteService._linkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def linkAuthResponse(response) -> auth_message_pb2.HuaweiLinkAuthResponse:
@@ -5023,7 +5023,7 @@ class HuaweiAuthRemoteService:
 
     @staticmethod
     def unLinkAuthRequest(request: auth_message_pb2.HuaweiUnLinkAuthRequest):
-        return RpcTarget(HuaweiAuthRemoteService._unLinkAuth_CODE, 'HuaweiAuthRemoteService', HuaweiAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(HuaweiAuthRemoteService._unLinkAuth_CODE, 'HuaweiAuthRemoteService', HuaweiAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def unLinkAuthResponse(response) -> auth_message_pb2.HuaweiUnLinkAuthResponse:
@@ -5040,7 +5040,7 @@ class HuaweiAuthRemoteService:
 
     @staticmethod
     def encryptedAuth2Request(request: auth_message_pb2.HuaweiAuthRequest):
-        return RpcTarget(HuaweiAuthRemoteService._encryptedAuth2_CODE, 'HuaweiAuthRemoteService', HuaweiAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(HuaweiAuthRemoteService._encryptedAuth2_CODE, 'HuaweiAuthRemoteService', HuaweiAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuth2Response(response) -> auth_message_pb2.HuaweiAuthResponse:
@@ -5068,7 +5068,7 @@ class GoogleAuthRemoteService:
 
     @staticmethod
     def linkAuthRequest(request: auth_message_pb2.GoogleLinkAuthRequest):
-        return RpcTarget(GoogleAuthRemoteService._linkAuth_CODE, 'GoogleAuthRemoteService', GoogleAuthRemoteService._linkAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(GoogleAuthRemoteService._linkAuth_CODE, 'GoogleAuthRemoteService', GoogleAuthRemoteService._linkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def linkAuthResponse(response) -> auth_message_pb2.GoogleLinkAuthResponse:
@@ -5085,7 +5085,7 @@ class GoogleAuthRemoteService:
 
     @staticmethod
     def unLinkAuthRequest(request: auth_message_pb2.GoogleUnLinkAuthRequest):
-        return RpcTarget(GoogleAuthRemoteService._unLinkAuth_CODE, 'GoogleAuthRemoteService', GoogleAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GoogleAuthRemoteService._unLinkAuth_CODE, 'GoogleAuthRemoteService', GoogleAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def unLinkAuthResponse(response) -> auth_message_pb2.GoogleUnLinkAuthResponse:
@@ -5102,7 +5102,7 @@ class GoogleAuthRemoteService:
 
     @staticmethod
     def encryptedAuthRequest(request: auth_message_pb2.GoogleAuthRequest):
-        return RpcTarget(GoogleAuthRemoteService._encryptedAuth_CODE, 'GoogleAuthRemoteService', GoogleAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(GoogleAuthRemoteService._encryptedAuth_CODE, 'GoogleAuthRemoteService', GoogleAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuthResponse(response) -> auth_message_pb2.GoogleAuthResponse:
@@ -5119,7 +5119,7 @@ class GoogleAuthRemoteService:
 
     @staticmethod
     def encryptedAuth2Request(request: auth_message_pb2.GoogleAuthRequest):
-        return RpcTarget(GoogleAuthRemoteService._encryptedAuth2_CODE, 'GoogleAuthRemoteService', GoogleAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(GoogleAuthRemoteService._encryptedAuth2_CODE, 'GoogleAuthRemoteService', GoogleAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuth2Response(response) -> auth_message_pb2.GoogleAuthResponse:
@@ -5179,7 +5179,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def setInventoryItemPublicityRequest(request: inventory_message_pb2.SetInventoryItemPublicityRequest):
-        return RpcTarget(InventoryRemoteService._setInventoryItemPublicity_CODE, 'InventoryRemoteService', InventoryRemoteService._setInventoryItemPublicity_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._setInventoryItemPublicity_CODE, 'InventoryRemoteService', InventoryRemoteService._setInventoryItemPublicity_METHOD, request.SerializeToString())
 
     @staticmethod
     def setInventoryItemPublicityResponse(response) -> inventory_message_pb2.SetInventoryItemPublicityResponse:
@@ -5196,7 +5196,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def getRecipeInfoRequest(request: inventory_message_pb2.GetRecipeInfoRequest):
-        return RpcTarget(InventoryRemoteService._getRecipeInfo_CODE, 'InventoryRemoteService', InventoryRemoteService._getRecipeInfo_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._getRecipeInfo_CODE, 'InventoryRemoteService', InventoryRemoteService._getRecipeInfo_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRecipeInfoResponse(response) -> inventory_message_pb2.GetRecipeInfoResponse:
@@ -5213,7 +5213,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def activateCouponEncryptedRequest(request: inventory_message_pb2.ActivateCouponRequest):
-        return RpcTarget(InventoryRemoteService._activateCouponEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._activateCouponEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._activateCouponEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._activateCouponEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def activateCouponEncryptedResponse(response) -> inventory_message_pb2.ActivateCouponResponse:
@@ -5230,7 +5230,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def setInventoryItemFlagsEncryptedRequest(request: inventory_message_pb2.SetInventoryItemFlagsRequest):
-        return RpcTarget(InventoryRemoteService._setInventoryItemFlagsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._setInventoryItemFlagsEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._setInventoryItemFlagsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._setInventoryItemFlagsEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def setInventoryItemFlagsEncryptedResponse(response) -> inventory_message_pb2.SetInventoryItemFlagsResponse:
@@ -5247,7 +5247,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def unmountInventoryItemEncryptedRequest(request: inventory_message_pb2.UnmountInventoryItemRequest):
-        return RpcTarget(InventoryRemoteService._unmountInventoryItemEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._unmountInventoryItemEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._unmountInventoryItemEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._unmountInventoryItemEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def unmountInventoryItemEncryptedResponse(response) -> inventory_message_pb2.UnmountInventoryItemResponse:
@@ -5264,7 +5264,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def removeInventoryItemPropertyEncryptedRequest(request: inventory_message_pb2.RemoveItemModificationRequest):
-        return RpcTarget(InventoryRemoteService._removeInventoryItemPropertyEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._removeInventoryItemPropertyEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._removeInventoryItemPropertyEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._removeInventoryItemPropertyEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def removeInventoryItemPropertyEncryptedResponse(response) -> inventory_message_pb2.RemoveItemModificationResponse:
@@ -5281,7 +5281,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def getInventoryItemPropertyDefinitionsEncryptedRequest(request: inventory_message_pb2.GetInventoryItemPropertyDefinitionsRequest):
-        return RpcTarget(InventoryRemoteService._getInventoryItemPropertyDefinitionsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._getInventoryItemPropertyDefinitionsEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._getInventoryItemPropertyDefinitionsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._getInventoryItemPropertyDefinitionsEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def getInventoryItemPropertyDefinitionsEncryptedResponse(response) -> inventory_message_pb2.GetInventoryItemPropertyDefinitionsResponse:
@@ -5298,7 +5298,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def setInventoryItemsPropertiesEncryptedRequest(request: inventory_message_pb2.SetItemsModificationsRequest):
-        return RpcTarget(InventoryRemoteService._setInventoryItemsPropertiesEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._setInventoryItemsPropertiesEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._setInventoryItemsPropertiesEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._setInventoryItemsPropertiesEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def setInventoryItemsPropertiesEncryptedResponse(response) -> inventory_message_pb2.SetItemsModificationsResponse:
@@ -5315,7 +5315,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def getOtherPlayerPublicItemsEncryptedRequest(request: inventory_message_pb2.GetAllOtherPlayerPublicItemsRequest):
-        return RpcTarget(InventoryRemoteService._getOtherPlayerPublicItemsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._getOtherPlayerPublicItemsEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._getOtherPlayerPublicItemsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._getOtherPlayerPublicItemsEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def getOtherPlayerPublicItemsEncryptedResponse(response) -> inventory_message_pb2.GetAllOtherPlayerPublicItemsResponse:
@@ -5332,7 +5332,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def buyInventoryItemEncryptedRequest(request: inventory_message_pb2.BuyInventoryItemRequest):
-        return RpcTarget(InventoryRemoteService._buyInventoryItemEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._buyInventoryItemEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._buyInventoryItemEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._buyInventoryItemEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def buyInventoryItemEncryptedResponse(response) -> inventory_message_pb2.BuyInventoryItemResponse:
@@ -5349,7 +5349,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def getPlayerInventoryEncryptedRequest(request: inventory_message_pb2.GetPlayerInventoryRequest):
-        return RpcTarget(InventoryRemoteService._getPlayerInventoryEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._getPlayerInventoryEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._getPlayerInventoryEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._getPlayerInventoryEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerInventoryEncryptedResponse(response) -> inventory_message_pb2.GetPlayerInventoryResponse:
@@ -5366,7 +5366,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def getRecipeStateRequest(request: inventory_message_pb2.GetRecipeStateRequest):
-        return RpcTarget(InventoryRemoteService._getRecipeState_CODE, 'InventoryRemoteService', InventoryRemoteService._getRecipeState_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._getRecipeState_CODE, 'InventoryRemoteService', InventoryRemoteService._getRecipeState_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRecipeStateResponse(response) -> inventory_message_pb2.GetRecipeStateResponse:
@@ -5383,7 +5383,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def consumeInventoryItemEncryptedRequest(request: inventory_message_pb2.ConsumeInventoryItemRequest):
-        return RpcTarget(InventoryRemoteService._consumeInventoryItemEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._consumeInventoryItemEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._consumeInventoryItemEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._consumeInventoryItemEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def consumeInventoryItemEncryptedResponse(response) -> inventory_message_pb2.ConsumeInventoryItemResponse:
@@ -5400,7 +5400,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def tradeInventoryItemsEncryptedRequest(request: inventory_message_pb2.TradeInventoryItemsRequest):
-        return RpcTarget(InventoryRemoteService._tradeInventoryItemsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._tradeInventoryItemsEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._tradeInventoryItemsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._tradeInventoryItemsEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def tradeInventoryItemsEncryptedResponse(response) -> inventory_message_pb2.TradeInventoryItemsResponse:
@@ -5417,7 +5417,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def getInventoryItemDefinitionsEncryptedRequest(request: inventory_message_pb2.GetInventoryItemDefinitionsRequest):
-        return RpcTarget(InventoryRemoteService._getInventoryItemDefinitionsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._getInventoryItemDefinitionsEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._getInventoryItemDefinitionsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._getInventoryItemDefinitionsEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def getInventoryItemDefinitionsEncryptedResponse(response) -> inventory_message_pb2.GetInventoryItemDefinitionsResponse:
@@ -5434,7 +5434,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def transferInventoryItemsEncryptedRequest(request: inventory_message_pb2.TransferInventoryItemsRequest):
-        return RpcTarget(InventoryRemoteService._transferInventoryItemsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._transferInventoryItemsEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._transferInventoryItemsEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._transferInventoryItemsEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def transferInventoryItemsEncryptedResponse(response) -> inventory_message_pb2.TransferInventoryItemsResponse:
@@ -5451,7 +5451,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def executeRecipeEncrypted2Request(request: inventory_message_pb2.ExecuteRecipeRequest):
-        return RpcTarget(InventoryRemoteService._executeRecipeEncrypted2_CODE, 'InventoryRemoteService', InventoryRemoteService._executeRecipeEncrypted2_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._executeRecipeEncrypted2_CODE, 'InventoryRemoteService', InventoryRemoteService._executeRecipeEncrypted2_METHOD, request.SerializeToString())
 
     @staticmethod
     def executeRecipeEncrypted2Response(response) -> inventory_message_pb2.ExecuteRecipeEncrypted2Response:
@@ -5468,7 +5468,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def sellInventoryItemEncryptedRequest(request: inventory_message_pb2.SellInventoryItemRequest):
-        return RpcTarget(InventoryRemoteService._sellInventoryItemEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._sellInventoryItemEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._sellInventoryItemEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._sellInventoryItemEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def sellInventoryItemEncryptedResponse(response) -> inventory_message_pb2.SellInventoryItemResponse:
@@ -5485,7 +5485,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def mountInventoryItemEncryptedRequest(request: inventory_message_pb2.MountInventoryItemRequest):
-        return RpcTarget(InventoryRemoteService._mountInventoryItemEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._mountInventoryItemEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._mountInventoryItemEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._mountInventoryItemEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def mountInventoryItemEncryptedResponse(response) -> inventory_message_pb2.MountInventoryItemResponse:
@@ -5502,7 +5502,7 @@ class InventoryRemoteService:
 
     @staticmethod
     def getRecipeStatusEncryptedRequest(request: inventory_message_pb2.GetRecipeStatusRequest):
-        return RpcTarget(InventoryRemoteService._getRecipeStatusEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._getRecipeStatusEncrypted_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(InventoryRemoteService._getRecipeStatusEncrypted_CODE, 'InventoryRemoteService', InventoryRemoteService._getRecipeStatusEncrypted_METHOD, request.SerializeToString())
 
     @staticmethod
     def getRecipeStatusEncryptedResponse(response) -> inventory_message_pb2.GetRecipeStatusResponse:
@@ -5530,7 +5530,7 @@ class ContentCreatorRemoteService:
 
     @staticmethod
     def subscribeCreatorRequest(request: content_creator_message_pb2.SubscribeCreatorRequest):
-        return RpcTarget(ContentCreatorRemoteService._subscribeCreator_CODE, 'ContentCreatorRemoteService', ContentCreatorRemoteService._subscribeCreator_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ContentCreatorRemoteService._subscribeCreator_CODE, 'ContentCreatorRemoteService', ContentCreatorRemoteService._subscribeCreator_METHOD, request.SerializeToString())
 
     @staticmethod
     def subscribeCreatorResponse(response) -> content_creator_message_pb2.SubscribeCreatorResponse:
@@ -5547,7 +5547,7 @@ class ContentCreatorRemoteService:
 
     @staticmethod
     def findCreatorSubscriptionRequest(request: content_creator_message_pb2.GetSubscribedCreatorRequest):
-        return RpcTarget(ContentCreatorRemoteService._findCreatorSubscription_CODE, 'ContentCreatorRemoteService', ContentCreatorRemoteService._findCreatorSubscription_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ContentCreatorRemoteService._findCreatorSubscription_CODE, 'ContentCreatorRemoteService', ContentCreatorRemoteService._findCreatorSubscription_METHOD, request.SerializeToString())
 
     @staticmethod
     def findCreatorSubscriptionResponse(response) -> content_creator_message_pb2.GetSubscribedCreatorResponse:
@@ -5564,7 +5564,7 @@ class ContentCreatorRemoteService:
 
     @staticmethod
     def findCreatorRequest(request: content_creator_message_pb2.FindCreatorRequest):
-        return RpcTarget(ContentCreatorRemoteService._findCreator_CODE, 'ContentCreatorRemoteService', ContentCreatorRemoteService._findCreator_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ContentCreatorRemoteService._findCreator_CODE, 'ContentCreatorRemoteService', ContentCreatorRemoteService._findCreator_METHOD, request.SerializeToString())
 
     @staticmethod
     def findCreatorResponse(response) -> content_creator_message_pb2.FindCreatorResponse:
@@ -5581,7 +5581,7 @@ class ContentCreatorRemoteService:
 
     @staticmethod
     def unsubscribeCreatorRequest(request: content_creator_message_pb2.UnsubscribeCreatorRequest):
-        return RpcTarget(ContentCreatorRemoteService._unsubscribeCreator_CODE, 'ContentCreatorRemoteService', ContentCreatorRemoteService._unsubscribeCreator_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ContentCreatorRemoteService._unsubscribeCreator_CODE, 'ContentCreatorRemoteService', ContentCreatorRemoteService._unsubscribeCreator_METHOD, request.SerializeToString())
 
     @staticmethod
     def unsubscribeCreatorResponse(response) -> content_creator_message_pb2.UnsubscribeCreatorResponse:
@@ -5609,7 +5609,7 @@ class FacebookAuthRemoteService:
 
     @staticmethod
     def encryptedAuth2Request(request: auth_message_pb2.FacebookAuthRequest):
-        return RpcTarget(FacebookAuthRemoteService._encryptedAuth2_CODE, 'FacebookAuthRemoteService', FacebookAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(FacebookAuthRemoteService._encryptedAuth2_CODE, 'FacebookAuthRemoteService', FacebookAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuth2Response(response) -> auth_message_pb2.FacebookAuthResponse:
@@ -5626,7 +5626,7 @@ class FacebookAuthRemoteService:
 
     @staticmethod
     def unLinkAuthRequest(request: auth_message_pb2.FacebookUnLinkAuthRequest):
-        return RpcTarget(FacebookAuthRemoteService._unLinkAuth_CODE, 'FacebookAuthRemoteService', FacebookAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(FacebookAuthRemoteService._unLinkAuth_CODE, 'FacebookAuthRemoteService', FacebookAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def unLinkAuthResponse(response) -> auth_message_pb2.FacebookUnLinkAuthResponse:
@@ -5643,7 +5643,7 @@ class FacebookAuthRemoteService:
 
     @staticmethod
     def linkAuthRequest(request: auth_message_pb2.FacebookLinkAuthRequest):
-        return RpcTarget(FacebookAuthRemoteService._linkAuth_CODE, 'FacebookAuthRemoteService', FacebookAuthRemoteService._linkAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(FacebookAuthRemoteService._linkAuth_CODE, 'FacebookAuthRemoteService', FacebookAuthRemoteService._linkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def linkAuthResponse(response) -> auth_message_pb2.FacebookLinkAuthResponse:
@@ -5660,7 +5660,7 @@ class FacebookAuthRemoteService:
 
     @staticmethod
     def encryptedAuthRequest(request: auth_message_pb2.FacebookAuthRequest):
-        return RpcTarget(FacebookAuthRemoteService._encryptedAuth_CODE, 'FacebookAuthRemoteService', FacebookAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(FacebookAuthRemoteService._encryptedAuth_CODE, 'FacebookAuthRemoteService', FacebookAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuthResponse(response) -> auth_message_pb2.FacebookAuthResponse:
@@ -5682,7 +5682,7 @@ class GSMatchesRemoteService:
 
     @staticmethod
     def finishMatchRequest(request: matches_message_pb2.FinishMatchRequest):
-        return RpcTarget(GSMatchesRemoteService._finishMatch_CODE, 'GSMatchesRemoteService', GSMatchesRemoteService._finishMatch_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GSMatchesRemoteService._finishMatch_CODE, 'GSMatchesRemoteService', GSMatchesRemoteService._finishMatch_METHOD, request.SerializeToString())
 
     @staticmethod
     def finishMatchResponse(response) -> matches_message_pb2.FinishMatchResponse:
@@ -5712,7 +5712,7 @@ class GameServerInventoryRemoteService:
 
     @staticmethod
     def setItemsModificationsByServerRequest(request: inventory_message_pb2.SetItemsModificationsByServerRequest):
-        return RpcTarget(GameServerInventoryRemoteService._setItemsModificationsByServer_CODE, 'GameServerInventoryRemoteService', GameServerInventoryRemoteService._setItemsModificationsByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerInventoryRemoteService._setItemsModificationsByServer_CODE, 'GameServerInventoryRemoteService', GameServerInventoryRemoteService._setItemsModificationsByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def setItemsModificationsByServerResponse(response) -> inventory_message_pb2.SetItemsModificationsByServerResponse:
@@ -5729,7 +5729,7 @@ class GameServerInventoryRemoteService:
 
     @staticmethod
     def executeRecipeByServerRequest(request: inventory_message_pb2.ExecuteRecipeByServerRequest):
-        return RpcTarget(GameServerInventoryRemoteService._executeRecipeByServer_CODE, 'GameServerInventoryRemoteService', GameServerInventoryRemoteService._executeRecipeByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerInventoryRemoteService._executeRecipeByServer_CODE, 'GameServerInventoryRemoteService', GameServerInventoryRemoteService._executeRecipeByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def executeRecipeByServerResponse(response) -> inventory_message_pb2.ExecuteRecipeByServerResponse:
@@ -5746,7 +5746,7 @@ class GameServerInventoryRemoteService:
 
     @staticmethod
     def giveInventoryByServerRequest(request: inventory_message_pb2.GiveInventoryByServerRequest):
-        return RpcTarget(GameServerInventoryRemoteService._giveInventoryByServer_CODE, 'GameServerInventoryRemoteService', GameServerInventoryRemoteService._giveInventoryByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerInventoryRemoteService._giveInventoryByServer_CODE, 'GameServerInventoryRemoteService', GameServerInventoryRemoteService._giveInventoryByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def giveInventoryByServerResponse(response) -> inventory_message_pb2.GiveInventoryByServerResponse:
@@ -5763,7 +5763,7 @@ class GameServerInventoryRemoteService:
 
     @staticmethod
     def consumeItemsByServerRequest(request: inventory_message_pb2.ConsumeItemsByServerRequest):
-        return RpcTarget(GameServerInventoryRemoteService._consumeItemsByServer_CODE, 'GameServerInventoryRemoteService', GameServerInventoryRemoteService._consumeItemsByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerInventoryRemoteService._consumeItemsByServer_CODE, 'GameServerInventoryRemoteService', GameServerInventoryRemoteService._consumeItemsByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def consumeItemsByServerResponse(response) -> inventory_message_pb2.ConsumeItemsByServerResponse:
@@ -5780,7 +5780,7 @@ class GameServerInventoryRemoteService:
 
     @staticmethod
     def getPlayerInventoryItemsByServerRequest(request: inventory_message_pb2.PlayerInventoryItemsByServerRequest):
-        return RpcTarget(GameServerInventoryRemoteService._getPlayerInventoryItemsByServer_CODE, 'GameServerInventoryRemoteService', GameServerInventoryRemoteService._getPlayerInventoryItemsByServer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerInventoryRemoteService._getPlayerInventoryItemsByServer_CODE, 'GameServerInventoryRemoteService', GameServerInventoryRemoteService._getPlayerInventoryItemsByServer_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerInventoryItemsByServerResponse(response) -> inventory_message_pb2.PlayerInventoryItemsByServerResponse:
@@ -5802,7 +5802,7 @@ class OffersRemoteService:
 
     @staticmethod
     def getSpecialOffersRequest(request: offers_message_pb2.GetSpecialOffersRequest):
-        return RpcTarget(OffersRemoteService._getSpecialOffers_CODE, 'OffersRemoteService', OffersRemoteService._getSpecialOffers_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(OffersRemoteService._getSpecialOffers_CODE, 'OffersRemoteService', OffersRemoteService._getSpecialOffers_METHOD, request.SerializeToString())
 
     @staticmethod
     def getSpecialOffersResponse(response) -> offers_message_pb2.GetSpecialOffersResponse:
@@ -5850,7 +5850,7 @@ class StorageRemoteService:
 
     @staticmethod
     def writeFile2Request(request: storage_message_pb2.WriteFileRequest):
-        return RpcTarget(StorageRemoteService._writeFile2_CODE, 'StorageRemoteService', StorageRemoteService._writeFile2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._writeFile2_CODE, 'StorageRemoteService', StorageRemoteService._writeFile2_METHOD, request.SerializeToString())
 
     @staticmethod
     def writeFile2Response(response) -> storage_message_pb2.WriteFileResponse:
@@ -5867,7 +5867,7 @@ class StorageRemoteService:
 
     @staticmethod
     def readAllFiles2Request(request: storage_message_pb2.ReadAllFilesRequest):
-        return RpcTarget(StorageRemoteService._readAllFiles2_CODE, 'StorageRemoteService', StorageRemoteService._readAllFiles2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._readAllFiles2_CODE, 'StorageRemoteService', StorageRemoteService._readAllFiles2_METHOD, request.SerializeToString())
 
     @staticmethod
     def readAllFiles2Response(response) -> storage_message_pb2.ReadAllFilesResponse:
@@ -5885,7 +5885,7 @@ class StorageRemoteService:
     @staticmethod
     def writeFileRequest(value0, value1):
         request_payload = Parser.serialize_primitive_request([('string', value0), ('byte[]', value1)])
-        return RpcTarget(StorageRemoteService._writeFile_CODE, 'StorageRemoteService', StorageRemoteService._writeFile_METHOD, request_payload, secure=False)
+        return RpcTarget(StorageRemoteService._writeFile_CODE, 'StorageRemoteService', StorageRemoteService._writeFile_METHOD, request_payload)
 
     @staticmethod
     def writeFileResponse(response) -> None:
@@ -5902,7 +5902,7 @@ class StorageRemoteService:
 
     @staticmethod
     def deleteFile2Request(request: storage_message_pb2.DeleteFileRequest):
-        return RpcTarget(StorageRemoteService._deleteFile2_CODE, 'StorageRemoteService', StorageRemoteService._deleteFile2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._deleteFile2_CODE, 'StorageRemoteService', StorageRemoteService._deleteFile2_METHOD, request.SerializeToString())
 
     @staticmethod
     def deleteFile2Response(response) -> storage_message_pb2.DeleteFileResponse:
@@ -5919,7 +5919,7 @@ class StorageRemoteService:
 
     @staticmethod
     def unshareFileRequest(request: storage_message_pb2.UnshareFileRequest):
-        return RpcTarget(StorageRemoteService._unshareFile_CODE, 'StorageRemoteService', StorageRemoteService._unshareFile_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._unshareFile_CODE, 'StorageRemoteService', StorageRemoteService._unshareFile_METHOD, request.SerializeToString())
 
     @staticmethod
     def unshareFileResponse(response) -> storage_message_pb2.UnshareFileResponse:
@@ -5936,7 +5936,7 @@ class StorageRemoteService:
 
     @staticmethod
     def getFilenamesRequest(request: storage_message_pb2.GetFilenamesRequest):
-        return RpcTarget(StorageRemoteService._getFilenames_CODE, 'StorageRemoteService', StorageRemoteService._getFilenames_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._getFilenames_CODE, 'StorageRemoteService', StorageRemoteService._getFilenames_METHOD, request.SerializeToString())
 
     @staticmethod
     def getFilenamesResponse(response) -> storage_message_pb2.GetFilenamesResponse:
@@ -5953,7 +5953,7 @@ class StorageRemoteService:
 
     @staticmethod
     def shareFileRequest(request: storage_message_pb2.ShareFileRequest):
-        return RpcTarget(StorageRemoteService._shareFile_CODE, 'StorageRemoteService', StorageRemoteService._shareFile_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._shareFile_CODE, 'StorageRemoteService', StorageRemoteService._shareFile_METHOD, request.SerializeToString())
 
     @staticmethod
     def shareFileResponse(response) -> storage_message_pb2.ShareFileResponse:
@@ -5970,7 +5970,7 @@ class StorageRemoteService:
 
     @staticmethod
     def readPlayerPublicFilesRequest(request: storage_message_pb2.ReadPlayerPublicFilesRequest):
-        return RpcTarget(StorageRemoteService._readPlayerPublicFiles_CODE, 'StorageRemoteService', StorageRemoteService._readPlayerPublicFiles_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._readPlayerPublicFiles_CODE, 'StorageRemoteService', StorageRemoteService._readPlayerPublicFiles_METHOD, request.SerializeToString())
 
     @staticmethod
     def readPlayerPublicFilesResponse(response) -> storage_message_pb2.ReadPlayerPublicFilesResponse:
@@ -5987,7 +5987,7 @@ class StorageRemoteService:
 
     @staticmethod
     def readFile3Request(request: storage_message_pb2.ReadFile3Request):
-        return RpcTarget(StorageRemoteService._readFile3_CODE, 'StorageRemoteService', StorageRemoteService._readFile3_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._readFile3_CODE, 'StorageRemoteService', StorageRemoteService._readFile3_METHOD, request.SerializeToString())
 
     @staticmethod
     def readFile3Response(response) -> storage_message_pb2.ReadFile3Response:
@@ -6004,7 +6004,7 @@ class StorageRemoteService:
 
     @staticmethod
     def changeFileAccessModeRequest(request: storage_message_pb2.ChangeFileAccessModeRequest):
-        return RpcTarget(StorageRemoteService._changeFileAccessMode_CODE, 'StorageRemoteService', StorageRemoteService._changeFileAccessMode_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._changeFileAccessMode_CODE, 'StorageRemoteService', StorageRemoteService._changeFileAccessMode_METHOD, request.SerializeToString())
 
     @staticmethod
     def changeFileAccessModeResponse(response) -> storage_message_pb2.ChangeFileAccessModeResponse:
@@ -6021,7 +6021,7 @@ class StorageRemoteService:
 
     @staticmethod
     def readPublicFileRequest(request: storage_message_pb2.ReadPublicFileRequest):
-        return RpcTarget(StorageRemoteService._readPublicFile_CODE, 'StorageRemoteService', StorageRemoteService._readPublicFile_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._readPublicFile_CODE, 'StorageRemoteService', StorageRemoteService._readPublicFile_METHOD, request.SerializeToString())
 
     @staticmethod
     def readPublicFileResponse(response) -> storage_message_pb2.ReadPublicFileResponse:
@@ -6038,7 +6038,7 @@ class StorageRemoteService:
 
     @staticmethod
     def readFile2Request(request: storage_message_pb2.ReadFileRequest):
-        return RpcTarget(StorageRemoteService._readFile2_CODE, 'StorageRemoteService', StorageRemoteService._readFile2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._readFile2_CODE, 'StorageRemoteService', StorageRemoteService._readFile2_METHOD, request.SerializeToString())
 
     @staticmethod
     def readFile2Response(response) -> storage_message_pb2.ReadFileResponse:
@@ -6055,7 +6055,7 @@ class StorageRemoteService:
 
     @staticmethod
     def readFilesRequest(request: storage_message_pb2.ReadFilesRequest):
-        return RpcTarget(StorageRemoteService._readFiles_CODE, 'StorageRemoteService', StorageRemoteService._readFiles_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._readFiles_CODE, 'StorageRemoteService', StorageRemoteService._readFiles_METHOD, request.SerializeToString())
 
     @staticmethod
     def readFilesResponse(response) -> storage_message_pb2.ReadFilesResponse:
@@ -6072,7 +6072,7 @@ class StorageRemoteService:
 
     @staticmethod
     def getSharedFileRequest(request: storage_message_pb2.GetSharedFileRequest):
-        return RpcTarget(StorageRemoteService._getSharedFile_CODE, 'StorageRemoteService', StorageRemoteService._getSharedFile_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(StorageRemoteService._getSharedFile_CODE, 'StorageRemoteService', StorageRemoteService._getSharedFile_METHOD, request.SerializeToString())
 
     @staticmethod
     def getSharedFileResponse(response) -> storage_message_pb2.GetSharedFileResponse:
@@ -6100,7 +6100,7 @@ class BoltIdAuthRemoteService:
 
     @staticmethod
     def unLinkAuthRequest(request: auth_message_pb2.BoltIdUnLinkAuthRequest):
-        return RpcTarget(BoltIdAuthRemoteService._unLinkAuth_CODE, 'BoltIdAuthRemoteService', BoltIdAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(BoltIdAuthRemoteService._unLinkAuth_CODE, 'BoltIdAuthRemoteService', BoltIdAuthRemoteService._unLinkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def unLinkAuthResponse(response) -> auth_message_pb2.BoltIdUnLinkAuthResponse:
@@ -6117,7 +6117,7 @@ class BoltIdAuthRemoteService:
 
     @staticmethod
     def encryptedAuthRequest(request: auth_message_pb2.BoltIdAuthRequest):
-        return RpcTarget(BoltIdAuthRemoteService._encryptedAuth_CODE, 'BoltIdAuthRemoteService', BoltIdAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(BoltIdAuthRemoteService._encryptedAuth_CODE, 'BoltIdAuthRemoteService', BoltIdAuthRemoteService._encryptedAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuthResponse(response) -> auth_message_pb2.BoltIdAuthResponse:
@@ -6134,7 +6134,7 @@ class BoltIdAuthRemoteService:
 
     @staticmethod
     def encryptedAuth2Request(request: auth_message_pb2.BoltIdAuthRequest):
-        return RpcTarget(BoltIdAuthRemoteService._encryptedAuth2_CODE, 'BoltIdAuthRemoteService', BoltIdAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(BoltIdAuthRemoteService._encryptedAuth2_CODE, 'BoltIdAuthRemoteService', BoltIdAuthRemoteService._encryptedAuth2_METHOD, request.SerializeToString())
 
     @staticmethod
     def encryptedAuth2Response(response) -> auth_message_pb2.BoltIdAuthResponse:
@@ -6151,7 +6151,7 @@ class BoltIdAuthRemoteService:
 
     @staticmethod
     def linkAuthRequest(request: auth_message_pb2.BoltIdLinkAuthRequest):
-        return RpcTarget(BoltIdAuthRemoteService._linkAuth_CODE, 'BoltIdAuthRemoteService', BoltIdAuthRemoteService._linkAuth_METHOD, request.SerializeToString(), secure=True)
+        return RpcTarget(BoltIdAuthRemoteService._linkAuth_CODE, 'BoltIdAuthRemoteService', BoltIdAuthRemoteService._linkAuth_METHOD, request.SerializeToString())
 
     @staticmethod
     def linkAuthResponse(response) -> auth_message_pb2.BoltIdLinkAuthResponse:
@@ -6179,7 +6179,7 @@ class GameServerPlayerRemoteService:
 
     @staticmethod
     def checkBanRequest(request: common_message_pb2.CheckBanGamePlayerRequest):
-        return RpcTarget(GameServerPlayerRemoteService._checkBan_CODE, 'GameServerPlayerRemoteService', GameServerPlayerRemoteService._checkBan_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerPlayerRemoteService._checkBan_CODE, 'GameServerPlayerRemoteService', GameServerPlayerRemoteService._checkBan_METHOD, request.SerializeToString())
 
     @staticmethod
     def checkBanResponse(response) -> common_message_pb2.CheckBanGamePlayerResponse:
@@ -6196,7 +6196,7 @@ class GameServerPlayerRemoteService:
 
     @staticmethod
     def banGamePlayerRequest(request: common_message_pb2.BanGamePlayerRequest):
-        return RpcTarget(GameServerPlayerRemoteService._banGamePlayer_CODE, 'GameServerPlayerRemoteService', GameServerPlayerRemoteService._banGamePlayer_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerPlayerRemoteService._banGamePlayer_CODE, 'GameServerPlayerRemoteService', GameServerPlayerRemoteService._banGamePlayer_METHOD, request.SerializeToString())
 
     @staticmethod
     def banGamePlayerResponse(response) -> common_message_pb2.BanGamePlayerResponse:
@@ -6213,7 +6213,7 @@ class GameServerPlayerRemoteService:
 
     @staticmethod
     def setPhotonGame2Request(request: common_message_pb2.SetPhotonGameRequest):
-        return RpcTarget(GameServerPlayerRemoteService._setPhotonGame2_CODE, 'GameServerPlayerRemoteService', GameServerPlayerRemoteService._setPhotonGame2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerPlayerRemoteService._setPhotonGame2_CODE, 'GameServerPlayerRemoteService', GameServerPlayerRemoteService._setPhotonGame2_METHOD, request.SerializeToString())
 
     @staticmethod
     def setPhotonGame2Response(response) -> common_message_pb2.SetPhotonGameResponse:
@@ -6230,7 +6230,7 @@ class GameServerPlayerRemoteService:
 
     @staticmethod
     def banGamePlayerCustomRequest(request: common_message_pb2.BanGamePlayerCustomRequest):
-        return RpcTarget(GameServerPlayerRemoteService._banGamePlayerCustom_CODE, 'GameServerPlayerRemoteService', GameServerPlayerRemoteService._banGamePlayerCustom_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameServerPlayerRemoteService._banGamePlayerCustom_CODE, 'GameServerPlayerRemoteService', GameServerPlayerRemoteService._banGamePlayerCustom_METHOD, request.SerializeToString())
 
     @staticmethod
     def banGamePlayerCustomResponse(response) -> common_message_pb2.BanGamePlayerResponse:
@@ -6272,7 +6272,7 @@ class GameEventRemoteService:
 
     @staticmethod
     def getCurrentChallengesRequest(request: challenges_message_pb2.GetCurrentChallengesRequest):
-        return RpcTarget(GameEventRemoteService._getCurrentChallenges_CODE, 'GameEventRemoteService', GameEventRemoteService._getCurrentChallenges_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameEventRemoteService._getCurrentChallenges_CODE, 'GameEventRemoteService', GameEventRemoteService._getCurrentChallenges_METHOD, request.SerializeToString())
 
     @staticmethod
     def getCurrentChallengesResponse(response) -> challenges_message_pb2.GetCurrentChallengesResponse:
@@ -6289,7 +6289,7 @@ class GameEventRemoteService:
 
     @staticmethod
     def getPlayerGameEventsProgressesRequest(request: game_event_message_pb2.GetPlayerGameEventsProgressesRequest):
-        return RpcTarget(GameEventRemoteService._getPlayerGameEventsProgresses_CODE, 'GameEventRemoteService', GameEventRemoteService._getPlayerGameEventsProgresses_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameEventRemoteService._getPlayerGameEventsProgresses_CODE, 'GameEventRemoteService', GameEventRemoteService._getPlayerGameEventsProgresses_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerGameEventsProgressesResponse(response) -> game_event_message_pb2.GetPlayerGameEventsProgressesResponse:
@@ -6306,7 +6306,7 @@ class GameEventRemoteService:
 
     @staticmethod
     def getCachedPlayerGameEventsRequest(request: game_event_message_pb2.GetCachedPlayerGameEventsRequest):
-        return RpcTarget(GameEventRemoteService._getCachedPlayerGameEvents_CODE, 'GameEventRemoteService', GameEventRemoteService._getCachedPlayerGameEvents_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameEventRemoteService._getCachedPlayerGameEvents_CODE, 'GameEventRemoteService', GameEventRemoteService._getCachedPlayerGameEvents_METHOD, request.SerializeToString())
 
     @staticmethod
     def getCachedPlayerGameEventsResponse(response) -> game_event_message_pb2.GetCachedPlayerGameEventsResponse:
@@ -6323,7 +6323,7 @@ class GameEventRemoteService:
 
     @staticmethod
     def getPlayerGameEventProgressRequest(request: game_event_message_pb2.GetPlayerGameEventProgressRequest):
-        return RpcTarget(GameEventRemoteService._getPlayerGameEventProgress_CODE, 'GameEventRemoteService', GameEventRemoteService._getPlayerGameEventProgress_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameEventRemoteService._getPlayerGameEventProgress_CODE, 'GameEventRemoteService', GameEventRemoteService._getPlayerGameEventProgress_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerGameEventProgressResponse(response) -> game_event_message_pb2.GetPlayerGameEventProgressResponse:
@@ -6340,7 +6340,7 @@ class GameEventRemoteService:
 
     @staticmethod
     def processChallengeRequest(request: challenges_message_pb2.ProgressChallengeRequest):
-        return RpcTarget(GameEventRemoteService._processChallenge_CODE, 'GameEventRemoteService', GameEventRemoteService._processChallenge_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameEventRemoteService._processChallenge_CODE, 'GameEventRemoteService', GameEventRemoteService._processChallenge_METHOD, request.SerializeToString())
 
     @staticmethod
     def processChallengeResponse(response) -> challenges_message_pb2.ProgressChallengeResponse:
@@ -6357,7 +6357,7 @@ class GameEventRemoteService:
 
     @staticmethod
     def saveChallengeDefinition3Request(request: challenges_message_pb2.SaveChallengeDefinition2Request):
-        return RpcTarget(GameEventRemoteService._saveChallengeDefinition3_CODE, 'GameEventRemoteService', GameEventRemoteService._saveChallengeDefinition3_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameEventRemoteService._saveChallengeDefinition3_CODE, 'GameEventRemoteService', GameEventRemoteService._saveChallengeDefinition3_METHOD, request.SerializeToString())
 
     @staticmethod
     def saveChallengeDefinition3Response(response) -> challenges_message_pb2.SaveChallengeDefinition2Response:
@@ -6374,7 +6374,7 @@ class GameEventRemoteService:
 
     @staticmethod
     def claimAllRewardsOfSpecificPassesRequest(request: game_event_message_pb2.ClaimAllRewardsOfSpecificPasses):
-        return RpcTarget(GameEventRemoteService._claimAllRewardsOfSpecificPasses_CODE, 'GameEventRemoteService', GameEventRemoteService._claimAllRewardsOfSpecificPasses_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameEventRemoteService._claimAllRewardsOfSpecificPasses_CODE, 'GameEventRemoteService', GameEventRemoteService._claimAllRewardsOfSpecificPasses_METHOD, request.SerializeToString())
 
     @staticmethod
     def claimAllRewardsOfSpecificPassesResponse(response) -> game_event_message_pb2.ClaimRewardsResponse:
@@ -6391,7 +6391,7 @@ class GameEventRemoteService:
 
     @staticmethod
     def getPlayerCurrentGameEvents2Request(request: game_event_message_pb2.GetPlayerCurrentGameEventsRequest):
-        return RpcTarget(GameEventRemoteService._getPlayerCurrentGameEvents2_CODE, 'GameEventRemoteService', GameEventRemoteService._getPlayerCurrentGameEvents2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameEventRemoteService._getPlayerCurrentGameEvents2_CODE, 'GameEventRemoteService', GameEventRemoteService._getPlayerCurrentGameEvents2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getPlayerCurrentGameEvents2Response(response) -> game_event_message_pb2.GetPlayerCurrentGameEventsResponse:
@@ -6408,7 +6408,7 @@ class GameEventRemoteService:
 
     @staticmethod
     def claimSpecificLevelRewardRequest(request: game_event_message_pb2.ClaimSpecificLevelRewardRequest):
-        return RpcTarget(GameEventRemoteService._claimSpecificLevelReward_CODE, 'GameEventRemoteService', GameEventRemoteService._claimSpecificLevelReward_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameEventRemoteService._claimSpecificLevelReward_CODE, 'GameEventRemoteService', GameEventRemoteService._claimSpecificLevelReward_METHOD, request.SerializeToString())
 
     @staticmethod
     def claimSpecificLevelRewardResponse(response) -> game_event_message_pb2.ClaimRewardsResponse:
@@ -6425,7 +6425,7 @@ class GameEventRemoteService:
 
     @staticmethod
     def getAllChallengesRequest(request: challenges_message_pb2.GetAllChallengesRequest):
-        return RpcTarget(GameEventRemoteService._getAllChallenges_CODE, 'GameEventRemoteService', GameEventRemoteService._getAllChallenges_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameEventRemoteService._getAllChallenges_CODE, 'GameEventRemoteService', GameEventRemoteService._getAllChallenges_METHOD, request.SerializeToString())
 
     @staticmethod
     def getAllChallengesResponse(response) -> challenges_message_pb2.GetAllChallengesResponse:
@@ -6442,7 +6442,7 @@ class GameEventRemoteService:
 
     @staticmethod
     def progressGameEventRequest(request: game_event_message_pb2.ProgressGameEventRequest):
-        return RpcTarget(GameEventRemoteService._progressGameEvent_CODE, 'GameEventRemoteService', GameEventRemoteService._progressGameEvent_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameEventRemoteService._progressGameEvent_CODE, 'GameEventRemoteService', GameEventRemoteService._progressGameEvent_METHOD, request.SerializeToString())
 
     @staticmethod
     def progressGameEventResponse(response) -> game_event_message_pb2.ProgressGameEventResponse:
@@ -6464,7 +6464,7 @@ class GlobalChatRemoteService:
 
     @staticmethod
     def sendGlobalChatMessage2Request(request: chat_message_pb2.SendGlobalMsgRequest):
-        return RpcTarget(GlobalChatRemoteService._sendGlobalChatMessage2_CODE, 'GlobalChatRemoteService', GlobalChatRemoteService._sendGlobalChatMessage2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GlobalChatRemoteService._sendGlobalChatMessage2_CODE, 'GlobalChatRemoteService', GlobalChatRemoteService._sendGlobalChatMessage2_METHOD, request.SerializeToString())
 
     @staticmethod
     def sendGlobalChatMessage2Response(response) -> chat_message_pb2.GetGlobalMsgsResponse:
@@ -6486,7 +6486,7 @@ class AppGalleryInAppRemoteService:
 
     @staticmethod
     def buyInAppRequest(request: inapps_message_pb2.AppGalleryBuyInappRequest):
-        return RpcTarget(AppGalleryInAppRemoteService._buyInApp_CODE, 'AppGalleryInAppRemoteService', AppGalleryInAppRemoteService._buyInApp_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(AppGalleryInAppRemoteService._buyInApp_CODE, 'AppGalleryInAppRemoteService', AppGalleryInAppRemoteService._buyInApp_METHOD, request.SerializeToString())
 
     @staticmethod
     def buyInAppResponse(response) -> inapps_message_pb2.AppGalleryBuyInappResponse:
@@ -6508,7 +6508,7 @@ class GameAnnouncementRemoteService:
 
     @staticmethod
     def getAllAnnouncementsRequest(request: newsfeed_message_pb2.GetAllGameAnnouncementsRequest):
-        return RpcTarget(GameAnnouncementRemoteService._getAllAnnouncements_CODE, 'GameAnnouncementRemoteService', GameAnnouncementRemoteService._getAllAnnouncements_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(GameAnnouncementRemoteService._getAllAnnouncements_CODE, 'GameAnnouncementRemoteService', GameAnnouncementRemoteService._getAllAnnouncements_METHOD, request.SerializeToString())
 
     @staticmethod
     def getAllAnnouncementsResponse(response) -> newsfeed_message_pb2.GetAllGameAnnouncementsResponse:
@@ -6558,7 +6558,7 @@ class ChatRemoteService:
 
     @staticmethod
     def deleteGroupMsgs2Request(request: chat_message_pb2.DeleteGroupMsgsRequest):
-        return RpcTarget(ChatRemoteService._deleteGroupMsgs2_CODE, 'ChatRemoteService', ChatRemoteService._deleteGroupMsgs2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._deleteGroupMsgs2_CODE, 'ChatRemoteService', ChatRemoteService._deleteGroupMsgs2_METHOD, request.SerializeToString())
 
     @staticmethod
     def deleteGroupMsgs2Response(response) -> chat_message_pb2.DeleteGroupMsgsResponse:
@@ -6575,7 +6575,7 @@ class ChatRemoteService:
 
     @staticmethod
     def sendFriendMsg2Request(request: chat_message_pb2.SendFriendMsgRequest):
-        return RpcTarget(ChatRemoteService._sendFriendMsg2_CODE, 'ChatRemoteService', ChatRemoteService._sendFriendMsg2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._sendFriendMsg2_CODE, 'ChatRemoteService', ChatRemoteService._sendFriendMsg2_METHOD, request.SerializeToString())
 
     @staticmethod
     def sendFriendMsg2Response(response) -> chat_message_pb2.SendFriendMsgResponse:
@@ -6592,7 +6592,7 @@ class ChatRemoteService:
 
     @staticmethod
     def getFriendMsgsByOffset2Request(request: chat_message_pb2.GetFriendMsgsByOffsetRequest):
-        return RpcTarget(ChatRemoteService._getFriendMsgsByOffset2_CODE, 'ChatRemoteService', ChatRemoteService._getFriendMsgsByOffset2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._getFriendMsgsByOffset2_CODE, 'ChatRemoteService', ChatRemoteService._getFriendMsgsByOffset2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getFriendMsgsByOffset2Response(response) -> chat_message_pb2.GetFriendMsgsByOffsetResponse:
@@ -6609,7 +6609,7 @@ class ChatRemoteService:
 
     @staticmethod
     def getFriendMsgsByPage2Request(request: chat_message_pb2.GetFriendMsgsByPageRequest):
-        return RpcTarget(ChatRemoteService._getFriendMsgsByPage2_CODE, 'ChatRemoteService', ChatRemoteService._getFriendMsgsByPage2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._getFriendMsgsByPage2_CODE, 'ChatRemoteService', ChatRemoteService._getFriendMsgsByPage2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getFriendMsgsByPage2Response(response) -> chat_message_pb2.GetFriendMsgsByPageResponse:
@@ -6626,7 +6626,7 @@ class ChatRemoteService:
 
     @staticmethod
     def getUnreadChatUsersCount2Request(request: chat_message_pb2.GetUnreadChatUsersCountRequest):
-        return RpcTarget(ChatRemoteService._getUnreadChatUsersCount2_CODE, 'ChatRemoteService', ChatRemoteService._getUnreadChatUsersCount2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._getUnreadChatUsersCount2_CODE, 'ChatRemoteService', ChatRemoteService._getUnreadChatUsersCount2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getUnreadChatUsersCount2Response(response) -> chat_message_pb2.GetUnreadChatUsersCountResponse:
@@ -6643,7 +6643,7 @@ class ChatRemoteService:
 
     @staticmethod
     def sendGroupMsg2Request(request: chat_message_pb2.SendGroupMsgRequest):
-        return RpcTarget(ChatRemoteService._sendGroupMsg2_CODE, 'ChatRemoteService', ChatRemoteService._sendGroupMsg2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._sendGroupMsg2_CODE, 'ChatRemoteService', ChatRemoteService._sendGroupMsg2_METHOD, request.SerializeToString())
 
     @staticmethod
     def sendGroupMsg2Response(response) -> chat_message_pb2.SendGroupMsgResponse:
@@ -6660,7 +6660,7 @@ class ChatRemoteService:
 
     @staticmethod
     def getChatUserRequest(request: chat_message_pb2.GetChatUserRequest):
-        return RpcTarget(ChatRemoteService._getChatUser_CODE, 'ChatRemoteService', ChatRemoteService._getChatUser_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._getChatUser_CODE, 'ChatRemoteService', ChatRemoteService._getChatUser_METHOD, request.SerializeToString())
 
     @staticmethod
     def getChatUserResponse(response) -> chat_message_pb2.GetChatUserResponse:
@@ -6677,7 +6677,7 @@ class ChatRemoteService:
 
     @staticmethod
     def readGroupMsgs2Request(request: chat_message_pb2.ReadGroupMsgsRequest):
-        return RpcTarget(ChatRemoteService._readGroupMsgs2_CODE, 'ChatRemoteService', ChatRemoteService._readGroupMsgs2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._readGroupMsgs2_CODE, 'ChatRemoteService', ChatRemoteService._readGroupMsgs2_METHOD, request.SerializeToString())
 
     @staticmethod
     def readGroupMsgs2Response(response) -> chat_message_pb2.ReadGroupMsgsResponse:
@@ -6694,7 +6694,7 @@ class ChatRemoteService:
 
     @staticmethod
     def getChatUsersLiteRequest(request: chat_message_pb2.GetChatUsersLiteRequest):
-        return RpcTarget(ChatRemoteService._getChatUsersLite_CODE, 'ChatRemoteService', ChatRemoteService._getChatUsersLite_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._getChatUsersLite_CODE, 'ChatRemoteService', ChatRemoteService._getChatUsersLite_METHOD, request.SerializeToString())
 
     @staticmethod
     def getChatUsersLiteResponse(response) -> chat_message_pb2.GetChatUsersLiteResponse:
@@ -6711,7 +6711,7 @@ class ChatRemoteService:
 
     @staticmethod
     def getChatUsersByOffset2Request(request: chat_message_pb2.GetChatUsersByOffsetRequest):
-        return RpcTarget(ChatRemoteService._getChatUsersByOffset2_CODE, 'ChatRemoteService', ChatRemoteService._getChatUsersByOffset2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._getChatUsersByOffset2_CODE, 'ChatRemoteService', ChatRemoteService._getChatUsersByOffset2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getChatUsersByOffset2Response(response) -> chat_message_pb2.GetChatUsersByOffsetResponse:
@@ -6728,7 +6728,7 @@ class ChatRemoteService:
 
     @staticmethod
     def readFriendMsgs2Request(request: chat_message_pb2.ReadFriendMsgsRequest):
-        return RpcTarget(ChatRemoteService._readFriendMsgs2_CODE, 'ChatRemoteService', ChatRemoteService._readFriendMsgs2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._readFriendMsgs2_CODE, 'ChatRemoteService', ChatRemoteService._readFriendMsgs2_METHOD, request.SerializeToString())
 
     @staticmethod
     def readFriendMsgs2Response(response) -> chat_message_pb2.ReadFriendMsgsResponse:
@@ -6745,7 +6745,7 @@ class ChatRemoteService:
 
     @staticmethod
     def getChatUsersByPage2Request(request: chat_message_pb2.GetChatUsersByPageRequest):
-        return RpcTarget(ChatRemoteService._getChatUsersByPage2_CODE, 'ChatRemoteService', ChatRemoteService._getChatUsersByPage2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._getChatUsersByPage2_CODE, 'ChatRemoteService', ChatRemoteService._getChatUsersByPage2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getChatUsersByPage2Response(response) -> chat_message_pb2.GetChatUsersByPageResponse:
@@ -6762,7 +6762,7 @@ class ChatRemoteService:
 
     @staticmethod
     def getChatUsers2Request(request: chat_message_pb2.GetChatUsersRequest):
-        return RpcTarget(ChatRemoteService._getChatUsers2_CODE, 'ChatRemoteService', ChatRemoteService._getChatUsers2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._getChatUsers2_CODE, 'ChatRemoteService', ChatRemoteService._getChatUsers2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getChatUsers2Response(response) -> chat_message_pb2.GetChatUsersResponse:
@@ -6779,7 +6779,7 @@ class ChatRemoteService:
 
     @staticmethod
     def getGroupMsgs2Request(request: chat_message_pb2.GetGroupMsgsRequest):
-        return RpcTarget(ChatRemoteService._getGroupMsgs2_CODE, 'ChatRemoteService', ChatRemoteService._getGroupMsgs2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._getGroupMsgs2_CODE, 'ChatRemoteService', ChatRemoteService._getGroupMsgs2_METHOD, request.SerializeToString())
 
     @staticmethod
     def getGroupMsgs2Response(response) -> chat_message_pb2.GetGroupMsgsResponse:
@@ -6796,7 +6796,7 @@ class ChatRemoteService:
 
     @staticmethod
     def deleteFriendMsgs2Request(request: chat_message_pb2.DeleteFriendMsgsRequest):
-        return RpcTarget(ChatRemoteService._deleteFriendMsgs2_CODE, 'ChatRemoteService', ChatRemoteService._deleteFriendMsgs2_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(ChatRemoteService._deleteFriendMsgs2_CODE, 'ChatRemoteService', ChatRemoteService._deleteFriendMsgs2_METHOD, request.SerializeToString())
 
     @staticmethod
     def deleteFriendMsgs2Response(response) -> chat_message_pb2.DeleteFriendMsgsResponse:
@@ -6826,7 +6826,7 @@ class InAppRemoteService:
 
     @staticmethod
     def findCreatorSubscriptionRequest(request: content_creator_message_pb2.GetSubscribedCreatorRequest):
-        return RpcTarget(InAppRemoteService._findCreatorSubscription_CODE, 'InAppRemoteService', InAppRemoteService._findCreatorSubscription_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(InAppRemoteService._findCreatorSubscription_CODE, 'InAppRemoteService', InAppRemoteService._findCreatorSubscription_METHOD, request.SerializeToString())
 
     @staticmethod
     def findCreatorSubscriptionResponse(response) -> content_creator_message_pb2.GetSubscribedCreatorResponse:
@@ -6843,7 +6843,7 @@ class InAppRemoteService:
 
     @staticmethod
     def findCreatorRequest(request: content_creator_message_pb2.FindCreatorRequest):
-        return RpcTarget(InAppRemoteService._findCreator_CODE, 'InAppRemoteService', InAppRemoteService._findCreator_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(InAppRemoteService._findCreator_CODE, 'InAppRemoteService', InAppRemoteService._findCreator_METHOD, request.SerializeToString())
 
     @staticmethod
     def findCreatorResponse(response) -> content_creator_message_pb2.FindCreatorResponse:
@@ -6860,7 +6860,7 @@ class InAppRemoteService:
 
     @staticmethod
     def unsubscribeCreatorRequest(request: content_creator_message_pb2.UnsubscribeCreatorRequest):
-        return RpcTarget(InAppRemoteService._unsubscribeCreator_CODE, 'InAppRemoteService', InAppRemoteService._unsubscribeCreator_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(InAppRemoteService._unsubscribeCreator_CODE, 'InAppRemoteService', InAppRemoteService._unsubscribeCreator_METHOD, request.SerializeToString())
 
     @staticmethod
     def unsubscribeCreatorResponse(response) -> content_creator_message_pb2.UnsubscribeCreatorResponse:
@@ -6877,7 +6877,7 @@ class InAppRemoteService:
 
     @staticmethod
     def getSubscribedCreatorRequest(request: content_creator_message_pb2.GetSubscribedCreatorRequest):
-        return RpcTarget(InAppRemoteService._getSubscribedCreator_CODE, 'InAppRemoteService', InAppRemoteService._getSubscribedCreator_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(InAppRemoteService._getSubscribedCreator_CODE, 'InAppRemoteService', InAppRemoteService._getSubscribedCreator_METHOD, request.SerializeToString())
 
     @staticmethod
     def getSubscribedCreatorResponse(response) -> content_creator_message_pb2.GetSubscribedCreatorResponse:
@@ -6894,7 +6894,7 @@ class InAppRemoteService:
 
     @staticmethod
     def subscribeCreatorRequest(request: content_creator_message_pb2.SubscribeCreatorRequest):
-        return RpcTarget(InAppRemoteService._subscribeCreator_CODE, 'InAppRemoteService', InAppRemoteService._subscribeCreator_METHOD, request.SerializeToString(), secure=False)
+        return RpcTarget(InAppRemoteService._subscribeCreator_CODE, 'InAppRemoteService', InAppRemoteService._subscribeCreator_METHOD, request.SerializeToString())
 
     @staticmethod
     def subscribeCreatorResponse(response) -> content_creator_message_pb2.SubscribeCreatorResponse:

@@ -8,10 +8,8 @@ from uuid import uuid4
 import lz4.block
 from python_socks.async_.asyncio import Proxy
 from python_socks._types import ProxyType
-import deprecation
 
 from .dispatcher import Dispatcher
-from .cipher import AstandyCipher
 from .events import BaseEvents
 from .types.extras import ConnectionInfo
 from .types.rpc_target import RpcTarget
@@ -89,7 +87,6 @@ class StandClient(Services, BaseEvents, Generated):
         self._send_lock = asyncio.Lock()
         self._authenticated = asyncio.Event()
 
-        self.cipher: AstandyCipher
         self._logger = AstandyLoggers.get_logger(alias_name)
 
     @property
@@ -191,8 +188,7 @@ class StandClient(Services, BaseEvents, Generated):
             if self._connect_attempts_number > self.max_retry_count: raise ConnectionError
 
             if not self._is_first_connect: self.logger.info('Reconnecting!')
-            self.cipher = AstandyCipher()
-            self.generate_keys()
+            
             
             try:
                 await self._connect()
@@ -209,7 +205,6 @@ class StandClient(Services, BaseEvents, Generated):
 
     async def _initialize(self):
         try:
-            await self.hello()
             await self.handshake(self._handshake)
             asyncio.create_task(self._ping_loop())
             self._authenticated.set()
@@ -310,7 +305,6 @@ class StandClient(Services, BaseEvents, Generated):
         self._pending_requests[uuid] = future
 
         payload = target.request
-        if target.secure: payload = self.cipher.encrypt(payload)
 
         result: Response = Response()
         if not await self._send_payload(
@@ -321,9 +315,6 @@ class StandClient(Services, BaseEvents, Generated):
         
         try:
             result = await asyncio.wait_for(future, timeout=timeout)
-            if target.secure:  
-                for i in range(len(result.data)):
-                    result.data[i].one = self.cipher.decrypt(result.data[i].one)
         except asyncio.TimeoutError:
             self._logger.warning(f"Request {uuid} timeout after {timeout} seconds")
         finally:
